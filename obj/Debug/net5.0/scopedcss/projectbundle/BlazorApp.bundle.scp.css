@@ -1,0 +1,118 @@
+@import '';
+
+/* _content/BlazorApp/Shared/MainLayout.razor.rz.scp.css */
+/* _content/BlazorApp/Shared/NavMenu.razor.rz.scp.css */
+
+
+.container[b-7cxxmz0cwl]{
+    align-items: left;
+}
+
+body[b-7cxxmz0cwl] {
+  background: burlywood;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.navbar[b-7cxxmz0cwl]{
+    height: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.nav-item[b-7cxxmz0cwl]{
+    margin-left: 50px;
+}
+
+.nav-item2[b-7cxxmz0cwl]{
+    margin-left: 300px;
+    border-left: 2px, black;
+}
+
+.nav-item3[b-7cxxmz0cwl]{
+    margin-left: 20px;
+}
+
+.user[b-7cxxmz0cwl]{
+    border-left: 2px solid black;
+}
+
+
+.product-search[b-7cxxmz0cwl] {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 60px;
+  margin: 0 auto;
+  box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
+  cursor: pointer;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.search-element[b-7cxxmz0cwl] {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  border-right: 1px solid rgba(10,10,10,.1);
+  padding: 1em;
+  margin-left:15px;
+}
+
+.search-element2[b-7cxxmz0cwl] {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    padding: 1em;
+    margin-left:15px;
+  }
+
+.search-label[b-7cxxmz0cwl] {
+  font-weight: 700;
+}
+
+.search-input[b-7cxxmz0cwl] {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-top: 5px;
+}
+
+.search-input:focus[b-7cxxmz0cwl] {
+  box-shadow: 0px 2px 0px 0px tomato;
+}
+
+.search-button[b-7cxxmz0cwl] {
+    display:block;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.search-button:hover[b-7cxxmz0cwl] {
+  background-color: HSLA(345, 100%, 60%, 1.00);
+}
+
+.search-image[b-7cxxmz0cwl]{
+    margin-right:15px;
+}
+
+table[b-7cxxmz0cwl] {
+    width: 90%;
+    margin: 5%;
+    align-items: center;
+  }
+.product[b-7cxxmz0cwl]{
+    width: 170px;
+    height: 250px;
+    border: 1px solid red;
+}
+
+.product[b-7cxxmz0cwl]{
+    margin-bottom: 20% ;
+}
