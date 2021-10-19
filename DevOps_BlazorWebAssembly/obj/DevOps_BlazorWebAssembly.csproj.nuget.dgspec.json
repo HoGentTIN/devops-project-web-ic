@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {}
+    "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {}
   },
   "projects": {
-    "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {
+    "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
+        "projectUniqueName": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
         "projectName": "DevOps_BlazorWebAssembly",
-        "projectPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
+        "projectPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
         "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\DevOps_BlazorWebAssembly\\obj\\",
+        "outputPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AntDesign": {
+              "target": "Package",
+              "version": "[0.1.0-*, )"
+            },
+            "MatBlazor": {
+              "target": "Package",
+              "version": "[2.8.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[5.0.10, )"
@@ -48,6 +56,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[5.1.5, )"
             },
             "Syncfusion.Blazor.Calendars": {
               "target": "Package",

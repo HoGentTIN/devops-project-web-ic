@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Syncfusion.Blazor;
+using MudBlazor.Services;
+
 namespace DevOps_BlazorWebAssembly
 {
     public class Program
@@ -18,9 +20,11 @@ namespace DevOps_BlazorWebAssembly
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddSyncfusionBlazor();
+            builder.Services.AddMudServices();
 
             await builder.Build().RunAsync();
+
+            
         }
     }
 }
