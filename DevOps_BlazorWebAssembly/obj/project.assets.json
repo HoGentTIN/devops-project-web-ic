@@ -100,7 +100,7 @@
           "lib/net5.0/Microsoft.AspNetCore.Components.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/5.0.10": {
+      "Microsoft.AspNetCore.Components.Analyzers/5.0.11": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
@@ -1931,7 +1931,7 @@
           "lib/net5.0/Microsoft.AspNetCore.Components.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/5.0.10": {
+      "Microsoft.AspNetCore.Components.Analyzers/5.0.11": {
         "type": "package",
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
@@ -4514,10 +4514,10 @@
         "microsoft.aspnetcore.components.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Components.Analyzers/5.0.10": {
-      "sha512": "YsGoiP+Cy/rdrvSw5RR5I1dI55lk/QbwMRDVjjGRJamJ5eHGAeBLpnd/bHDWt412NX1vocFRqYljx+zXojQa2g==",
+    "Microsoft.AspNetCore.Components.Analyzers/5.0.11": {
+      "sha512": "2yx5LMJYTxDNUVqBGvl4Ygzgu91DeTkVkDnctE2uMEnJC+ZRT6p86XCWueR+KDLpymsSA9NolwPPbBp9/e7iMQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.components.analyzers/5.0.10",
+      "path": "microsoft.aspnetcore.components.analyzers/5.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4526,7 +4526,7 @@
         "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
         "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
         "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
-        "microsoft.aspnetcore.components.analyzers.5.0.10.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.5.0.11.nupkg.sha512",
         "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
@@ -9196,6 +9196,7 @@
     "net5.0": [
       "AntDesign >= 0.1.0-*",
       "MatBlazor >= 2.8.0",
+      "Microsoft.AspNetCore.Components.Analyzers >= 5.0.11",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.10",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.10",
       "MudBlazor >= 5.1.5",
@@ -9204,19 +9205,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\szabo\\.nuget\\packages\\": {}
+    "C:\\Users\\senad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
+      "projectUniqueName": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
       "projectName": "DevOps_BlazorWebAssembly",
-      "projectPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
-      "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\obj\\",
+      "projectPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
+      "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9249,6 +9250,10 @@
           "MatBlazor": {
             "target": "Package",
             "version": "[2.8.0, )"
+          },
+          "Microsoft.AspNetCore.Components.Analyzers": {
+            "target": "Package",
+            "version": "[5.0.11, )"
           },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",

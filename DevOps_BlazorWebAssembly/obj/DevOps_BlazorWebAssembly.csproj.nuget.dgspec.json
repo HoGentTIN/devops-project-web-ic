@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {}
+    "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {}
   },
   "projects": {
-    "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {
+    "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
+        "projectUniqueName": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
         "projectName": "DevOps_BlazorWebAssembly",
-        "projectPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
-        "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\Blazor_getStarted\\BlazorApp\\DevOps_BlazorWebAssembly\\obj\\",
+        "projectPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\DevOps_BlazorWebAssembly.csproj",
+        "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\DevOps_BlazorWebAssembly\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +47,10 @@
             "MatBlazor": {
               "target": "Package",
               "version": "[2.8.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Analyzers": {
+              "target": "Package",
+              "version": "[5.0.11, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
