@@ -97,6 +97,17 @@ using MudBlazor;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 66 "C:\Users\senad\DevOps\devops-project-web-ic\DevOps_BlazorWebAssembly\Pages\Index.razor"
+       
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

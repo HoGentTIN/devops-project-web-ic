@@ -13,7 +13,7 @@
     
 <div class="parallax-container">
   <div class="background">
-    <img class="background__image" src="/Images/art2.jpg" />
+    <img class="background__image" src="/Images/art2.jpg" height="500px" width="100%" />
   </div>
   <div class="foreground">
     <div class="foreground__content">
@@ -46,18 +46,17 @@
   </div>
 </div>
 
-
-
+<MudDivider DividerType="DividerType.Middle" Class="my-10"/>
    
 <div class="h1">
     <MudText Typo="Typo.h1" >"Where Art is at Home.."</MudText>
 </div>
 
 <div class="carousel">
-    <MudCarousel Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object">
+    <MudCarousel Elevation="2" Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object" >
     <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Lighten1};")">
         <div class="d-flex" style="height:100%">
-            <img class="img1" src="/Images/art2.jpg">
+            <img class="img1" src="/Images/art5.jpg">
         </div>
     </MudCarouselItem>
     <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Teal.Lighten3};")">
@@ -83,6 +82,16 @@
 
 <div class="h1">
     <MudText Typo="Typo.h2" >Featured Art:</MudText>
+    <div class="para">
+    <MudText Typo="Typo.body1">
+       Here you can see the newewst eatured Art ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+       Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br>
+       Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+       Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+       Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. 
+       Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+    </MudText>
+    </div>
 </div>
 
     <table>
@@ -111,8 +120,9 @@
     </td>
     <td>
         <div class ="product2">
+            <div class="padding">
             <div class = "product" style="background-image: url('/Images/frame.jpg');">
-                
+            </div>
             </div>
              <div class=text>
                 <p class="headline"><b>Price:</b> 7000€</p>
@@ -145,9 +155,11 @@
   </tr>
   
 </table>
-<MudDivider DividerType="DividerType.Middle" Class="my-6"/>
+<MudDivider DividerType="DividerType.Middle" Class="my-10"/>
 
-    
+<div class="footer">
+  <p>&copy ArtSquare - 2021</p>
+</div>  
 </body>
 </div>
 

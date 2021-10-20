@@ -97,7 +97,7 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 76 "C:\Users\senad\DevOps\devops-project-web-ic\DevOps_BlazorWebAssembly\Shared\MainLayout.razor"
+#line 75 "C:\Users\senad\DevOps\devops-project-web-ic\DevOps_BlazorWebAssembly\Shared\MainLayout.razor"
        
     private bool arrows = true;
     private bool delimiters = true;
