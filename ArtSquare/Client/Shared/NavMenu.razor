@@ -1,0 +1,80 @@
+﻿<header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+</header>
+
+<MudThemeProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="10">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+
+        <div class="title">
+            <h2>ArtSquare</h2>
+        </div>
+        <MudSpacer />
+        <MudButton Variant="Variant.Text" Style="@($"color:{Colors.Shades.White};")">Support</MudButton>
+        <MudDivider FlexItem="true" DividerType="DividerType.Middle" Vertical="true" />
+        <MudIconButton Icon="@Icons.Material.Filled.ShoppingCart" Color="Color.Inherit" Edge="Edge.End" />
+        <MudIconButton Icon="@Icons.Material.Filled.AccountCircle" Color="Color.Inherit" Edge="Edge.End" />
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h5" Class="mt-1">Hello, Alexander</MudText>
+            @*<img src="/Images/logo.png"/>*@
+        </MudDrawerHeader>
+        @*NavMenu*@
+        <MudPaper Width="260px" Height="100%" Class="d-inline-flex py-3" Square="true">
+            <MudNavMenu Class="mud-width-full">
+                <MudDivider />
+                <MudNavGroup Title="Market Place" Expanded="true" Href="/marketplace" Icon="@Icons.Filled.Store">
+                    <MudNavLink Href="/trends" Icon="@Icons.Filled.Whatshot">Trends</MudNavLink>
+                    <MudNavLink Href="/bestselling" Icon="@Icons.Filled.Moving">Bestselling Artist</MudNavLink>
+                    <MudNavLink Href="/newest" Icon="@Icons.Filled.NewReleases">Newest</MudNavLink>
+                    <MudNavLink Href="/sponsored" Icon="@Icons.Filled.Star">Sponsored</MudNavLink>
+                </MudNavGroup>
+                <MudNavGroup Title="Auctions" Expanded="true" Href="/auctions" Icon="@Icons.Filled.SafetyDivider">
+                    <MudNavLink Href="/open" Icon="@Icons.Filled.EventAvailable">Open</MudNavLink>
+                    <MudNavLink Href="/popular" Icon="@Icons.Filled.Groups">Popular</MudNavLink>
+                </MudNavGroup>
+                <MudNavLink Href="/young art" Icon="@Icons.Outlined.ColorLens">Young Art</MudNavLink>
+                <MudNavLink Href="/upgrade" Icon="@Icons.Sharp.Upgrade">Upgrade</MudNavLink>
+
+                <div class="logout">
+                    <MudNavLink class="logout" Href="/logout" Icon="@Icons.Sharp.Logout">Logout</MudNavLink>
+                </div>
+            </MudNavMenu>
+        </MudPaper>
+    </MudDrawer>
+    <MudMainContent>
+        @*Body*@
+    </MudMainContent>
+</MudLayout>
+
+<MudThemeProvider Theme="MyCustomTheme" />
+@code{
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Cyan.Lighten1,
+            Secondary = Colors.Cyan.Lighten1,
+            AppbarBackground = Colors.Cyan.Lighten1,
+        },
+
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidthLeft = "260px",
+            DrawerWidthRight = "300px"
+        }
+    };
+}
+@code {
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

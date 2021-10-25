@@ -1,0 +1,12 @@
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\bin\Debug\net5.0\ArtSquare.Shared.deps.json
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\bin\Debug\net5.0\ArtSquare.Shared.dll
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\bin\Debug\net5.0\ref\ArtSquare.Shared.dll
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\bin\Debug\net5.0\ArtSquare.Shared.pdb
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.csproj.AssemblyReference.cache
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.AssemblyInfoInputs.cache
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.AssemblyInfo.cs
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.csproj.CoreCompileInputs.cache
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.dll
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ref\ArtSquare.Shared.dll
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.pdb

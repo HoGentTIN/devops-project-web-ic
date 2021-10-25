@@ -1,0 +1,235 @@
+/* /Pages/Index.razor.rz.scp.css */
+
+
+.container[b-fo21lasvq5] {
+    align-items: left;
+}
+/* img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+} */
+body[b-fo21lasvq5] {
+    background: white;
+    /* font-family: 'Andada Pro', serif; */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.footer[b-fo21lasvq5] {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00ACC1;
+    color: white;
+    text-align: center;
+}
+
+.nav-link[b-fo21lasvq5] {
+    color: #C7B4A3;
+}
+
+.navbar[b-fo21lasvq5] {
+    height: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    background: #DEC9B6;
+    margin-bottom: 10%;
+}
+
+.nav-item[b-fo21lasvq5] {
+    margin-left: 50px;
+}
+
+.nav-item2[b-fo21lasvq5] {
+    margin-left: 300px;
+    border-left: 2px, black;
+}
+
+.nav-item3[b-fo21lasvq5] {
+    margin-left: 20px;
+}
+
+.user[b-fo21lasvq5] {
+    border-left: 2px solid black;
+}
+
+.form[b-fo21lasvq5] {
+    margin-top: 20px;
+    position: relative;
+}
+
+.product-search[b-fo21lasvq5] {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 60px;
+    margin: 0 auto;
+    box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 70%;
+}
+
+.search-element[b-fo21lasvq5] {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    border-right: 1px solid rgba(10,10,10,.1);
+    padding: 1em;
+    margin-left: 15px;
+    height: 80px;
+    width: 10%;
+}
+
+.search-element2[b-fo21lasvq5] {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    padding: 1em;
+    margin-left: 15px;
+}
+
+.search-label[b-fo21lasvq5] {
+    font-weight: 700;
+}
+
+.search-input[b-fo21lasvq5] {
+    border: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-top: 5px;
+}
+
+    .search-input:focus[b-fo21lasvq5] {
+        box-shadow: 0px 2px 0px 0px tomato;
+    }
+
+.search-button[b-fo21lasvq5] {
+    display: block;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+    .search-button:hover[b-fo21lasvq5] {
+        background-color: HSLA(345, 100%, 60%, 1.00);
+    }
+
+.search-image[b-fo21lasvq5] {
+    margin-right: 15px;
+}
+
+table[b-fo21lasvq5] {
+    width: 90%;
+    margin: 5%;
+    align-items: center;
+}
+
+.product[b-fo21lasvq5] {
+    width: 220px;
+    height: 350px;
+    background-size: cover;
+    border: 6px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.para[b-fo21lasvq5] {
+    margin-right: 10%;
+    text-align: left;
+}
+
+
+.product2[b-fo21lasvq5] {
+    margin-bottom: 20%;
+}
+
+.text[b-fo21lasvq5] {
+    margin-left: 20%;
+}
+
+.headline[b-fo21lasvq5] {
+    margin-bottom: 2px;
+}
+
+.carousel[b-fo21lasvq5] {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 80%;
+}
+
+.h1[b-fo21lasvq5] {
+    margin-left: 9%;
+    margin-top: 2%;
+    font-family: 'Andada Pro', serif;
+}
+
+.d-flex[b-fo21lasvq5] {
+    margin: auto;
+    width: 100%;
+}
+
+.parallax-container[b-fo21lasvq5] {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    perspective: 8px;
+    perspective-origin: 0%;
+    display: flex;
+    background-attachment: fixed;
+}
+
+.background[b-fo21lasvq5] {
+    justify-content: center;
+    position: absolute;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    transform: translateZ(0px);
+}
+
+
+.foreground[b-fo21lasvq5] {
+    background-attachment: fixed;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    ;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+/* /Shared/NavMenu.razor.rz.scp.css */
+img[b-zpe50d1sq6] {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+    margin: 0;
+}
+
+.title[b-zpe50d1sq6] {
+    margin-left: 4%;
+    font-family: 'IM Fell English SC', serif;
+    position: absolute;
+    top: 22%;
+}
+
+
+.logout[b-zpe50d1sq6] {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
