@@ -89,8 +89,8 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/open")]
-    public partial class Open : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/trends")]
+    public partial class Trends : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,7 +98,7 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 223 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Open.razor"
+#line 226 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
        
     public int spacing { get; set; } = 5;
     private int _selected = 11;

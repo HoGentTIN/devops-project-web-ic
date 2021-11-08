@@ -18,3 +18,8 @@ img[b-zpe50d1sq6] {
     width: 100%;
     bottom: 0;
 }
+
+#link[b-zpe50d1sq6]{
+    text-decoration: none;
+    color: white;
+}

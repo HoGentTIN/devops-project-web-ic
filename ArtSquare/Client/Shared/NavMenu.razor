@@ -11,7 +11,7 @@
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
 
         <div class="title">
-            <h2>ArtSquare</h2>
+            <h2 ><a href="/" id="link">ArtSquare</a></h2>
         </div>
         <MudSpacer />
         <MudButton Variant="Variant.Text" Style="@($"color:{Colors.Shades.White};")">Support</MudButton>
@@ -22,7 +22,6 @@
     <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
         <MudDrawerHeader>
             <MudText Typo="Typo.h5" Class="mt-1">Hello, Alexander</MudText>
-            @*<img src="/Images/logo.png"/>*@
         </MudDrawerHeader>
         @*NavMenu*@
         <MudPaper Width="260px" Height="100%" Class="d-inline-flex py-3" Square="true">

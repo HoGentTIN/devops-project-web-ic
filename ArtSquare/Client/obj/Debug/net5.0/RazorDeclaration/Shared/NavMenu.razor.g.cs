@@ -97,7 +97,7 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 56 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Shared\NavMenu.razor"
+#line 55 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Shared\NavMenu.razor"
       
     MudTheme MyCustomTheme = new MudTheme()
     {
@@ -119,7 +119,7 @@ using MudBlazor;
 #line hidden
 #nullable disable
 #nullable restore
-#line 73 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Shared\NavMenu.razor"
+#line 72 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Shared\NavMenu.razor"
        
     bool _drawerOpen = true;
 

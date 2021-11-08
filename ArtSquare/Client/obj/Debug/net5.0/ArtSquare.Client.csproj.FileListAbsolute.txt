@@ -1273,3 +1273,6 @@ C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Ar
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Open.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Open.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\open.razor.rz.scp.css
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Trends.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Trends.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\Trends.razor.rz.scp.css

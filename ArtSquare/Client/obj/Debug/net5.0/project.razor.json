@@ -94,39 +94,6 @@
         }
       },
       {
-        "HashCode": -744370353,
-        "Kind": "Components.Component",
-        "Name": "ArtSquare.Client.Shared.NavMenu",
-        "AssemblyName": "ArtSquare.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ArtSquare.Client.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -2008879002,
-        "Kind": "Components.Component",
-        "Name": "ArtSquare.Client.Shared.NavMenu",
-        "AssemblyName": "ArtSquare.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ArtSquare.Client.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ArtSquare.Client.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 871554691,
         "Kind": "Components.Component",
         "Name": "ArtSquare.Client.Shared.MainLayout",
@@ -223,35 +190,35 @@
         }
       },
       {
-        "HashCode": -156472010,
+        "HashCode": -744370353,
         "Kind": "Components.Component",
-        "Name": "ArtSquare.Client.Pages.Index",
+        "Name": "ArtSquare.Client.Shared.NavMenu",
         "AssemblyName": "ArtSquare.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ArtSquare.Client.Pages.Index"
+          "Common.TypeName": "ArtSquare.Client.Shared.NavMenu"
         }
       },
       {
-        "HashCode": 842841913,
+        "HashCode": -2008879002,
         "Kind": "Components.Component",
-        "Name": "ArtSquare.Client.Pages.Index",
+        "Name": "ArtSquare.Client.Shared.NavMenu",
         "AssemblyName": "ArtSquare.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ArtSquare.Client.Pages.Index"
+            "TagName": "ArtSquare.Client.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ArtSquare.Client.Pages.Index",
+          "Common.TypeName": "ArtSquare.Client.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -285,6 +252,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ArtSquare.Client.Pages.Open",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1019598514,
+        "Kind": "Components.Component",
+        "Name": "ArtSquare.Client.Pages.Trends",
+        "AssemblyName": "ArtSquare.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Trends"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ArtSquare.Client.Pages.Trends"
+        }
+      },
+      {
+        "HashCode": -1199849648,
+        "Kind": "Components.Component",
+        "Name": "ArtSquare.Client.Pages.Trends",
+        "AssemblyName": "ArtSquare.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ArtSquare.Client.Pages.Trends"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ArtSquare.Client.Pages.Trends",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -73426,6 +73426,11 @@
   },
   "RootNamespace": "ArtSquare.Client",
   "Documents": [
+    {
+      "FilePath": "c:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\Pages\\Trends.razor",
+      "TargetPath": "Pages\\Trends.razor",
+      "FileKind": "component"
+    },
     {
       "FilePath": "c:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\Shared\\SurveyPrompt.razor",
       "TargetPath": "Shared\\SurveyPrompt.razor",

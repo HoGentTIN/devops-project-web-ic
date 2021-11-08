@@ -18,3 +18,8 @@ img {
     width: 100%;
     bottom: 0;
 }
+
+#link{
+    text-decoration: none;
+    color: white;
+}

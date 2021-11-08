@@ -98,12 +98,26 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 63 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
+#line 209 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
       
     private bool arrows = true;
     private bool delimiters = true;
     private bool autocycle = true;
     private Transition transition = Transition.Slide;
+
+    public int spacing { get; set; } = 4;
+    void AddSpacing()
+    {
+        if (spacing >= 10)
+        {
+            spacing = 0;
+        }
+        else
+        {
+            spacing += 1;
+        }
+        StateHasChanged();
+    }
 
 #line default
 #line hidden

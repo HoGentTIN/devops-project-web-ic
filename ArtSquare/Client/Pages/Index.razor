@@ -27,14 +27,13 @@
                         <label class="search-label">Tag</label>
                         <input class="search-input" type="text" placeholder="Enter Tag" autocomplete="on" name="location">
                     </div>
-                    <img class="search-image" src="/Images/search.jpg" width="50" height="50">
+                        <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary"/>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<MudDivider DividerType="DividerType.Middle" Class="my-10" />
 
 <div class="h1">
     <MudText Typo="Typo.h1">"Where Art is at Home.."</MudText>
@@ -60,12 +59,7 @@
     </MudCarousel>
 </div>
 
-@code{
-    private bool arrows = true;
-    private bool delimiters = true;
-    private bool autocycle = true;
-    private Transition transition = Transition.Slide;
-}
+
 <MudDivider DividerType="DividerType.Middle" Class="my-6" />
 
 <div class="h1">
@@ -143,8 +137,92 @@
     </tr>
 
 </table>
-<MudDivider DividerType="DividerType.Middle" Class="my-10" />
+
+
+<MudDivider DividerType="DividerType.Middle" Class="my-12" />
+
+<table>
+    <tr>
+        <td>
+            <div class="container">
+            <img src="/Images/box.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit the Auction</div></a>
+            </div>
+            </div>
+
+        </td>
+        <td>
+            <div class="container">
+            <img src="/Images/box2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/trends"><div class="textbox">Visit the Market</div></a>
+            </div>
+            </div>
+        </td>
+        <td>
+             <div class="container">
+            <img src="/Images/box3.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit Young Art</div></a>
+            </div>
+            </div>
+        </td>
+        
+    </tr>
+</table>
+@* <MudGrid Class="mt-5 mb-5">
+        <MudItem xs="12" >
+            <MudGrid Spacing="@spacing" Justify="Justify.Center">
+            <MudItem >
+            <div class="container">
+            <img src="/Images/box.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit the Auction</div></a>
+            </div>
+            </div>
+            </MudItem>
+            <MudItem >
+            <div class="container">
+            <img src="/Images/box2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/trends"><div class="textbox">Visit the Market</div></a>
+            </div>
+            </div>
+            </MudItem>
+            <MudItem >
+            <div class="container">
+            <img src="/Images/box3.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit Young Art</div></a>
+            </div>
+            </div>
+            </MudItem>
+            </MudGrid>
+        </MudItem>
+</MudGrid> *@
+
 
 <div class="footer">
     <p>&copy ArtSquare - 2021</p>
 </div>
+@code{
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    public int spacing { get; set; } = 4;
+    void AddSpacing()
+    {
+        if (spacing >= 10)
+        {
+            spacing = 0;
+        }
+        else
+        {
+            spacing += 1;
+        }
+        StateHasChanged();
+    }
+}
