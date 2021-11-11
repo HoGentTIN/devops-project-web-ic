@@ -638,6 +638,14 @@ table[b-wql45fxksi] {
     margin-right: auto;
     ;
 }
+/* /Pages/UploadArt.razor.rz.scp.css */
+th[b-ebhgefn06d], td[b-ebhgefn06d] {
+    padding: 70px;
+}
+
+.artInput[b-ebhgefn06d] {
+    margin-left: 200px;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .main[b-aj2li4n6m3]{
     margin-top: 0;

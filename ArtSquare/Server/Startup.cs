@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using ArtSquare.Server.Data;
 
 namespace ArtSquare.Server
 {
@@ -25,6 +27,10 @@ namespace ArtSquare.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDbContext<ArtSquareServerContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ArtSquareServerContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
