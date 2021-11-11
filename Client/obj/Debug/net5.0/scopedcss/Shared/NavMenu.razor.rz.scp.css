@@ -1,0 +1,25 @@
+img[b-zpe50d1sq6] {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+    margin: 0;
+}
+
+.title[b-zpe50d1sq6] {
+    margin-left: 4%;
+    font-family: 'IM Fell English SC', serif;
+    position: absolute;
+    top: 22%;
+}
+
+
+.logout[b-zpe50d1sq6] {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#link[b-zpe50d1sq6]{
+    text-decoration: none;
+    color: white;
+}

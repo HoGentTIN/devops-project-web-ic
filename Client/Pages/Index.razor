@@ -1,0 +1,228 @@
+﻿@page "/"
+<div class="parallax-container">
+    <div class="background">
+        <img class="background__image" src="/Images/art2.jpg" height="500px" width="100%" />
+    </div>
+    <div class="foreground">
+        <div class="foreground__content">
+            <form action="" method="get" class="form">
+                <div class="product-search">
+                    <div class="search-element">
+                        <label class="search-label">Title</label>
+                        <input class="search-input" type="text" autocomplete="on" placeholder="Enter Title" name="location">
+                    </div>
+                    <div class="search-element">
+                        <label class="search-label">Artist</label>
+                        <input class="search-input" type="text" placeholder="Enter Artist" autocomplete="on" name="location">
+                    </div>
+                    <div class="search-element">
+                        <label class="search-label">Type</label>
+                        <input class="search-input" type="text" placeholder="Enter Type" autocomplete="on" name="location">
+                    </div>
+                    <div class="search-element">
+                        <label class="search-label">Price</label>
+                        <input class="search-input" type="text" placeholder="Enter Price" autocomplete="on" name="location">
+                    </div>
+                    <div class="search-element2">
+                        <label class="search-label">Tag</label>
+                        <input class="search-input" type="text" placeholder="Enter Tag" autocomplete="on" name="location">
+                    </div>
+                        <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="h1">
+    <MudText Typo="Typo.h1">"Where Art is at Home.."</MudText>
+</div>
+
+<div class="carousel">
+    <MudCarousel Elevation="2" Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object">
+        <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Lighten1};")">
+            <div class="d-flex" style="height:100%">
+                <img class="img1" src="/Images/art5.jpg">
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Teal.Lighten3};")">
+            <div class="d-flex" style="height:100%">
+                <img class="img1" src="/Images/art.jpg">
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Accent1};")">
+            <div class="d-flex" style="height:100%">
+                <img src="/Images/art3.jpg">
+            </div>
+        </MudCarouselItem>
+    </MudCarousel>
+</div>
+
+
+<MudDivider DividerType="DividerType.Middle" Class="my-6" />
+
+<div class="h1">
+    <MudText Typo="Typo.h2">Featured Art:</MudText>
+    <div class="para">
+        <MudText Typo="Typo.body1">
+            Here you can see the newewst eatured Art ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br>
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+            Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+        </MudText>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <td>
+            <div class="product2">
+                <div class="product" style="background-image: url('/Images/frame4.jpg');">
+
+                </div>
+                <div class=text>
+                    <p class="headline"><b>Price:</b> 7000€</p>
+                    <p class="headline"><b>Artist:</b> Jean-Pierre Francau </p>
+                </div>
+            </div>
+
+        </td>
+        <td>
+            <div class="product2">
+                <div class="product" style="background-image: url('/Images/frame1.jpg');">
+                </div>
+                <div class=text>
+                    <p class="headline"><b>Price:</b> 7000€</p>
+                    <p class="headline"><b>Artist:</b> Jean-Pierre Francau </p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="product2">
+                <div class="padding">
+                    <div class="product" style="background-image: url('/Images/frame.jpg');">
+                    </div>
+                </div>
+                <div class=text>
+                    <p class="headline"><b>Price:</b> 7000€</p>
+                    <p class="headline"><b>Artist:</b> Jean-Pierre Francau </p>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="product2">
+                <div class="product" style="background-image: url('/Images/frame2.jpg');">
+
+                </div>
+                <div class=text>
+                    <p class="headline"><b>Price:</b> 7000€</p>
+                    <p class="headline"><b>Artist:</b> Jean-Pierre Francau </p>
+                </div>
+            </div>
+        </td>
+        @* <td>
+               <div class ="product2">
+                    <div class = "product">
+
+                    </div>
+                     <div class=text>
+                    <p class="headline"><b>Price:</b> 7000€</p>
+                    <p class="headline"><b>Artist:</b> Jean-Pierre Francau </p>
+                    </div>
+                </div>
+            </td> *@
+    </tr>
+
+</table>
+
+
+<MudDivider DividerType="DividerType.Middle" Class="my-12" />
+
+<table>
+    <tr>
+        <td>
+            <div class="container">
+            <img src="/Images/box.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit the Auction</div></a>
+            </div>
+            </div>
+
+        </td>
+        <td>
+            <div class="container">
+            <img src="/Images/box2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/trends"><div class="textbox">Visit the Market</div></a>
+            </div>
+            </div>
+        </td>
+        <td>
+             <div class="container">
+            <img src="/Images/box3.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit Young Art</div></a>
+            </div>
+            </div>
+        </td>
+        
+    </tr>
+</table>
+@* <MudGrid Class="mt-5 mb-5">
+        <MudItem xs="12" >
+            <MudGrid Spacing="@spacing" Justify="Justify.Center">
+            <MudItem >
+            <div class="container">
+            <img src="/Images/box.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit the Auction</div></a>
+            </div>
+            </div>
+            </MudItem>
+            <MudItem >
+            <div class="container">
+            <img src="/Images/box2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/trends"><div class="textbox">Visit the Market</div></a>
+            </div>
+            </div>
+            </MudItem>
+            <MudItem >
+            <div class="container">
+            <img src="/Images/box3.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit Young Art</div></a>
+            </div>
+            </div>
+            </MudItem>
+            </MudGrid>
+        </MudItem>
+</MudGrid> *@
+
+
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
+@code{
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    public int spacing { get; set; } = 4;
+    void AddSpacing()
+    {
+        if (spacing >= 10)
+        {
+            spacing = 0;
+        }
+        else
+        {
+            spacing += 1;
+        }
+        StateHasChanged();
+    }
+}

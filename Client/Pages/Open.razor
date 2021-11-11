@@ -1,0 +1,238 @@
+@page "/open"
+
+    @* <div class="background">
+        <img class="background__image" src="/Images/art2.jpg" height="300px" width="100%" />
+    </div> *@
+    <div class="foreground">
+        <div class="foreground__content">
+            <form action="" method="get" class="form">
+                <div class="product-search">
+                    <div class="search-element">
+                        <label class="search-label">Title</label>
+                        <input class="search-input" type="text" autocomplete="on" placeholder="Enter Title" name="location">
+                    </div>
+                    <div class="search-element">
+                        <label class="search-label">Artist</label>
+                        <input class="search-input" type="text" placeholder="Enter Artist" autocomplete="on" name="location">
+                    </div>
+                    <div class="search-element">
+                        <label class="search-label">Type</label>
+                        <input class="search-input" type="text" placeholder="Enter Type" autocomplete="on" name="location">
+                    </div>
+                    <div class="search-element">
+                        <label class="search-label">Price</label>
+                        <input class="search-input" type="text" placeholder="Enter Price" autocomplete="on" name="location">
+                    </div>
+                    <div class="search-element2">
+                        <label class="search-label">Tag</label>
+                        <input class="search-input" type="text" placeholder="Enter Tag" autocomplete="on" name="location">
+                    </div>
+                    
+                        <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary"/>
+                        
+                        
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<MudDivider DividerType="DividerType.Middle" Class="my-10" />
+
+<div class="h1">
+    <MudText Typo="Typo.h1">Welcome to the Auction</MudText>
+    <div class="para">
+        <MudText Typo="Typo.body1">
+            Here you can see the newewst eatured Art ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br>
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+            Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+        </MudText>
+    </div>
+</div>
+
+
+<div class="h1">
+    <MudText Typo="Typo.h2">New Entries:</MudText>
+    
+</div>
+
+<MudGrid Class="mt-5">
+    <MudItem xs="12" >
+        <MudGrid Spacing="@spacing" Justify="Justify.Center">
+            <MudItem >
+                <MudCard Elevation="4" Square="true" >
+                        <MudCardHeader>
+                            <CardHeaderAvatar>
+                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">Artist Name</MudText>
+                                <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="/Images/art2.jpg" Height="200" Width="300" />
+                        <MudCardContent>
+                            <MudText Typo="Typo.h5">Old Paint</MudText>
+                            <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                            <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">1100€</MudPaper>
+                        </MudCardActions>
+                    </MudCard>
+            </MudItem>
+            <MudItem >
+                <MudCard Elevation="4" Square="true">
+                        <MudCardHeader>
+                            <CardHeaderAvatar>
+                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">Artist Name</MudText>
+                                <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="/Images/art.jpg" Height="200" Width="300" />
+                        <MudCardContent>
+                            <MudText Typo="Typo.h5">Old Paint</MudText>
+                            <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                            <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">8000€</MudPaper>
+                        </MudCardActions>
+                    </MudCard>
+            </MudItem>
+            <MudItem >
+                <MudCard Elevation="4" Square="true">
+                        <MudCardHeader>
+                            <CardHeaderAvatar>
+                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">Artist Name</MudText>
+                                <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="/Images/art3.jpg" Height="200" Width="300" />
+                        <MudCardContent>
+                            <MudText Typo="Typo.h5">Old Paint</MudText>
+                            <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                            <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">2130€</MudPaper>
+                        </MudCardActions>
+                    </MudCard>
+            </MudItem>
+            <MudItem >
+                <MudCard Elevation="4" Square="true" >
+                        <MudCardHeader>
+                            <CardHeaderAvatar>
+                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">Artist Name</MudText>
+                                <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="/Images/frame1.jpg" Height="200" Width="300" />
+                        <MudCardContent>
+                            <MudText Typo="Typo.h5">Old Paint</MudText>
+                            <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                            <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">5000€</MudPaper>
+
+                        </MudCardActions>
+                    </MudCard>
+            </MudItem>
+             <MudItem >
+                <MudCard Elevation="4" Square="true">
+                        <MudCardHeader>
+                            <CardHeaderAvatar>
+                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">Artist Name</MudText>
+                                <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="/Images/frame.jpg" Height="200" Width="300" />
+                        <MudCardContent>
+                            <MudText Typo="Typo.h5">Old Paint</MudText>
+                            <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                            <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">1250€</MudPaper>
+
+                        </MudCardActions>
+                    </MudCard>
+            </MudItem>
+             <MudItem >
+                <MudCard Elevation="4" Square="true">
+                        <MudCardHeader>
+                            <CardHeaderAvatar>
+                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">Artist Name</MudText>
+                                <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="/Images/art5.jpg" Height="200" Width="300" />
+                        <MudCardContent>
+                            <MudText Typo="Typo.h5">Old Paint</MudText>
+                            <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                            <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">1000€</MudPaper>
+                        </MudCardActions>
+                    </MudCard>
+            </MudItem>
+            
+            <MudItem >
+                    <MudPagination BoundaryCount="1" MiddleCount="3" Count="9" @bind-Selected="@_selected" Class="mt-5" Color="Color.Secondary"/>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+    
+</MudGrid>
+
+
+
+
+<MudDivider DividerType="DividerType.Middle" Class="my-10" />
+
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
+
+@code {
+    public int spacing { get; set; } = 5;
+    private int _selected = 11;
+    void AddSpacing()
+    {
+        if (spacing >= 10)
+        {
+            spacing = 0;
+        }
+        else
+        {
+            spacing += 1;
+        }
+        StateHasChanged();
+    }
+}

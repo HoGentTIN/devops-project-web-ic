@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\usuario\Desktop\Uni gante\devops\Blazor\Good version\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\usuario\Desktop\Uni gante\devops\Blazor\Good version\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\usuario\.nuget\packages\mudblazor\5.1.5\build\..\staticwebassets\" />
+</StaticWebAssets>
