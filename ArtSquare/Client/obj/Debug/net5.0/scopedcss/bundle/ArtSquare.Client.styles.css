@@ -1,3 +1,7 @@
+/* /Pages/DetailView.razor.rz.scp.css */
+h3[b-5mridw1b76] {
+    color: red;
+}
 /* /Pages/Index.razor.rz.scp.css */
 
 
@@ -643,6 +647,9 @@ th[b-ebhgefn06d], td[b-ebhgefn06d] {
 
 .artInput[b-ebhgefn06d] {
     margin-left: 200px;
+}
+body[b-ebhgefn06d]{
+    color: red;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .main[b-aj2li4n6m3]{

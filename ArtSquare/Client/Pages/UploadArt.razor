@@ -1,0 +1,80 @@
+﻿@page "/uploadArt"
+
+
+<h3>UploadArt</h3>
+
+<table class="artInput">
+    <tr>
+        <td>
+            <MudText Typo="Typo.body1">
+                Title:
+            </MudText>
+        </td>
+        <td>
+            <MudItem xs="48" sm="24" md="16">
+                <MudTextField @bind-Value="TextValue" Label="Name of the Art.." Variant="Variant.Text"></MudTextField>
+            </MudItem>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <MudText Typo="Typo.body1">
+                Description:
+            </MudText>
+        </td>
+        <td>
+            <MudItem xs="200" sm="100" md="80">
+                <MudTextField @bind-Value="TextValue" Label="Description.." Variant="Variant.Text"></MudTextField>
+            </MudItem>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <MudText Typo="Typo.body1">
+                Price:
+            </MudText>
+        </td>
+        <td>
+            <MudItem xs="48" sm="24" md="16">
+                <MudTextField @bind-Value="TextValue" Label="Price.." Variant="Variant.Text"></MudTextField>
+            </MudItem>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <MudText Typo="Typo.body1">
+                Width:
+            </MudText>
+        </td>
+        <td>
+            <MudItem xs="48" sm="24" md="16">
+                <MudTextField @bind-Value="TextValue" Label="Width.." Variant="Variant.Text"></MudTextField>
+            </MudItem>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <MudText Typo="Typo.body1">
+                Height:
+            </MudText>
+        </td>
+        <td>
+            <MudItem xs="48" sm="24" md="16">
+                <MudTextField @bind-Value="TextValue" Label="Height.." Variant="Variant.Text"></MudTextField>
+            </MudItem>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" >Upload Art</MudButton>
+
+        </td>
+
+    </tr>
+</table>
+
+
+
+@code {
+    public string TextValue { get; set; }
+}

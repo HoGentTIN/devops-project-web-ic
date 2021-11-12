@@ -1285,3 +1285,6 @@ C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\o
 C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\UploadArt.razor.g.cs
 C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\UploadArt.razor.g.cs
 C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\UploadArt.razor.rz.scp.css
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\DetailView.razor.g.cs
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\DetailView.razor.g.cs
+C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\DetailView.razor.rz.scp.css
