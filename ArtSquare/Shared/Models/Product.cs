@@ -4,11 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ArtSquare.Server.Models
+namespace ArtSquare.Shared.Models
 {
     public class Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        #region Properties
         public int Id { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
@@ -20,9 +20,12 @@ namespace ArtSquare.Server.Models
         public double Width { get; set; }
         public double Height { get; set; }
         public string Desciption { get; set; }
-        public string FrameDescription { get; set; }
-        public int B_id { set; get; }
-        public int A_id { set; get; }
+        public int BetId { set; get; }
+        public Bet Bet { set; get; }
+        public Artist Artist { set; get; }
+        public int ArtistId { set; get; } 
+        public List<Tag> Tags { set; get; }
+        #endregion
 
 
     }

@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ArtSquare.Server.Models
+namespace ArtSquare.Shared.Models
 {
     public class Artist
     {
         #region properties
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
@@ -19,7 +18,7 @@ namespace ArtSquare.Server.Models
         public string Bank { get; set; }
         public string Nationality { get; set; }
         public bool IsYoungArtist { get; set; }
-        public string IsConformed { get; set; } 
+        public bool IsConformed { get; set; } 
         #endregion
 
 

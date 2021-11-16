@@ -89,6 +89,20 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+using ArtSquare.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+using ArtSquare.Client.Services.ProductService;
+
+#line default
+#line hidden
+#nullable disable
     public partial class _Imports : System.Object
     {
         #pragma warning disable 1998

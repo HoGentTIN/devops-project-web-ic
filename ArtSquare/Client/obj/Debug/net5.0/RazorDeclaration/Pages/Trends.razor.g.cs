@@ -89,6 +89,20 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+using ArtSquare.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+using ArtSquare.Client.Services.ProductService;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/trends")]
     public partial class Trends : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,8 +112,13 @@ using MudBlazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 226 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
+#line 229 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
        
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ProductService.LoadProducts();
+    }
     public int spacing { get; set; } = 5;
     private int _selected = 11;
     void AddSpacing()
@@ -118,6 +137,7 @@ using MudBlazor;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
     }
 }
 #pragma warning restore 1591

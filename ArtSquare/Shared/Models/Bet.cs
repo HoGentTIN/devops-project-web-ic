@@ -4,15 +4,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ArtSquare.Server.Models
+namespace ArtSquare.Shared.Models
 {
     public class Bet
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        #region Properties
         public int Id { get; set; }
-        public double amount { get; set; }
-        public int U_id { get; set; }
-        public int P_id { get; set; }
+        public double Amount { get; set; }
+        //public int U_id { get; set; }
+        public UserArt UserId { get; set; }
+        //public int P_id { get; set; } 
+        public Product Product { get; set; }
+        public int ProductID { get; set; }
+        #endregion
 
 
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ArtSquare.Server.Models;
+using ArtSquare.Shared.Models;
 
 namespace ArtSquare.Server.Data
 {

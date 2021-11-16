@@ -332,11 +332,6 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\ArtSquare.Server.TagHelpers.output.cache
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\ArtSquare.Server.RazorCoreGenerate.cache
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\Razor\Pages\Product\Create.cshtml.g.cs
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\Razor\Pages\Product\Delete.cshtml.g.cs
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\Razor\Pages\Product\Details.cshtml.g.cs
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\Razor\Pages\Product\Edit.cshtml.g.cs
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\Razor\Pages\Product\Index.cshtml.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\Razor\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\ArtSquare.Server.RazorTargetAssemblyInfo.cache
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\obj\Debug\net5.0\ArtSquare.Server.RazorTargetAssemblyInfo.cs

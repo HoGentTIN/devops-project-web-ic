@@ -4,13 +4,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ArtSquare.Server.Models
+namespace ArtSquare.Shared.Models
 {
     public class Order_Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        #region Properties
         public int Id { get; set; }
         public int P_id { get; set; }
-        public int O_id { get; set; }
+        public int O_id { get; set; } 
+        #endregion
     }
 }

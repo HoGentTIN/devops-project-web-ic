@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using ArtSquare.Server.Data;
+using ArtSquare.Server.Services.ProductService;
 
 namespace ArtSquare.Server
 {
@@ -27,7 +28,7 @@ namespace ArtSquare.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
-
+            services.AddScoped<IProductService, ProductService>();
             services.AddDbContext<ArtSquareServerContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ArtSquareServerContext")));
 
