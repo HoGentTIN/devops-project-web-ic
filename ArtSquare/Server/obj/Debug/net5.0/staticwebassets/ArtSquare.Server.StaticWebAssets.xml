@@ -1,6 +1,6 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="/" Path="C:\Users\szabo\Desktop\5. Semester HoGent\DevOps\finalVersion\ArtSquare\Client\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\wwwroot\" />
   <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\szabo\.nuget\packages\mudblazor\5.1.5\build\..\staticwebassets\" />
 </StaticWebAssets>
