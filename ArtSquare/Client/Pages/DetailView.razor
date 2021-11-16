@@ -1,10 +1,53 @@
 ﻿@page "/detailView"
+<Mudgrid>
+    <MudItem xs="12"  >
+        <div class="carousel">
+        <div class="frame">
+            
+        <MudCarousel  Elevation="2" Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object">
+                <MudCarouselItem  Transition="transition"  Style="@($"background:{Colors.Cyan.Lighten1};")">
+                    <div class="d-flex" style="height:100%">
+                        <img class="img1" src="/Images/art5.jpg">
+                    </div>
+                </MudCarouselItem>
+                <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Teal.Lighten3};")">
+                    <div class="d-flex" style="height:100%">
+                        <img class="img1" src="/Images/art.jpg">
+                    </div>
+                </MudCarouselItem>
+                <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Accent1};")">
+                    <div class="d-flex" style="height:100%">
+                        <img src="/Images/art3.jpg">
+                    </div>
+                </MudCarouselItem>
+            </MudCarousel>
+        </div>
+    </div>
+</MudItem>
 
-<body>
-    <h3>DetailView</h3>
-</body>
+    <MudIdem xs="12" >
+        <MudText Typo="Typo.h2" Align="Align.Right">The Winter</MudText> 
+    </MudIdem>
+</Mudgrid>
 
+    
+
+
+
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
 
 @code {
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
 
+    private bool visible;
+    private int rating;
+    private void OpenDialog() => visible = true;
+    void Submit() => visible = false;
+
+    private DialogOptions dialogOptions = new() { FullWidth = true };
 }

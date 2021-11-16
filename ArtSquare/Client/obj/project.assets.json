@@ -1231,19 +1231,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\szabo\\.nuget\\packages\\": {}
+    "C:\\Users\\senad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\finalVersion\\ArtSquare\\Client\\ArtSquare.Client.csproj",
+      "projectUniqueName": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj",
       "projectName": "ArtSquare.Client",
-      "projectPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\finalVersion\\ArtSquare\\Client\\ArtSquare.Client.csproj",
-      "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\finalVersion\\ArtSquare\\Client\\obj\\",
+      "projectPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj",
+      "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1257,8 +1257,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\finalVersion\\ArtSquare\\Shared\\ArtSquare.Shared.csproj": {
-              "projectPath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\finalVersion\\ArtSquare\\Shared\\ArtSquare.Shared.csproj"
+            "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj": {
+              "projectPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj"
             }
           }
         }
@@ -1304,7 +1304,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-            "version": "[5.0.12, 5.0.12]"
+            "version": "[5.0.10, 5.0.10]"
           }
         ],
         "frameworkReferences": {
@@ -1312,7 +1312,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

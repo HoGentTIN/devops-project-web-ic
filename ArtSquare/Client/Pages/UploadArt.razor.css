@@ -8,3 +8,21 @@
 body{
     color: red;
 }
+
+.space{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer {
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00ACC1;
+    color: white;
+    text-align: center;
+}
+.up{
+    margin-top: 50px;
+}

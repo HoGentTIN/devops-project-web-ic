@@ -1,80 +1,90 @@
 ﻿@page "/uploadArt"
+@inject ISnackbar Snackbar
+<MudText Class=" mb-10" Align="Align.Center" Typo="Typo.h3">Upload your art</MudText>
+
+<MudPaper Class="mx-auto mb-20 mud-theme-secondary" Height="600px" Width="80%" Elevation="4">
+    <MudContainer >
+        <MudPaper  Height="600px" Width="100%" Square="true" Class="pt-25" Elevation="4">
+         
+    <MudGrid Class="ml-5 ">
+        <MudItem xs="12" sm="6" md="4">
+            <MudTextField T="string" Label="Title" HelperText="Specify name of Art" HelperTextOnFocus="false" Variant="Variant.Text" />
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudTextField T="string" Label="Description" HelperText="Add a Description" HelperTextOnFocus="false" Variant="Variant.Text" />
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudTextField T="string" Label="Price" HelperText="Set a Price" HelperTextOnFocus="false" Variant="Variant.Text" />
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudTextField T="string" Label="Width" HelperText="Add a Width" HelperTextOnFocus="false" Variant="Variant.Text" />
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4">
+            <MudTextField T="string" Label="Height" HelperText="Add a Height" HelperTextOnFocus="false" Variant="Variant.Text" />
+        </MudItem>
+       
+
+            
 
 
-<h3>UploadArt</h3>
+    </MudGrid>
+    <MudGrid Class="ml-5 mt-5">
+        <MudItem xs="12" sm="6" md="4">
 
-<table class="artInput">
-    <tr>
-        <td>
-            <MudText Typo="Typo.body1">
-                Title:
-            </MudText>
-        </td>
-        <td>
-            <MudItem xs="48" sm="24" md="16">
-                <MudTextField @bind-Value="TextValue" Label="Name of the Art.." Variant="Variant.Text"></MudTextField>
-            </MudItem>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <MudText Typo="Typo.body1">
-                Description:
-            </MudText>
-        </td>
-        <td>
-            <MudItem xs="200" sm="100" md="80">
-                <MudTextField @bind-Value="TextValue" Label="Description.." Variant="Variant.Text"></MudTextField>
-            </MudItem>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <MudText Typo="Typo.body1">
-                Price:
-            </MudText>
-        </td>
-        <td>
-            <MudItem xs="48" sm="24" md="16">
-                <MudTextField @bind-Value="TextValue" Label="Price.." Variant="Variant.Text"></MudTextField>
-            </MudItem>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <MudText Typo="Typo.body1">
-                Width:
-            </MudText>
-        </td>
-        <td>
-            <MudItem xs="48" sm="24" md="16">
-                <MudTextField @bind-Value="TextValue" Label="Width.." Variant="Variant.Text"></MudTextField>
-            </MudItem>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <MudText Typo="Typo.body1">
-                Height:
-            </MudText>
-        </td>
-        <td>
-            <MudItem xs="48" sm="24" md="16">
-                <MudTextField @bind-Value="TextValue" Label="Height.." Variant="Variant.Text"></MudTextField>
-            </MudItem>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <MudButton Variant="Variant.Filled" Color="Color.Primary" >Upload Art</MudButton>
+        <InputFile Class="mud-theme-secondary" id="fileInput" OnChange="UploadFiles" hidden multiple accept=".jpg, .jpeg, .png" />
 
-        </td>
+            <MudFab HtmlTag="label"
+            Color="Color.Secondary"
+            Icon="@Icons.Filled.Image"
+            Label="Load picture"
+            for="fileInput" />
+        </MudItem>
 
-    </tr>
-</table>
+            @if (files != null)
+            {
+                <MudText Typo="@Typo.h6">@files.Count() File@(files.Count() == 1 ? "" : "s"):</MudText>
+                <MudList>
+                @foreach (var file in files)
+                {
+                <MudListItem Icon="@Icons.Filled.AttachFile" @key="@file">
+                    @file.Name <code>@file.Size bytes</code>
+                </MudListItem>
+                }
+                </MudList>
+            }
+    </MudGrid>
+    <div class="up">
+    <MudGrid Class="mt-60">
+                <MudItem Class="mx-auto mt-70 " >
+                    <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.Upload" Style="background-color: lightblue; color: white; width: 200px; height: 60px;">
+                        Upload Art
+                    </MudButton>
+                </MudItem>
+    </MudGrid>
+</div>
+        </MudPaper>
+    </MudContainer>
+</MudPaper>
+<div class="space">
+    <MudDivider DividerType="DividerType.Middle" Class="my-6" />
 
+</div>
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
 
 
 @code {
     public string TextValue { get; set; }
+    IList<IBrowserFile> files = new List<IBrowserFile>();
+   
+    
+    private void UploadFiles(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles())
+        {
+            files.Add(file);
+        }
+        //TODO upload the files to the server
+    }
 }

@@ -141,36 +141,48 @@
 
 <MudDivider DividerType="DividerType.Middle" Class="my-12" />
 
-<table>
-    <tr>
-        <td>
-            <div class="container">
-            <img src="/Images/box.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-                <a href="/open"><div class="textbox">Visit the Auction</div></a>
-            </div>
-            </div>
-
-        </td>
-        <td>
-            <div class="container">
+<MudGrid Class="mx-auto mb-10">
+<MudItem >
+        <div class="container">
+                <img src="/Images/box.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <a href="/open"><div class="textbox">Visit the Auction</div></a>
+                </div>
+                </div>
+</MudItem>
+<MudItem >
+    <div class="container">
             <img src="/Images/box2.jpg" alt="Avatar" class="image">
             <div class="overlay">
                 <a href="/trends"><div class="textbox">Visit the Market</div></a>
             </div>
             </div>
-        </td>
-        <td>
-             <div class="container">
+</MudItem>
+<MudItem >
+     <div class="container">
             <img src="/Images/box3.jpg" alt="Avatar" class="image">
             <div class="overlay">
                 <a href="/open"><div class="textbox">Visit Young Art</div></a>
             </div>
             </div>
+</MudItem>
+    @* <table>
+    <tr>
+        <td>
+            
+
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            
         </td>
         
     </tr>
-</table>
+</table> *@
+</MudGrid>
+
 @* <MudGrid Class="mt-5 mb-5">
         <MudItem xs="12" >
             <MudGrid Spacing="@spacing" Justify="Justify.Center">

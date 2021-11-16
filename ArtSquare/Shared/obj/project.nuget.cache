@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BIHuGK1ksoZuqG83F5gQW5lMIJ8wTyqhR2vN8lVmVtQ2LY3I4UM+cougjjt2RZ3SmkBUTw3dMVHok8wfIphlTA==",
+  "dgSpecHash": "ZVbG5Z6kc8N26lucXp9rYOcOPAAgh9TjXOF7V/xyyc24BduMHtXsEj3oc6RAMZqkFQYApU0WmyXGsq7RnT0wNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\szabo\\Desktop\\5. Semester HoGent\\DevOps\\finalVersion\\ArtSquare\\Shared\\ArtSquare.Shared.csproj",
+  "projectFilePath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

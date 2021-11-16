@@ -1,3 +1,24 @@
-﻿h3 {
-    color: red;
+﻿
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00ACC1;
+    color: white;
+    text-align: center;
+}
+
+.carousel {
+    margin-left: 50px;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    width: 30%;
+}
+.frame{
+    border: 3px solid #555;
+    background: black;
+    margin: auto;
+    padding: 15px 15px;
 }
