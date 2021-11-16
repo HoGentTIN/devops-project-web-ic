@@ -11,14 +11,28 @@
 }
 
 .carousel[b-5mridw1b76] {
-    margin-left: 50px;
-    margin-top: 3%;
-    margin-bottom: 10%;
-    width: 30%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1%;
+    
+    width: 70%;
 }
 .frame[b-5mridw1b76]{
     border: 3px solid #555;
     background: black;
     margin: auto;
     padding: 15px 15px;
+}
+.Desc[b-5mridw1b76]{
+    width:60%;
+    margin-left:220px;
+    margin-bottom:5%;
+    margin-top:10px;
+}
+.tags[b-5mridw1b76]{
+    margin-top:5%;
+    
+}
+.spacing[b-5mridw1b76]{
+    margin-top:5%;
 }
