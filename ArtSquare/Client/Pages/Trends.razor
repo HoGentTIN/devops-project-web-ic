@@ -62,42 +62,43 @@
 </div>
 
 <MudGrid Class="mt-5">
-    <MudItem xs="12">
-        <MudGrid Spacing="@spacing" Justify="Justify.Center">
-            @foreach (var product in ProductService.Products)
-            {
-                <MudItem>
-                    <MudCard Elevation="4">
-                        <MudCardHeader>
-                            <CardHeaderAvatar>
-                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
-                            </CardHeaderAvatar>
-                            <CardHeaderContent>
-                                <MudText Typo="Typo.body1">Artist Name</MudText>
-                                <!-- <MudText Typo="Typo.body2">20/4/1969</MudText> -->
-                            </CardHeaderContent>
-                        </MudCardHeader>
-                        <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
-                        <MudCardContent>
-                            <MudText Typo="Typo.h5">@product.Name</MudText>
-                            <MudText Typo="Typo.body2">@product.Desciption</MudText>
-                        </MudCardContent>
-                        <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="() => RedirectDetailView(product.Id)">Learn More</MudButton>
-                            <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
-                        </MudCardActions>
-                    </MudCard>
+    <MudItem xs="12" >
+        
+            <MudGrid Spacing="@spacing" Justify="Justify.Center">
+                @foreach (var product in ProductService.Products)
+                {
+    <MudItem>
+        <div class="card">
+    <MudCard Elevation="4" Width="375px" Height="450px" Square="true">
+        <MudCardHeader>
+            <CardHeaderAvatar>
+                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+            </CardHeaderAvatar>
+            <CardHeaderContent>
+                <MudText Typo="Typo.body1">Artist Name</MudText>
+                <!-- <MudText Typo="Typo.body2">20/4/1969</MudText> -->
+            </CardHeaderContent>
+        </MudCardHeader>
+        <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
+        <MudCardContent>
+            <MudText Typo="Typo.h5">@product.Name</MudText>
+            <MudText Typo="Typo.body2">@product.Desciption</MudText>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="() => RedirectDetailView(product.Id)">Learn More</MudButton>
+            <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
+            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
+        </MudCardActions>
+    </MudCard>
+</div>
                 </MudItem>
             }
             
-            <MudItem>
-                <MudPagination BoundaryCount="1" MiddleCount="3" Count="9" @bind-Selected="@_selected" Class="mt-5" Color="Color.Secondary" />
-            </MudItem>
+            
         </MudGrid>
     </MudItem>
+    
 </MudGrid>
-
 
 
 
@@ -114,7 +115,6 @@
         await ProductService.LoadProducts();
     }
     public int spacing { get; set; } = 5;
-    private int _selected = 11;
     void AddSpacing()
     {
         if (spacing >= 10)

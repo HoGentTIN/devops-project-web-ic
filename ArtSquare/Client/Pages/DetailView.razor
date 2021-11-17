@@ -32,10 +32,12 @@
 
 <div class="Desc">
     <MudGrid Class="ml-25">
+        <MudItem xs="12">
+            <MudText Typo="Typo.h2">"@product.Name"</MudText>
+        </MudItem>
+        <br />
         <MudItem>
-            <MudText Typo="Typo.h2">@product.Name</MudText>
-        </MudItem><br />
-        <MudItem>
+            <br/>
             <MudText>
                 @product.Desciption
             </MudText>
@@ -58,7 +60,7 @@
 
     <div class="tags">
 
-        <MudText Align="Align.Left"><b>Price:</b> @product.Price</MudText>
+        <MudText Align="Align.Left"><b>Price:</b> @product.Price  €</MudText>
         <MudButton Class="mt-5" Variant="Variant.Filled">Buy Art</MudButton>
 
 
