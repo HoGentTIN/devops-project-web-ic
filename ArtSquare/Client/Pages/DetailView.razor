@@ -1,4 +1,5 @@
-﻿@page "/detailView"
+﻿@page "/product/{id:int}"
+@inject IProductService ProductService
 
 
 <div class="carousel">
@@ -23,7 +24,7 @@
         </MudCarousel>
     </div>
     <MudText Typo="Typo.button">Ivan Aizovsky</MudText><br />
-    <MudText Typo="Typo.overline">33 x 43 cm.</MudText>
+    <MudText Typo="Typo.overline">@product.Width x @product.Height cm.</MudText>
 </div>
 
 
@@ -32,37 +33,33 @@
 <div class="Desc">
     <MudGrid Class="ml-25">
         <MudItem>
-            <MudText Typo="Typo.h2">"The Winter"</MudText>
+            <MudText Typo="Typo.h2">@product.Name</MudText>
         </MudItem><br />
         <MudItem>
             <MudText>
-                Aivazovsky depicts the winter nature. This is a real fairy tale. In the center of the picture – the road. It is still almost uncovered with snow. It can be assumed that this is an early winter.
-                On the sides of the road are trees.
-                They have already managed to dress up in winter coats.
-                Snow lies on each branch and creates the impression of a certain miracle.The artist uses shades of white, gray, blue, pinkish and even black in his picture. As a result,
-                he manages to convey the special charm of nature and the ringing silence.
+                @product.Desciption
             </MudText>
         </MudItem>
 
     </MudGrid>
-    
+
     <div class="tags">
         <div class="spacing">
             <MudText Typo="Typo.button">Tags:</MudText><br />
-                                                       <MudItem Class="mt-5">
-                                                           <MudChip>"Winter"</MudChip>
-                                                           <MudChip>"Oil"</MudChip>
-                                                           <MudChip >"Fine Arts"</MudChip>
+            <MudItem Class="mt-5">
+                <MudChip>"Winter"</MudChip>
+                <MudChip>"Oil"</MudChip>
+                <MudChip>"Fine Arts"</MudChip>
 
-                                                           <MudChip >"Classic"</MudChip>
-                                                       </MudItem>
+                <MudChip>"Classic"</MudChip>
+            </MudItem>
         </div>
     </div>
 
     <div class="tags">
 
-        <MudText Align="Align.Left"><b>Price:</b> 860.00€</MudText> 
-        <MudButton Class="mt-5" Variant="Variant.Filled" >Buy Art</MudButton>
+        <MudText Align="Align.Left"><b>Price:</b> @product.Price</MudText>
+        <MudButton Class="mt-5" Variant="Variant.Filled">Buy Art</MudButton>
 
 
     </div>
@@ -87,4 +84,14 @@
     void Submit() => visible = false;
 
     private DialogOptions dialogOptions = new() { FullWidth = true };
+
+    private Product product = new Product();
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProductService.GetProduct(Id);
+    }
 }

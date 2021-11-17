@@ -1,0 +1,5 @@
+﻿1;The Scream;150;/Images/art2.jpg;67;80;This Art was made near the beach in Greece, very beatiful
+2;The Rainbow;31;/Images/art2.jpg;30;20;The masterpiece was taken from an adventure in Austria
+3;The Sunset;2000;/Images/art2.jpg;100;200;Sunsets are the most beautiful thing, regarding to an anonymous pull made in 2021
+4;The Submarine;600;/Images/art2.jpg;500;200;Beatles did know what is trendy at their time, their hit made a huge impact
+5;The Flower;40;/Images/art2.jpg;55;34;How could anyone deny the beaty of this!

@@ -13,6 +13,8 @@ namespace ArtSquare.Server.Services.ProductService
         Task<List<Product>> GetProducts();
         Task<Product> GetProduct(int id);
 
+        Task AddProduct(Product p);
+
 
     }
 }

@@ -1,4 +1,5 @@
 @inject IProductService ProductService
+@inject NavigationManager NavManager
 
 @page "/trends"
 @* <div class="background">
@@ -73,7 +74,7 @@
                             </CardHeaderAvatar>
                             <CardHeaderContent>
                                 <MudText Typo="Typo.body1">Artist Name</MudText>
-                                <MudText Typo="Typo.body2">20/4/1969</MudText>
+                                <!-- <MudText Typo="Typo.body2">20/4/1969</MudText> -->
                             </CardHeaderContent>
                         </MudCardHeader>
                         <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
@@ -82,133 +83,14 @@
                             <MudText Typo="Typo.body2">@product.Desciption</MudText>
                         </MudCardContent>
                         <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="Color.Primary" Link="/detailView">Learn More</MudButton>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="() => RedirectDetailView(product.Id)">Learn More</MudButton>
                             <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">5000€</MudPaper>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
                         </MudCardActions>
                     </MudCard>
                 </MudItem>
             }
-            <MudItem>
-                <MudCard Elevation="4">
-                    <MudCardHeader>
-                        <CardHeaderAvatar>
-                            <MudAvatar Color="Color.Secondary">A</MudAvatar>
-                        </CardHeaderAvatar>
-                        <CardHeaderContent>
-                            <MudText Typo="Typo.body1">Artist Name</MudText>
-                            <MudText Typo="Typo.body2">20/4/1969</MudText>
-                        </CardHeaderContent>
-                    </MudCardHeader>
-                    <MudCardMedia Image="/Images/art.jpg" Height="200" Width="300" />
-                    <MudCardContent>
-                        <MudText Typo="Typo.h5">Old Paint</MudText>
-                        <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                        <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                        <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                        <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">5000€</MudPaper>
-                    </MudCardActions>
-                </MudCard>
-            </MudItem>
-            <MudItem>
-                <MudCard Elevation="4">
-                    <MudCardHeader>
-                        <CardHeaderAvatar>
-                            <MudAvatar Color="Color.Secondary">A</MudAvatar>
-                        </CardHeaderAvatar>
-                        <CardHeaderContent>
-                            <MudText Typo="Typo.body1">Artist Name</MudText>
-                            <MudText Typo="Typo.body2">20/4/1969</MudText>
-                        </CardHeaderContent>
-                    </MudCardHeader>
-                    <MudCardMedia Image="/Images/art3.jpg" Height="200" Width="300" />
-                    <MudCardContent>
-                        <MudText Typo="Typo.h5">Old Paint</MudText>
-                        <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                        <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                        <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                        <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">5000€</MudPaper>
-                    </MudCardActions>
-                </MudCard>
-            </MudItem>
-            <MudItem>
-                <MudCard Elevation="4">
-                    <MudCardHeader>
-                        <CardHeaderAvatar>
-                            <MudAvatar Color="Color.Secondary">A</MudAvatar>
-                        </CardHeaderAvatar>
-                        <CardHeaderContent>
-                            <MudText Typo="Typo.body1">Artist Name</MudText>
-                            <MudText Typo="Typo.body2">20/4/1969</MudText>
-                        </CardHeaderContent>
-                    </MudCardHeader>
-                    <MudCardMedia Image="/Images/art2.jpg" Height="200" Width="300" />
-                    <MudCardContent>
-                        <MudText Typo="Typo.h5">Old Paint</MudText>
-                        <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                        <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                        <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                        <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">5000€</MudPaper>
-                    </MudCardActions>
-                </MudCard>
-            </MudItem>
-            <MudItem>
-                <MudCard Elevation="4">
-                    <MudCardHeader>
-                        <CardHeaderAvatar>
-                            <MudAvatar Color="Color.Secondary">A</MudAvatar>
-                        </CardHeaderAvatar>
-                        <CardHeaderContent>
-                            <MudText Typo="Typo.body1">Artist Name</MudText>
-                            <MudText Typo="Typo.body2">20/4/1969</MudText>
-                        </CardHeaderContent>
-                    </MudCardHeader>
-                    <MudCardMedia Image="/Images/art.jpg" Height="200" Width="300" />
-                    <MudCardContent>
-                        <MudText Typo="Typo.h5">Old Paint</MudText>
-                        <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                        <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                        <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                        <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">5000€</MudPaper>
-                    </MudCardActions>
-                </MudCard>
-            </MudItem>
-            <MudItem>
-                <MudCard Elevation="4">
-                    <MudCardHeader>
-                        <CardHeaderAvatar>
-                            <MudAvatar Color="Color.Secondary">A</MudAvatar>
-                        </CardHeaderAvatar>
-                        <CardHeaderContent>
-                            <MudText Typo="Typo.body1">Artist Name</MudText>
-                            <MudText Typo="Typo.body2">20/4/1969</MudText>
-                        </CardHeaderContent>
-                    </MudCardHeader>
-                    <MudCardMedia Image="/Images/art3.jpg" Height="200" Width="300" />
-                    <MudCardContent>
-                        <MudText Typo="Typo.h5">Old Paint</MudText>
-                        <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                        <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                        <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                        <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">5000€</MudPaper>
-                    </MudCardActions>
-                </MudCard>
-            </MudItem>
+            
             <MudItem>
                 <MudPagination BoundaryCount="1" MiddleCount="3" Count="9" @bind-Selected="@_selected" Class="mt-5" Color="Color.Secondary" />
             </MudItem>
@@ -227,7 +109,6 @@
 </div>
 
 @code {
-
     protected override async Task OnInitializedAsync()
     {
         await ProductService.LoadProducts();
@@ -245,5 +126,10 @@
             spacing += 1;
         }
         StateHasChanged();
+    }
+
+    void RedirectDetailView(int id)
+    {
+        NavManager.NavigateTo("/product/"+id);
     }
 }

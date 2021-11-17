@@ -23,7 +23,19 @@ namespace ArtSquare.Server.Controllers
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
             return Ok(await _productService.GetProducts());
-        
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List<Product>>> GetProduct(int id)
+        {
+            return Ok(await _productService.GetProduct(id));
+        }
+
+        [HttpPost]
+        public async Task AddProduct(Product p)
+        {
+            Console.WriteLine("Reached the Constructor");
+            await _productService.AddProduct(p);
         }
     }
 }

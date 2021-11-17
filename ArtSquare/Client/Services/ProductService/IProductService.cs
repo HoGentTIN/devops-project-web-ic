@@ -10,5 +10,8 @@ namespace ArtSquare.Client.Services.ProductService
     {
         List<Product> Products { get; set; }
         Task LoadProducts();
+        Task<Product> GetProduct(int id);
+
+        Task AddProduct(string name, string description, double price, int width, int height);
     }
 }
