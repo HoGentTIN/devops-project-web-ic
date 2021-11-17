@@ -112,7 +112,7 @@ using ArtSquare.Client.Services.ProductService;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 112 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
+#line 110 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
        
     protected override async Task OnInitializedAsync()
     {
