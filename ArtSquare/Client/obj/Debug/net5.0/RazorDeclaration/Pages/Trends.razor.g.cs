@@ -126,11 +126,7 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-<<<<<<< HEAD
-#line 110 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
-=======
-#line 110 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
->>>>>>> origin/dev
+#line 112 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
        
     protected override async Task OnInitializedAsync()
     {
