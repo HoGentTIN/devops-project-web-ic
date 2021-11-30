@@ -1,4 +1,5 @@
 ﻿@page "/uploadArt"
+@attribute [Authorize]
 @inject ISnackbar Snackbar
 @inject IProductService ProductService
 
@@ -56,6 +57,20 @@
                     </MudList>
                 }
             </MudGrid>
+
+            <MudCheckBox @bind-Checked="@IsAuction" Label="Is Auction?" Color="Color.Primary"></MudCheckBox>
+            @if (IsAuction == true)
+            {
+                <MudItem xs="12" sm="6" md="4">
+                    <MudDatePicker Label="Deadline" Editable="false" @bind-Date="date" Placeholder="Select Date" />
+                </MudItem>
+                <MudItem xs="12" sm="6" md="4">
+                    <MudTextField T="string" Label="Minimum Price" HelperText="Add a minimum price" HelperTextOnFocus="false" Variant="Variant.Text" @bind-Text="@MinPrice" @oninput="@((e) => { Height=(string)e.Value;})" />
+                </MudItem>
+                <MudItem xs="12" sm="6" md="4">
+                    <MudTextField T="string" Label="Instant purchase price" HelperText="Add a maximum price" HelperTextOnFocus="false" Variant="Variant.Text" @bind-Text="@MaxPrice" @oninput="@((e) => { Height=(string)e.Value;})" />
+                </MudItem>
+            }
             <div class="up">
                 <MudGrid Class="mt-60">
                     <MudItem Class="mx-auto mt-70 ">
@@ -83,9 +98,13 @@
     private string Price { get; set; } = "";
     private string Width { get; set; } = "";
     private string Height { get; set; } = "";
+    private string MinPrice { get; set; } = "";
+    private string MaxPrice { get; set; } = "";
 
 
     public string TextValue { get; set; }
+    public bool IsAuction { get; set; } = false;
+    DateTime? date = DateTime.Today;
     IList<IBrowserFile> files = new List<IBrowserFile>();
 
 
@@ -100,13 +119,19 @@
 
     async void AddArt()
     {
-        await Add(Name, Description, Convert.ToDouble(Price), Convert.ToInt32(Width), Convert.ToInt32(Height));
+        if (IsAuction == true)
+        {
+
+        }
+        else
+        {
+            await Add(Name, Description, Convert.ToDouble(Price), Convert.ToInt32(Width), Convert.ToInt32(Height), IsAuction);
+        }
     }
 
-    protected async Task Add(string name, string description, double price, int width, int height)
+    protected async Task Add(string name, string description, double price, int width, int height, bool isAuction)
     {
-        Console.WriteLine(name + "#" + description);
-        await ProductService.AddProduct(name, description, price, width, height);
+        await ProductService.AddProduct(name, description, price, width, height, IsAuction);
 
     }
 }

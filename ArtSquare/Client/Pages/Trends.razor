@@ -68,7 +68,6 @@
                 @foreach (var product in ProductService.Products)
                 {
     <MudItem>
-        <div class="card">
     <MudCard Elevation="4" Width="375px" Height="450px" Square="true">
         <MudCardHeader>
             <CardHeaderAvatar>
@@ -90,7 +89,6 @@
             <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
         </MudCardActions>
     </MudCard>
-</div>
                 </MudItem>
             }
             

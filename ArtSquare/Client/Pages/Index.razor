@@ -1,4 +1,6 @@
 ﻿@page "/"
+@inject IProductService ProductService
+
 <div class="parallax-container">
     <div class="background">
         <img class="background__image" src="/Images/art2.jpg" height="500px" width="100%" />
@@ -27,7 +29,7 @@
                         <label class="search-label">Tag</label>
                         <input class="search-input" type="text" placeholder="Enter Tag" autocomplete="on" name="location">
                     </div>
-                        <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary"/>
+                    <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary" />
                 </div>
             </form>
         </div>
@@ -142,77 +144,77 @@
 <MudDivider DividerType="DividerType.Middle" Class="my-12" />
 
 <MudGrid Class="mx-auto mb-10">
-<MudItem >
+    <MudItem>
         <div class="container">
+            <img src="/Images/box.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit the Auction</div></a>
+            </div>
+        </div>
+    </MudItem>
+    <MudItem>
+        <div class="container">
+            <img src="/Images/box2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/trends"><div class="textbox">Visit the Market</div></a>
+            </div>
+        </div>
+    </MudItem>
+    <MudItem>
+        <div class="container">
+            <img src="/Images/box3.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit Young Art</div></a>
+            </div>
+        </div>
+    </MudItem>
+    @* <table>
+            <tr>
+                <td>
+
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+
+            </tr>
+        </table> *@
+</MudGrid>
+
+@* <MudGrid Class="mt-5 mb-5">
+            <MudItem xs="12" >
+                <MudGrid Spacing="@spacing" Justify="Justify.Center">
+                <MudItem >
+                <div class="container">
                 <img src="/Images/box.jpg" alt="Avatar" class="image">
                 <div class="overlay">
                     <a href="/open"><div class="textbox">Visit the Auction</div></a>
                 </div>
                 </div>
-</MudItem>
-<MudItem >
-    <div class="container">
-            <img src="/Images/box2.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-                <a href="/trends"><div class="textbox">Visit the Market</div></a>
-            </div>
-            </div>
-</MudItem>
-<MudItem >
-     <div class="container">
-            <img src="/Images/box3.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-                <a href="/open"><div class="textbox">Visit Young Art</div></a>
-            </div>
-            </div>
-</MudItem>
-    @* <table>
-    <tr>
-        <td>
-            
-
-        </td>
-        <td>
-            
-        </td>
-        <td>
-            
-        </td>
-        
-    </tr>
-</table> *@
-</MudGrid>
-
-@* <MudGrid Class="mt-5 mb-5">
-        <MudItem xs="12" >
-            <MudGrid Spacing="@spacing" Justify="Justify.Center">
-            <MudItem >
-            <div class="container">
-            <img src="/Images/box.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-                <a href="/open"><div class="textbox">Visit the Auction</div></a>
-            </div>
-            </div>
+                </MudItem>
+                <MudItem >
+                <div class="container">
+                <img src="/Images/box2.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <a href="/trends"><div class="textbox">Visit the Market</div></a>
+                </div>
+                </div>
+                </MudItem>
+                <MudItem >
+                <div class="container">
+                <img src="/Images/box3.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <a href="/open"><div class="textbox">Visit Young Art</div></a>
+                </div>
+                </div>
+                </MudItem>
+                </MudGrid>
             </MudItem>
-            <MudItem >
-            <div class="container">
-            <img src="/Images/box2.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-                <a href="/trends"><div class="textbox">Visit the Market</div></a>
-            </div>
-            </div>
-            </MudItem>
-            <MudItem >
-            <div class="container">
-            <img src="/Images/box3.jpg" alt="Avatar" class="image">
-            <div class="overlay">
-                <a href="/open"><div class="textbox">Visit Young Art</div></a>
-            </div>
-            </div>
-            </MudItem>
-            </MudGrid>
-        </MudItem>
-</MudGrid> *@
+    </MudGrid> *@
 
 
 <div class="footer">

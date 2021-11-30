@@ -1292,6 +1292,8 @@ C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Ra
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\UploadArt.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\DetailView.razor.rz.scp.css
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\UploadArt.razor.rz.scp.css
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Shared\ProductList.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\ProductList.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\blazor.boot.json
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\ArtSquare.Client.StaticWebAssets.xml
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\ArtSquare.Client.dll
@@ -1302,9 +1304,11 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll.gz
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll.gz
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.dll.gz
@@ -1499,9 +1503,11 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\ArtSquare.Shared.dll.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -1703,6 +1709,8 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.RazorComponent.input.cache
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Authentication.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Shared\ProductList.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\DetailView.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
@@ -1717,6 +1725,8 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.TagHelpers.output.cache
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.RazorCoreGenerate.cache
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\App.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Authentication.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\ProductList.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\DetailView.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
@@ -1727,9 +1737,11 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\Wg3Ys6Fm.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\+MMoVRMQ.gz
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\qfUK7Hmx.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\oSGUMtoW.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\Vc4DHdc7.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\xc5rIluT.gz
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\j8obeDCA.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\irTh1Tun.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\wO4Qm4YN.gz
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\zNWM1R98.gz
@@ -1938,7 +1950,3 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ref\ArtSquare.Client.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.pdb
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Shared\ProductList.razor.g.cs
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\ProductList.razor.g.cs
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Shared\ProductList.razor.g.cs
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\ProductList.razor.g.cs

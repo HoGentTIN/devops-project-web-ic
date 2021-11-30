@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ArtSquare.Shared.Models
 {
-    public class Product_Tag
+    class ShoppingCart
     {
+
         #region Properties
         public int Id { get; set; }
-        public int P_id { get; set; }
-        public int T_id { get; set; } 
+        public List<Product> Products {get; set;}
+        public UserArt UserArt { get; set; }
+        public double TotalPrice { get; set; }
         #endregion
     }
 }

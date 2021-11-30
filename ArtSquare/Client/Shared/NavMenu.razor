@@ -1,4 +1,8 @@
-﻿<header>
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+<header>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
@@ -11,7 +15,7 @@
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
 
         <div class="title">
-            <h2 ><a href="/" id="link">ArtSquare</a></h2>
+            <h2><a href="/" id="link">ArtSquare</a></h2>
         </div>
         <MudSpacer />
         <MudButton Variant="Variant.Text" Style="@($"color:{Colors.Shades.White};")">Support</MudButton>
@@ -21,7 +25,15 @@
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Elevation="2">
         <MudDrawerHeader>
-            <MudText Typo="Typo.h5" Class="mt-1">Hello, Alexander</MudText>
+            <AuthorizeView>
+                <Authorized>
+                    <MudText Typo="Typo.h5" Class="mt-1">Hello</MudText>
+                    <a href="#" @onclick="BeginSignOut">Log out</a>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="authentication/login">Login/Sign Up</a>
+                </NotAuthorized>
+            </AuthorizeView>
         </MudDrawerHeader>
         @*NavMenu*@
         <MudPaper Width="260px" Height="100%" Class="d-inline-flex py-3" Square="true">
@@ -68,12 +80,18 @@
             DrawerWidthRight = "300px"
         }
     };
-}
-@code {
+
+
     bool _drawerOpen = false;
 
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
+    }
+
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
     }
 }

@@ -13,11 +13,8 @@ namespace ArtSquare.Shared.Models
         public int Rating { get; set; }
         public string Title { get; set; }
         public string Text { get; set; }
-        public int PrpductId { get; set; }
         public Product Product { get; set; }
-        public int ArtistId { get; set; }
         public Artist Artist { get; set; }
-        public int UserArtId { set; get; }
         public UserArt UserArt { set; get; }
         #endregion
 

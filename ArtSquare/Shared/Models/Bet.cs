@@ -12,10 +12,9 @@ namespace ArtSquare.Shared.Models
         public int Id { get; set; }
         public double Amount { get; set; }
         //public int U_id { get; set; }
-        public UserArt UserId { get; set; }
+        public UserArt UserArt { get; set; }
         //public int P_id { get; set; } 
         public Product Product { get; set; }
-        public int ProductID { get; set; }
         #endregion
 
 

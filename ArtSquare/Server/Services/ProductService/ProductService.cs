@@ -10,39 +10,18 @@ namespace ArtSquare.Server.Services.ProductService
     public class ProductService : IProductService
     {
         public List<Product> Products { get; set; } = new List<Product>();
-        //{
-        //    new Product
-        //            {
-        //                Id = 1,
-        //                Name = "The Scream",
-        //                Price = 54.50,
-        //                ImgPath = "/Images/art2.jpg",
-        //                Deadline = DateTime.Now,
-        //                IsAuction = false,
-        //                Width = 600,
-        //                Height = 400,
-        //                Desciption = "This photo was taken in a small village in Istra Croatia.",
+        
 
-        //            },
-
-        //    new Product
-        //    {
-        //        Id = 2,
-        //        Name = "Rainbow",
-        //        Price = 63.90,
-        //        ImgPath = "example.jpg",
-        //        Deadline = DateTime.Now,
-        //        IsAuction = false,
-        //        Width = 200,
-        //        Height = 200,
-        //        Desciption = "This photo was taken in a small village in Istra Croatia.",
-        //    }
-        //};
-
+        public async Task<List<Product>> SetUp()
+        {
+            loadTxt();
+            return Products;
+        }
 
         public async Task<List<Product>> GetProducts()
         {
             loadTxt();
+
             return Products;
 
         }
@@ -59,10 +38,10 @@ namespace ArtSquare.Server.Services.ProductService
         {
             var lineCount = File.ReadLines(@"Products.txt").Count();
             using StreamWriter file = new(@"Products.txt", append: true);
-            await file.WriteLineAsync((lineCount+1) + ";" + p.Name + ";" + p.Price + ";/Images/art2.jpg;" + p.Width + ";" + p.Height + ";"+p.Desciption);
-
+            await file.WriteLineAsync((lineCount+1) + ";" + p.Name + ";" + p.Price + ";/Images/art2.jpg;" + p.Width + ";" + p.Height + ";"+p.Desciption+";"+p.UploadDate.ToString("dd.MM.yyyy")+";"+p.IsAuction);
             file.Close();
-            Console.WriteLine(Products.Count);
+
+            Products.Add(p);
         }
 
         public void loadTxt()
@@ -72,6 +51,7 @@ namespace ArtSquare.Server.Services.ProductService
             foreach (string line in lines)
             {
                 string[] attributes = line.Split(";");
+                string[] date = attributes[7].Split(".");
                 Product p = new Product
                 {
                     Id = Convert.ToInt32(attributes[0]),
@@ -81,6 +61,8 @@ namespace ArtSquare.Server.Services.ProductService
                     Width = Convert.ToInt32(attributes[4]),
                     Height = Convert.ToInt32(attributes[5]),
                     Desciption = attributes[6],
+                    UploadDate = new DateTime(Convert.ToInt16(date[2]), Convert.ToInt16(date[1]), Convert.ToInt16(date[0])),
+                    IsAuction = Convert.ToBoolean(attributes[8])
                 };
                 Products.Add(p);
             }
