@@ -1294,14 +1294,6 @@ C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\sc
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\UploadArt.razor.rz.scp.css
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Shared\ProductList.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\ProductList.razor.g.cs
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.Numerics.dll
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Text.Encoding.CodePages.dll
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Tasks.Dataflow.dll
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.ThreadPool.dll
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Timer.dll
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.dll
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Transactions.dll
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\dotnet.wasm
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\blazor.boot.json
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\ArtSquare.Client.StaticWebAssets.xml
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\ArtSquare.Client.dll
@@ -1656,6 +1648,7 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.InteropServices.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.Intrinsics.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.Loader.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.Numerics.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.Serialization.Formatters.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.Serialization.Json.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Runtime.Serialization.Primitives.dll
@@ -1677,6 +1670,7 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Security.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.ServiceModel.Web.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.ServiceProcess.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Text.Encoding.CodePages.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Text.Encoding.Extensions.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Text.Encoding.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Text.Encodings.Web.dll
@@ -1684,11 +1678,16 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Text.RegularExpressions.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Channels.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Overlapped.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Tasks.Dataflow.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Tasks.Extensions.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Tasks.Parallel.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Tasks.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Thread.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.ThreadPool.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.Timer.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Threading.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Transactions.Local.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Transactions.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.ValueTuple.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Web.HttpUtility.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Web.dll
@@ -1708,6 +1707,7 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\netstandard.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\System.Private.CoreLib.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\dotnet.timezones.blat
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\dotnet.wasm
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\icudt.dat
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\icudt_CJK.dat
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\icudt_EFIGS.dat

@@ -49,7 +49,8 @@ namespace ArtSquare.Server.Services.ProductService
 
             Products.Add(p);*/
             Console.WriteLine(p.ToString());
-            await _context.AddAsync(p);
+            await _context.AddAsync<Product>(p);
+            _context.SaveChanges();
         }
 
         /*public void loadTxt()
