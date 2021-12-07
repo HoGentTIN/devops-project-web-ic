@@ -4,47 +4,55 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using ArtSquare.Server.Data;
 
 namespace ArtSquare.Server.Services.ProductService
 {
     public class ProductService : IProductService
     {
-        public List<Product> Products { get; set; } = new List<Product>();
+        private readonly ArtSquareServerContext _context;
+        public ProductService(ArtSquareServerContext context)
+        {
+            _context = context;
+        }
+        //public List<Product> Products { get; set; } = new List<Product>();
         
 
         public async Task<List<Product>> SetUp()
         {
-            loadTxt();
-            return Products;
+            //loadTxt();
+            return await _context.Products.ToListAsync();
         }
 
         public async Task<List<Product>> GetProducts()
         {
-            loadTxt();
+            //loadTxt();
 
-            return Products;
+            return await _context.Products.ToListAsync();
 
         }
 
 
         public async Task<Product> GetProduct(int id)
         {
-            loadTxt();
-            Product product= Products.FirstOrDefault(p => p.Id == id);
-            return product;
+            //loadTxt();
+            return await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task AddProduct(Product p)
         {
-            var lineCount = File.ReadLines(@"Products.txt").Count();
+            /*var lineCount = File.ReadLines(@"Products.txt").Count();
             using StreamWriter file = new(@"Products.txt", append: true);
             await file.WriteLineAsync((lineCount+1) + ";" + p.Name + ";" + p.Price + ";/Images/art2.jpg;" + p.Width + ";" + p.Height + ";"+p.Desciption+";"+p.UploadDate.ToString("dd.MM.yyyy")+";"+p.IsAuction);
             file.Close();
 
-            Products.Add(p);
+            Products.Add(p);*/
+            Console.WriteLine(p.ToString());
+            await _context.AddAsync(p);
         }
 
-        public void loadTxt()
+        /*public void loadTxt()
         {
             string[] lines = File.ReadAllLines(@"Products.txt");
 
@@ -66,6 +74,6 @@ namespace ArtSquare.Server.Services.ProductService
                 };
                 Products.Add(p);
             }
-        }
+        }*/
     }
 }

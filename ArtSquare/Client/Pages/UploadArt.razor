@@ -2,6 +2,8 @@
 @attribute [Authorize]
 @inject ISnackbar Snackbar
 @inject IProductService ProductService
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject HttpClient Http
 
 
 <MudText Class=" mb-10" Align="Align.Center" Typo="Typo.h3">Upload your art</MudText>

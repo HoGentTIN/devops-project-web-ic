@@ -37,9 +37,9 @@ namespace ArtSquare.Server
             });
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductService, ProductService> ();
             services.AddDbContext<ArtSquareServerContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ArtSquareServerContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
         }
 

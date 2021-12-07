@@ -365,8 +365,10 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\ArtSquare.Server.Views.pdb
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Humanizer.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.dll
@@ -388,6 +390,7 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
@@ -407,6 +410,8 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\b
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Npgsql.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\RestClient.dll
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\RestSharp.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\System.Composition.AttributedModel.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\System.Composition.Convention.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Server\bin\Debug\net5.0\System.Composition.Hosting.dll

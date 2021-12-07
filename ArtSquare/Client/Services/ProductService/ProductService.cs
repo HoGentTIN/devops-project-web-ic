@@ -40,13 +40,13 @@ namespace ArtSquare.Client.Services.ProductService
         {
             var postBody = new Product
             {
-                Id = Products.Max(x => x.Id) + 1,
                 Name = name,
                 Price = price,
                 ImgPath = "/Images/art2.jpg",
                 IsAuction = isAuction,
                 Width = width,
                 Height = height,
+                ArtistId=1,
                 Desciption = description,
                 UploadDate = DateTime.Now
             };

@@ -13,7 +13,9 @@ namespace ArtSquare.Server.Data
             : base(options)
         {
         }
-        public DbSet<Product> Product { get; set; }
+        public DbSet<Artist> Artists { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

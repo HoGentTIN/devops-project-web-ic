@@ -50,16 +50,36 @@
             },
             "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.10, )"
             },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.IdentityModel.Clients.ActiveDirectory": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "MudBlazor": {
               "target": "Package",
               "version": "[5.1.5, )"
+            },
+            "RestClient": {
+              "target": "Package",
+              "version": "[3.446.20952, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.13.0, )"
             },
             "System.Net.Http.Json": {
               "target": "Package",
@@ -131,6 +151,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "RestClient": {
+              "target": "Package",
+              "version": "[3.446.20952, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

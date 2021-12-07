@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace ArtSquare.Shared.Models
 {
-    class ShoppingCart
+    public class ShoppingCart
     {
 
         #region Properties
         public int Id { get; set; }
         public List<Product> Products {get; set;}
         public UserArt UserArt { get; set; }
+        public int UserArtId { get; set; }
         public double TotalPrice { get; set; }
         #endregion
     }

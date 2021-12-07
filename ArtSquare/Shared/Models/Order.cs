@@ -16,6 +16,7 @@ namespace ArtSquare.Shared.Models
         public string DestinationCountry { get; set; }
         public double TotalPrice { get; set; }
         public UserArt UserArt { get; set; }
+        public int UserArtId { get; set; }
 
         public List<Product> Products { get; set; }
 

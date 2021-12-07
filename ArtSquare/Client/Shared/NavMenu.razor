@@ -2,6 +2,7 @@
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @inject NavigationManager Navigation
 @inject SignOutSessionStateManager SignOutManager
+
 <header>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +51,7 @@
                     <MudNavLink Href="/popular" Icon="@Icons.Filled.Groups">Popular</MudNavLink>
                 </MudNavGroup>
                 <MudNavLink Href="/young art" Icon="@Icons.Outlined.ColorLens">Young Art</MudNavLink>
+
                 <MudNavLink Href="/uploadArt" Icon="@Icons.Sharp.Upgrade">Upload Art</MudNavLink>
 
                 <div class="logout">
@@ -93,5 +95,7 @@
     {
         await SignOutManager.SetSignOutState();
         Navigation.NavigateTo("authentication/logout");
+
+       
     }
 }

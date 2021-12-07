@@ -118,6 +118,13 @@ using Microsoft.AspNetCore.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
+#line 5 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
            [Authorize]
 
@@ -133,7 +140,7 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 95 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
+#line 97 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
        
     private string Name { get; set; } = "";
     private string Description { get; set; } = "";
@@ -180,6 +187,7 @@ using Microsoft.AspNetCore.Authorization;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISnackbar Snackbar { get; set; }
     }

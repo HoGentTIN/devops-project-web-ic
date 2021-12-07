@@ -11,10 +11,11 @@ namespace ArtSquare.Shared.Models
         #region Properties
         public int Id { set; get; }
         public DateTime Deadline { set; get; }
-        public Bet HighestBet { set; get; }
+        public int HighestBetId { set; get; }
         public double MinPrice { set; get; }
         public double MaxPrice { set; get; }
         public Product Product { set; get; }
+        public int ProductId { set; get; }
         #endregion
     }
 }
