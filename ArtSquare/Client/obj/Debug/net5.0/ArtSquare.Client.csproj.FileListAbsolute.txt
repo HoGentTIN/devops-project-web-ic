@@ -1728,6 +1728,7 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\DetailView.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\New1.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Open.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Trends.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\UploadArt.razor.g.cs
@@ -1744,6 +1745,7 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\DetailView.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\New1.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Open.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Trends.razor.g.cs
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\UploadArt.razor.g.cs
@@ -1959,6 +1961,7 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\staticwebassets\ArtSquare.Client.StaticWebAssets.xml
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\DetailView.razor.rz.scp.css
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\Index.razor.rz.scp.css
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\New1.razor.rz.scp.css
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\Open.razor.rz.scp.css
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\Trends.razor.rz.scp.css
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\UploadArt.razor.rz.scp.css
@@ -1971,3 +1974,12 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ref\ArtSquare.Client.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\ArtSquare.Client.pdb
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\New2.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\New2.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\New2.razor.rz.scp.css
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\New3.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Shared\NewShared.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\New3.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\NewShared.razor.g.cs
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\New3.razor.rz.scp.css
+C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Shared\NewShared.razor.rz.scp.css

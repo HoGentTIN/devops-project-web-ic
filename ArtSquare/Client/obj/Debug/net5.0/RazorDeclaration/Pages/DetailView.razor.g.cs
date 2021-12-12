@@ -126,7 +126,7 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 77 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\DetailView.razor"
+#line 78 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\DetailView.razor"
        
     private bool arrows = true;
     private bool delimiters = true;

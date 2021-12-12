@@ -16,7 +16,7 @@
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
 
         <div class="title">
-            <h2><a href="/" id="link">ArtSquare</a></h2>
+            <h2><a href="/" id="link">Hooop Gallery</a></h2>
         </div>
         <MudSpacer />
         <MudButton Variant="Variant.Text" Style="@($"color:{Colors.Shades.White};")">Support</MudButton>
@@ -28,11 +28,19 @@
         <MudDrawerHeader>
             <AuthorizeView>
                 <Authorized>
-                    <MudText Typo="Typo.h5" Class="mt-1">Hello</MudText>
-                    <a href="#" @onclick="BeginSignOut">Log out</a>
+                    <div class="flex-column vstack">
+                        <MudText Typo="Typo.h5" Class="mt-1">Hello,  @context.User.Identity.Name</MudText>
+                        
+
+                    </div>
                 </Authorized>
                 <NotAuthorized>
-                    <a href="authentication/login">Login/Sign Up</a>
+                    <div class="flex-column vstack">
+                        <MudText Typo="Typo.h5" Class="mt-1">Hello, Guest</MudText>
+                        <MudButton @onclick="BeginLogIn">Log in</MudButton>
+
+                    </div>
+
                 </NotAuthorized>
             </AuthorizeView>
         </MudDrawerHeader>
@@ -54,9 +62,17 @@
 
                 <MudNavLink Href="/uploadArt" Icon="@Icons.Sharp.Upgrade">Upload Art</MudNavLink>
 
-                <div class="logout">
-                    <MudNavLink class="logout" Href="/logout" Icon="@Icons.Sharp.Logout">Logout</MudNavLink>
-                </div>
+                <AuthorizeView Roles="Admin">
+                    <MudNavLink Icon="@Icons.Sharp.Upgrade">Manage Artists</MudNavLink>
+                </AuthorizeView>
+
+                <AuthorizeView>
+                    <Authorized>
+                        <div class="logout">
+                            <MudNavLink @onclick="BeginSignOut" class="logout" Icon="@Icons.Sharp.Logout">Logout</MudNavLink>
+                        </div>
+                    </Authorized>
+                </AuthorizeView>
             </MudNavMenu>
         </MudPaper>
     </MudDrawer>
@@ -96,6 +112,13 @@
         await SignOutManager.SetSignOutState();
         Navigation.NavigateTo("authentication/logout");
 
-       
+
+    }
+
+    private async Task BeginLogIn(MouseEventArgs args)
+    {
+        Navigation.NavigateTo("authentication/login");
+
+
     }
 }

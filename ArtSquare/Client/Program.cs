@@ -11,7 +11,7 @@ using MudBlazor.Services;
 using ArtSquare.Client.Services.ProductService;
 
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
-
+using ArtSquare.Client.Shared;
 
 namespace ArtSquare.Client
 {
@@ -30,7 +30,7 @@ namespace ArtSquare.Client
             {
                 builder.Configuration.Bind("Auth0", options.ProviderOptions);
                 options.ProviderOptions.ResponseType = "code";
-            });
+            }).AddAccountClaimsPrincipalFactory<ArrayClaimsPrincipalFactory<RemoteUserAccount>>();
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
