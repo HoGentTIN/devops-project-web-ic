@@ -6,9 +6,8 @@ pipeline {
     stages {
         stage('configure'){
            steps{
-               sh 'git checkout dev'
                sh 'git stash'
-               sh 'git pull origin dev'
+               sh 'git pull'
             }
         }
         stage('Restore packages'){
