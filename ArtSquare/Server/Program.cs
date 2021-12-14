@@ -16,9 +16,11 @@ namespace ArtSquare.Server
     {
         public static void Main(string[] args)
         {
-            
+
 
             var host = CreateHostBuilder(args).Build();
+
+            
 
             CreateDbIfNotExists(host);
 

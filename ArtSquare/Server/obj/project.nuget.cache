@@ -1,10 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "+yQOFvq3rTADmnFDfJlpGoVbQOzGF2QyCGh9Ohg185/cL4FtmwqBfq0X1HYqb4d4sR4xFiHbKlcYhbaJjI4Q/g==",
+  "dgSpecHash": "SmvWvnGP+0kwa0RQ/MwhoI1LELq5D1SK2CmrGcfWxnGBt2iTiSP9Pu0iS6JxH98G2cI9iU2MClCVhfo1jbYiQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Server\\ArtSquare.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\szabo\\.nuget\\packages\\auth0.authenticationapi\\7.9.0\\auth0.authenticationapi.7.9.0.nupkg.sha512",
+    "C:\\Users\\szabo\\.nuget\\packages\\auth0.core\\7.9.0\\auth0.core.7.9.0.nupkg.sha512",
+    "C:\\Users\\szabo\\.nuget\\packages\\auth0.managementapi\\7.9.0\\auth0.managementapi.7.9.0.nupkg.sha512",
+    "C:\\Users\\szabo\\.nuget\\packages\\auth0net.dependencyinjection\\1.5.0\\auth0net.dependencyinjection.1.5.0.nupkg.sha512",
     "C:\\Users\\szabo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\szabo\\.nuget\\packages\\lazycache\\2.1.3\\lazycache.2.1.3.nupkg.sha512",
+    "C:\\Users\\szabo\\.nuget\\packages\\lazycache.aspnetcore\\2.1.3\\lazycache.aspnetcore.2.1.3.nupkg.sha512",
     "C:\\Users\\szabo\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\szabo\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\szabo\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",

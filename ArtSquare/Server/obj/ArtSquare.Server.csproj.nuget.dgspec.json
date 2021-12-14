@@ -159,6 +159,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Auth0Net.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Cookies": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -194,6 +198,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.12, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

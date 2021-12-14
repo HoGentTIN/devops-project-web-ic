@@ -14,6 +14,12 @@ namespace ArtSquare.Server.Data
         {
         }
         public DbSet<Artist> Artists { get; set; }
+        public DbSet<Auction> Auctions { get; set; }
+        public DbSet<Bet> Bets { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<UserArt> UserArts { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Product> Products { get; set; }
 

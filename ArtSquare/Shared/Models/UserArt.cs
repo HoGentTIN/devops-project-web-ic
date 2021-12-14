@@ -17,7 +17,7 @@ namespace ArtSquare.Shared.Models
         public int Zipcode { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public bool IsAuthenticated { get; set; }
+        public bool Blocked { get; set; }
 
         #endregion
 

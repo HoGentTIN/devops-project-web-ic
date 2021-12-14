@@ -60,16 +60,19 @@
                 </MudNavGroup>
                 <MudNavLink Href="/young art" Icon="@Icons.Outlined.ColorLens">Young Art</MudNavLink>
 
-                <MudNavLink Href="/uploadArt" Icon="@Icons.Sharp.Upgrade">Upload Art</MudNavLink>
+                <AuthorizeView Roles="Artist">
+                        <MudNavLink Href="/uploadArt" Icon="@Icons.Sharp.Upgrade">Upload Art</MudNavLink>
+                </AuthorizeView>
+
 
                 <AuthorizeView Roles="Admin">
-                    <MudNavLink Icon="@Icons.Sharp.Upgrade">Manage Artists</MudNavLink>
+                    <MudNavLink Href="/manageUser" Icon="@Icons.Filled.ManageAccounts">Manage Artists</MudNavLink>
                 </AuthorizeView>
 
                 <AuthorizeView>
                     <Authorized>
                         <div class="logout">
-                            <MudNavLink @onclick="BeginSignOut" class="logout" Icon="@Icons.Sharp.Logout">Logout</MudNavLink>
+                            <MudNavLink @onclick="@((e) => BeginSignOut())" class="logout" Icon="@Icons.Sharp.Logout">Logout</MudNavLink>
                         </div>
                     </Authorized>
                 </AuthorizeView>
@@ -107,7 +110,7 @@
         _drawerOpen = !_drawerOpen;
     }
 
-    private async Task BeginSignOut(MouseEventArgs args)
+    private async Task BeginSignOut()
     {
         await SignOutManager.SetSignOutState();
         Navigation.NavigateTo("authentication/logout");

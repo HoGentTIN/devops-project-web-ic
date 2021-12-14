@@ -132,7 +132,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 85 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Shared\NavMenu.razor"
+#line 88 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Shared\NavMenu.razor"
       
     MudTheme MyCustomTheme = new MudTheme()
     {
@@ -158,7 +158,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
         _drawerOpen = !_drawerOpen;
     }
 
-    private async Task BeginSignOut(MouseEventArgs args)
+    private async Task BeginSignOut()
     {
         await SignOutManager.SetSignOutState();
         Navigation.NavigateTo("authentication/logout");

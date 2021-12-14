@@ -38,7 +38,6 @@ namespace ArtSquare.Server.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Artist")]
         public async Task AddProduct(Product p)
         {
             await _productService.AddProduct(p);

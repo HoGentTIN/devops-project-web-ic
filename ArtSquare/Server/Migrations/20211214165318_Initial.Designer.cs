@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ArtSquare.Server.Migrations
 {
     [DbContext(typeof(ArtSquareServerContext))]
-    [Migration("20211205235700_ManyToMany")]
-    partial class ManyToMany
+    [Migration("20211214165318_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,6 +60,60 @@ namespace ArtSquare.Server.Migrations
                     b.ToTable("Artists");
                 });
 
+            modelBuilder.Entity("ArtSquare.Shared.Models.Auction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("HighestBetId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("MaxPrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("MinPrice")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Auctions");
+                });
+
+            modelBuilder.Entity("ArtSquare.Shared.Models.Bet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserArtId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserArtId");
+
+                    b.ToTable("Bets");
+                });
+
             modelBuilder.Entity("ArtSquare.Shared.Models.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -89,7 +143,7 @@ namespace ArtSquare.Server.Migrations
 
                     b.HasIndex("UserArtId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("ArtSquare.Shared.Models.Product", b =>
@@ -133,6 +187,42 @@ namespace ArtSquare.Server.Migrations
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("ArtSquare.Shared.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ArtistId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserArtId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArtistId");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserArtId");
+
+                    b.ToTable("Reviews");
+                });
+
             modelBuilder.Entity("ArtSquare.Shared.Models.ShoppingCart", b =>
                 {
                     b.Property<int>("Id")
@@ -150,7 +240,7 @@ namespace ArtSquare.Server.Migrations
 
                     b.HasIndex("UserArtId");
 
-                    b.ToTable("ShoppingCart");
+                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("ArtSquare.Shared.Models.Tag", b =>
@@ -175,6 +265,9 @@ namespace ArtSquare.Server.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Blocked")
+                        .HasColumnType("bit");
+
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
@@ -187,9 +280,6 @@ namespace ArtSquare.Server.Migrations
                     b.Property<string>("Firstname")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsAuthenticated")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Lastname")
                         .HasColumnType("nvarchar(max)");
 
@@ -201,7 +291,7 @@ namespace ArtSquare.Server.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserArt");
+                    b.ToTable("UserArts");
                 });
 
             modelBuilder.Entity("OrderProduct", b =>
@@ -249,6 +339,36 @@ namespace ArtSquare.Server.Migrations
                     b.ToTable("ProductTag");
                 });
 
+            modelBuilder.Entity("ArtSquare.Shared.Models.Auction", b =>
+                {
+                    b.HasOne("ArtSquare.Shared.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("ArtSquare.Shared.Models.Bet", b =>
+                {
+                    b.HasOne("ArtSquare.Shared.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ArtSquare.Shared.Models.UserArt", "UserArt")
+                        .WithMany()
+                        .HasForeignKey("UserArtId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("UserArt");
+                });
+
             modelBuilder.Entity("ArtSquare.Shared.Models.Order", b =>
                 {
                     b.HasOne("ArtSquare.Shared.Models.UserArt", "UserArt")
@@ -269,6 +389,31 @@ namespace ArtSquare.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Artist");
+                });
+
+            modelBuilder.Entity("ArtSquare.Shared.Models.Review", b =>
+                {
+                    b.HasOne("ArtSquare.Shared.Models.Artist", "Artist")
+                        .WithMany()
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ArtSquare.Shared.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
+                    b.HasOne("ArtSquare.Shared.Models.UserArt", "UserArt")
+                        .WithMany()
+                        .HasForeignKey("UserArtId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Artist");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("UserArt");
                 });
 
             modelBuilder.Entity("ArtSquare.Shared.Models.ShoppingCart", b =>

@@ -35,6 +35,17 @@ namespace ArtSquare.Server
                 options.Authority = Configuration["Auth0:Authority"];
                 options.Audience = Configuration["Auth0:ApiIdentifier"];
             });
+
+            services.AddAuth0AuthenticationClient(config =>
+            {
+                config.Domain = Configuration["Auth0:Authority"];
+                config.ClientId = Configuration["Auth0:ClientId"];
+                config.ClientSecret = Configuration["Auth0:ClientSecret"];
+            });
+
+            services.AddAuth0ManagementClient().AddManagementAccessToken();
+
+
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddScoped<IProductService, ProductService> ();

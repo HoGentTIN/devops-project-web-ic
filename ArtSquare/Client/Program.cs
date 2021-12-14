@@ -24,7 +24,21 @@ namespace ArtSquare.Client
 
 
 
+            builder.Services.AddHttpClient("ArtAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
+                    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
+
+            builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>()
+                   .CreateClient("ArtApi"));
+
+
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+           
+            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+            builder.Services.AddScoped<IProductService, ProductService>();
+
+            builder.Services.AddMudServices();
 
             builder.Services.AddOidcAuthentication(options =>
             {
@@ -32,11 +46,6 @@ namespace ArtSquare.Client
                 options.ProviderOptions.ResponseType = "code";
             }).AddAccountClaimsPrincipalFactory<ArrayClaimsPrincipalFactory<RemoteUserAccount>>();
 
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
-            builder.Services.AddScoped<IProductService, ProductService>();
-
-            builder.Services.AddMudServices();
             await builder.Build().RunAsync();
         }
     }
