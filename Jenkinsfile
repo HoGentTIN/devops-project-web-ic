@@ -32,6 +32,8 @@ pipeline {
         }
         stage('Deploy'){
              steps{
+                 sh 'export BUILD_ID=dontKillMe'
+                 sh 'JENKINS_NODE_COOKIE=dontKillMe'
                sh '''for pid in $(lsof -t -i:5000); do
                        kill -9 $pid
                done'''
