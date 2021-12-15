@@ -13,9 +13,10 @@ pipeline {
     }
     post {
         always {
-            step([$class: 'Mailer',
-  notifyEveryUnstableBuild: true,
-  recipients: emailextrecipients([culprits(), requestor()])])
+            emailext body: 'Test Message',
+            recipientProviders: [developers(), requestor()],
+            subject: 'Test Subject',
+            to: requestor()
 
         }
     }
