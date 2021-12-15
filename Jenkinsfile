@@ -37,7 +37,7 @@ pipeline {
                sh '''for pid in $(lsof -t -i:5000); do
                        kill -9 $pid
                done'''
-               sh 'BUILD_ID=dontKillMe nohup dotnet run --property:Configuration=Release --project=ArtSquare/Server --urls="http://192.168.56.20:5000" > /dev/null 2>&1 &'
+               sh 'BUILD_ID=dontKillMe nohup dotnet run --property:Configuration=Release --project=ArtSquare/Server --urls="https://192.168.56.20:5000" > /dev/null 2>&1 &'
              }
         }
     }
