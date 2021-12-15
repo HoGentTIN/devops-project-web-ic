@@ -47,7 +47,7 @@ pipeline {
                 emailext (body: '${DEFAULT_CONTENT}',
                           recipientProviders: [[$class: 'CulpritsRecipientProvider']],
                           subject: '${DEFAULT_SUBJECT}',
-                          to: 'benjamin.bappel@gmail.com')
+                          to: 'benjamin.bappel@student.hogent.be')
             }
         }
         
