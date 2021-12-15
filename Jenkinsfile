@@ -12,12 +12,33 @@ pipeline {
         }
     }
     post {
-        always {
-            emailext body: developers(),
-            recipientProviders: [developers(), requestor()],
-            subject: 'Test Subject',
-            to: 'benjamin.bappel@gmail.com'
-
+               success {
+            script{ emailext (body: '${DEFAULT_CONTENT}',
+                              recipientProviders: [[$class: 'CulpritsRecipientProvider']],
+                              subject: '${DEFAULT_SUBJECT}',
+                              to: 'benjamin.bappel@gmail.com')
+            }
+        }
+        failure {
+            script{ emailext (body: '${DEFAULT_CONTENT}',
+                              recipientProviders: [[$class: 'CulpritsRecipientProvider']],
+                              subject: '${DEFAULT_SUBJECT}',
+                              to: 'benjamin.bappel@gmail.com')
+            }
+        }
+        unstable {
+            script{ emailext (body: '${DEFAULT_CONTENT}',
+                              recipientProviders: [[$class: 'CulpritsRecipientProvider']],
+                              subject: '${DEFAULT_SUBJECT}',
+                              to: 'benjamin.bappel@gmail.com')
+            }
+        }
+        changed {
+            script{ emailext (body: '${DEFAULT_CONTENT}',
+                              recipientProviders: [[$class: 'CulpritsRecipientProvider']],
+                              subject: '${DEFAULT_SUBJECT}',
+                              to: 'benjamin.bappel@gmail.com')
+            }
         }
     }
 }
