@@ -1,3 +1,50 @@
+/* /Pages/ArtistView.razor.rz.scp.css */
+
+/* img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+} */
+body[b-lxf2248zhz] {
+    background: white;
+    /* font-family: 'Andada Pro', serif; */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.footer[b-lxf2248zhz] {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00ACC1;
+    color: white;
+    text-align: center;
+}
+
+
+.profile[b-lxf2248zhz] {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 5%;
+}
+
+.container[b-lxf2248zhz] {
+    margin-left: 10%;
+}
+
+.header[b-lxf2248zhz] {
+}
+
+.text[b-lxf2248zhz] {
+    margin-left: 30%;
+}
+
+.image[b-lxf2248zhz] {
+    width: 200px;
+    height: 200px;
+}
 /* /Pages/DetailView.razor.rz.scp.css */
 
 .footer[b-5mridw1b76] {
@@ -294,24 +341,6 @@ table[b-fo21lasvq5] {
     text-align: center;
   }
  
-/* /Pages/New1.razor.rz.scp.css */
-body[b-8ijt4uqpyi] {
-    background-color: black;
-}
-h3[b-8ijt4uqpyi]{
-    color: blue;
-}
-.footer[b-8ijt4uqpyi] {
-    margin-top: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 3.5rem;
-    background-color: #00ACC1;
-    color: white;
-    text-align: center;
-}
-
 /* /Pages/New2.razor.rz.scp.css */
 body[b-ecqq8gxeti] {
 }
@@ -324,6 +353,9 @@ body[b-7fzu0s62s2] {
 h3[b-7fzu0s62s2]{
     color: green;
 }
+.text[b-7fzu0s62s2]{
+}
+
 /* /Pages/Open.razor.rz.scp.css */
 
 .container[b-drcnif5294] {

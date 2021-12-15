@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj": {}
+    "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj": {
+    "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj",
+        "projectUniqueName": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj",
         "projectName": "ArtSquare.Client",
-        "projectPath": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj",
-        "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Client\\obj\\",
+        "projectPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\ArtSquare.Client.csproj",
+        "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj": {
-                "projectPath": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj"
+              "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj": {
+                "projectPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj"
               }
             }
           }
@@ -111,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -120,17 +120,17 @@
         }
       }
     },
-    "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj": {
+    "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj",
         "projectName": "ArtSquare.Shared",
-        "projectPath": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj",
-        "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\szabo\\Desktop\\Löschen später\\devops-project-web-ic\\ArtSquare\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\ArtSquare.Shared.csproj",
+        "packagesPath": "C:\\Users\\senad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\senad\\DevOps\\devops-project-web-ic\\ArtSquare\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\senad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -176,7 +176,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

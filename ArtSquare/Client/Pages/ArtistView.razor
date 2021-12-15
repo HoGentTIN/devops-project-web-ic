@@ -1,0 +1,77 @@
+﻿@page "/artistView"
+
+@* <div class="background">
+        <img class="background__image" src="/Images/art2.jpg" height="300px" width="100%" />
+    </div> *@
+
+
+<div class="container">
+
+
+    <MudText Typo="Typo.h1" Class="mb-5">Artist</MudText>
+
+
+    <div class="block">
+        <MudItem xs="12" sm="6">
+            <img class="profile" src="/Images/peter.jpg" />
+        </MudItem>
+    </div>
+    <div class="header">
+        <div class="text">
+            <MudItem xs="12" sm="6">
+                <MudText Class="mb-7" Typo="Typo.h2">Peter Lustig</MudText>
+            </MudItem>
+            <MudItem xs="12" sm="10">
+                <MudText Class="ml-20" Typo="Typo.body1">
+                    For over a decade Aivazovsky has been one of the biggest stars in abstract art.
+                    his way of combining different elements is unique and he received many prices for his works ...                    his way of combining different elements is unique and he received many prices for his works ...
+                    his way of combining different elements is unique and he received many prices for his works ...
+
+                </MudText>
+            </MudItem>
+
+            <MudItem Class="mt-10">
+                <MudText Typo="Typo.h5">Rating: <MudRating SelectedValue="2" Size="Size.Large" Class="ml-10" /></MudText>
+
+            </MudItem>
+
+        </div>
+        <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+        <MudItem Class="mt-10">
+            <MudText Typo="Typo.h4" Class="mb-5"> Recent Works:</MudText>
+
+        </MudItem>
+
+        <MudGrid Class="mx-auto mb-10">
+            <MudItem>
+                <div class="work">
+                    <img src="/Images/box.jpg" alt="Avatar" class="image">
+                </div>
+            </MudItem>
+            <MudItem>
+                <div class="work">
+                    <img src="/Images/box2.jpg" alt="Avatar" class="image">
+                </div>
+            </MudItem>
+            <MudItem>
+                <div class="work">
+                    <img src="/Images/box3.jpg" alt="Avatar" class="image">
+                </div>
+            </MudItem>
+            <MudItem>
+                <div class="work">
+                    <img src="/Images/box3.jpg" alt="Avatar" class="image">
+                </div>
+            </MudItem>
+        </MudGrid>
+    </div>
+
+
+</div>
+
+
+
+@code {
+
+
+}

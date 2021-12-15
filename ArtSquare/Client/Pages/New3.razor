@@ -1,7 +1,71 @@
 ﻿@page "/new3"
 
-<h3>New3</h3>
+<MudThemeProvider Theme="MyCustomTheme" />
+
+<MudGrid>
+    <MudItem xs="12">
+        <MudGrid Justify="Justify.Center">
+
+            <MudItem>
+                <MudPaper Style="height:600px;width:300px;" Class="d-flex justify-space-around py-2 px-1 mt-6 mud-theme-dark " Elevation="8" Square="true">
+                    <div class="text">
+                        <MudText Typo="Typo.h4" Class="mt-5" Align="Align.Center">Novice</MudText>
+                        <MudText Typo="Typo.h5" Class="mt-5" Align="Align.Center">10€/Month</MudText>
+                        <MudButton Variant="Variant.Filled" Color="Color.Warning" Square="true" Class="pa-2 mx-13 mt-5 ">Upgrade</MudButton>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-13 mt-5 " Elevation="5">5 Pictures</MudText>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-2 mt-3 " Elevation="5">Upload up to 6 Artpieces</MudText>
+                    </div>
+                </MudPaper>
+
+            </MudItem>
+
+            <MudItem>
+                <MudPaper Style="height:600px;width:300px;" Class="d-flex justify-space-around py-2 px-1 mt-6 mud-theme-primary" Elevation="9" Square="true">
+                    <div class="text">
+                        <MudText Typo="Typo.h4" Class="mt-5" Align="Align.Center">Professional</MudText>
+                        <MudText Typo="Typo.h5" Class="mt-5" Align="Align.Center">20€/Month</MudText>
+                        <MudButton Variant="Variant.Filled" Color="Color.Error" Square="true" Class="pa-2 mx-13 mt-5 ">Upgrade</MudButton>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-13 mt-5 " Elevation="5">10 Pictures</MudText>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-2 mt-3 " Elevation="5">Upload up to 15 Artpieces</MudText>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-8 mt-3 " Elevation="5">Monthly Highlight</MudText>
+
+
+
+
+
+                    </div>
+                </MudPaper>
+            </MudItem>
+            <MudItem>
+                <MudPaper Style="height:600px;width:300px;" Class="d-flex justify-space-around py-2 px-1 mt-6 mud-theme-secondary" Elevation="10" Square="true">
+                    <div class="text">
+                        <MudText Typo="Typo.h4" Class="mt-5" Align="Align.Center">Master</MudText>
+                        <MudText Typo="Typo.h5" Class="mt-5" Align="Align.Center">40€/Month</MudText>
+                        <MudButton Variant="Variant.Filled" Color="Color.Info" Square="true" Class="pa-2 mx-13 mt-5 ">Upgrade</MudButton>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-13 mt-5 " Elevation="5">15 Pictures</MudText>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-2 mt-3 " Elevation="5">Upload up to 30 Artpieces</MudText>
+                        <MudText Typo="Typo.subtitle2" Class="pa-2 mx-8 mt-3 " Elevation="5">Weekly Highlight</MudText>
+
+                    </div>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+</MudGrid>
+
 
 @code {
-
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.BlueGrey.Lighten3,
+            Secondary = Colors.Yellow.Accent4,
+            Dark = Colors.Brown.Lighten1,
+            Warning = Colors.Brown.Lighten3,
+            Error = Colors.BlueGrey.Lighten4,
+            Info = Colors.Yellow.Lighten2,
+            
+        }
+    };
 }

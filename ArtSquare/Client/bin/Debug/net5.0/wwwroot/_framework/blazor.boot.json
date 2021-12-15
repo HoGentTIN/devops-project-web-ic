@@ -217,13 +217,13 @@
       "mscorlib.dll": "sha256-+dB3Q0YubUPF1oZDMVZn6ZCiRkzRomtLoq51T5FocJk=",
       "netstandard.dll": "sha256-dOHF0zANIyA4WS496iWrAkTuEFWSWrXJjZj2pQQHrMA=",
       "System.Private.CoreLib.dll": "sha256-C96+zv+mWW0XzMG520oRgAG1lHVY8xzWGc6oc6rFjws=",
-      "ArtSquare.Shared.dll": "sha256-9fP6vHdTdBIyKh2uAqAW8g5p\/hRet1aH1j+3pUoTpI8=",
-      "ArtSquare.Client.dll": "sha256-ZkoY9jVplWkdsMOzge7y304PP91YdHG4AOekhNZh6B4="
+      "ArtSquare.Shared.dll": "sha256-kE3HAL8cvEdOEvIgPjQ39PPPjSb6K4o9uIx6Tf9YGpo=",
+      "ArtSquare.Client.dll": "sha256-qkE0O\/8sF5+ZJbIiG0eFwIjux4d67m1luBtq9HjOLpE="
     },
     "lazyAssembly": null,
     "pdb": {
-      "ArtSquare.Shared.pdb": "sha256-1Gp6lpFC8B25iD5ZpyIQpCEI+Gnk0oFoZr0unMPFXcs=",
-      "ArtSquare.Client.pdb": "sha256-3Z1EWLF\/QI3zB7snSS1lviorGEgcRAPQ5cYflv19Zlk="
+      "ArtSquare.Shared.pdb": "sha256-CdAu6tasVN+gmxqVDexhkQQ828Lcj1d\/b8TAlADPM1Q=",
+      "ArtSquare.Client.pdb": "sha256-9AKVXMFJbZJ4pj6KETS9BugX7aExqS3c3WSZygfo+GE="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ir9YCVnnk7popgsYUkvitfGA4WpkP1ydPh\/ENHnxGys=",
