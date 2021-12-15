@@ -34,6 +34,7 @@ namespace ArtSquare.Server
             {
                 options.Authority = Configuration["Auth0:Authority"];
                 options.Audience = Configuration["Auth0:ApiIdentifier"];
+                
             });
 
             services.AddAuth0AuthenticationClient(config =>
@@ -45,12 +46,15 @@ namespace ArtSquare.Server
 
             services.AddAuth0ManagementClient().AddManagementAccessToken();
 
+            services.AddHttpContextAccessor();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddScoped<IProductService, ProductService> ();
             services.AddDbContext<ArtSquareServerContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
 
         }
 
@@ -84,5 +88,6 @@ namespace ArtSquare.Server
                 endpoints.MapFallbackToFile("index.html");
             });
         }
+
     }
 }

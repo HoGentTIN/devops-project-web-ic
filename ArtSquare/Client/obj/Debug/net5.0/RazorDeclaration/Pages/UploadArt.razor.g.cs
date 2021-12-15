@@ -118,7 +118,7 @@ using Microsoft.AspNetCore.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
+#line 6 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 
 #line default
@@ -140,7 +140,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 97 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
+#line 98 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
        
     private string Name { get; set; } = "";
     private string Description { get; set; } = "";
@@ -175,6 +175,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
         else
         {
             await Add(Name, Description, Convert.ToDouble(Price), Convert.ToInt32(Width), Convert.ToInt32(Height), IsAuction);
+            Navigation.NavigateTo("trends");
         }
     }
 
@@ -188,6 +189,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager Navigation { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private ISnackbar Snackbar { get; set; }
     }

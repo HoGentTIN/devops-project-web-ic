@@ -1,4 +1,10 @@
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Identity;
+
+@inject HttpClient Http
 @inject IProductService ProductService
+@inject IUserService UserService
 @inject NavigationManager NavManager
 
 @page "/trends"
@@ -42,6 +48,7 @@
 <MudDivider DividerType="DividerType.Middle" Class="my-10" />
 
 <div class="h1">
+
     <MudText Typo="Typo.h1">Welcome to the Trends</MudText>
     <div class="para">
         <MudText Typo="Typo.body1">
@@ -62,43 +69,44 @@
 </div>
 
 <MudGrid Class="mt-5">
-    <MudItem xs="12" >
-        
-            <MudGrid Spacing="@spacing" Justify="Justify.Center">
-                @foreach (var product in ProductService.Products)
-                {
-    <MudItem>
+    <MudItem xs="12">
 
-    <MudCard Elevation="4" Width="375px" Height="450px" Square="true" Class="mr-5">
+        <MudGrid Spacing="@spacing" Justify="Justify.Center">
+            @foreach (var product in ProductService.Products)
+            {
+                <MudItem>
 
-        <MudCardHeader>
-            <CardHeaderAvatar>
-                <MudAvatar Color="Color.Secondary">A</MudAvatar>
-            </CardHeaderAvatar>
-            <CardHeaderContent>
-                <MudText Typo="Typo.body1">Artist Name</MudText>
-                <!-- <MudText Typo="Typo.body2">20/4/1969</MudText> -->
-            </CardHeaderContent>
-        </MudCardHeader>
-        <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
-        <MudCardContent>
-            <MudText Typo="Typo.h5">@product.Name</MudText>
-            <MudText Typo="Typo.body2">@product.Desciption</MudText>
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="() => RedirectDetailView(product.Id)">Learn More</MudButton>
-            <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
-        </MudCardActions>
-    </MudCard>
+                    <MudCard Elevation="4" Width="375px" Height="450px" Square="true" Class="mr-5">
+
+                        <MudCardHeader>
+                            <CardHeaderAvatar>
+                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                            </CardHeaderAvatar>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.body1">Artist Name</MudText>
+                                <!-- <MudText Typo="Typo.body2">20/4/1969</MudText> -->
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
+                        <MudCardContent>
+                            <MudText Typo="Typo.h5">@product.Name</MudText>
+                            <MudText Typo="Typo.body2">@product.Desciption</MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="() => RedirectDetailView(product.Id)">Learn More</MudButton>
+                            <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
+                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
+                        </MudCardActions>
+                    </MudCard>
                 </MudItem>
             }
-            
-            
+
+
         </MudGrid>
     </MudItem>
-    
+
 </MudGrid>
+
 
 
 
@@ -113,6 +121,8 @@
     protected override async Task OnInitializedAsync()
     {
         await ProductService.LoadProducts();
+        //user = await Http.GetStringAsync("user/id");
+
     }
     public int spacing { get; set; } = 5;
     void AddSpacing()
@@ -130,6 +140,6 @@
 
     void RedirectDetailView(int id)
     {
-        NavManager.NavigateTo("/product/"+id);
+        NavManager.NavigateTo("/product/" + id);
     }
 }

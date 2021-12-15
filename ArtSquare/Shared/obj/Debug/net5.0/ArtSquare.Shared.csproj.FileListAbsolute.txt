@@ -33,4 +33,3 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Shared\o
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Shared\obj\Debug\net5.0\ref\ArtSquare.Shared.dll
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.pdb
-C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Shared\obj\Debug\net5.0\ArtSquare.Shared.csproj.AssemblyReference.cache

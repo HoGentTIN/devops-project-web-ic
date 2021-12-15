@@ -104,15 +104,29 @@ using ArtSquare.Client.Services.ProductService;
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 15 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 15 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
-using Microsoft.AspNetCore.Authorization;
+#line 2 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
@@ -126,11 +140,13 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 112 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
+#line 120 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
        
     protected override async Task OnInitializedAsync()
     {
         await ProductService.LoadProducts();
+        //user = await Http.GetStringAsync("user/id");
+
     }
     public int spacing { get; set; } = 5;
     void AddSpacing()
@@ -148,14 +164,16 @@ using Microsoft.AspNetCore.Authorization;
 
     void RedirectDetailView(int id)
     {
-        NavManager.NavigateTo("/product/"+id);
+        NavManager.NavigateTo("/product/" + id);
     }
 
 #line default
 #line hidden
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IUserService UserService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

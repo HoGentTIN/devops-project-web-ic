@@ -38,6 +38,8 @@ namespace ArtSquare.Client
 
             builder.Services.AddScoped<IProductService, ProductService>();
 
+            builder.Services.AddScoped<IUserService, UserService>();
+
             builder.Services.AddMudServices();
 
             builder.Services.AddOidcAuthentication(options =>

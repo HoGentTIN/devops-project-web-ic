@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
             "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[5.0.0, )"

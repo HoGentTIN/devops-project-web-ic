@@ -2,6 +2,7 @@
 @attribute [Authorize]
 @inject ISnackbar Snackbar
 @inject IProductService ProductService
+@inject NavigationManager Navigation
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @inject HttpClient Http
 
@@ -128,6 +129,7 @@
         else
         {
             await Add(Name, Description, Convert.ToDouble(Price), Convert.ToInt32(Width), Convert.ToInt32(Height), IsAuction);
+            Navigation.NavigateTo("trends");
         }
     }
 
