@@ -4,7 +4,7 @@ pipeline {
         githubPush()
     }
     stages {
-        stage('configure'){
+                stage('configure'){
            steps{
                sh 'git stash'
                sh 'git pull'
@@ -35,8 +35,21 @@ pipeline {
                sh '''for pid in $(lsof -t -i:5000); do
                        kill -9 $pid
                done'''
-               sh 'nohup dotnet run --property:Configuration=Release --project=ArtSquare/Server --urls="https://192.168.56.20:5000" > /dev/null 2>&1 &'
+                 sh 'export BUILD_ID=dontKillMe'
+                 sh 'export JENKINS_NODE_COOKIE=dontKillMe'
+               sh 'JENKINS_NODE_COOKIE=dontKillMe nohup dotnet run --property:Configuration=Release --project=ArtSquare/Server --urls="https://192.168.56.20:5000" > /dev/null 2>&1 &'
              }
         }
+    }
+    post {
+        always {
+            script{
+                emailext (body: '${DEFAULT_CONTENT}',
+                          recipientProviders: [[$class: 'CulpritsRecipientProvider']],
+                          subject: '${DEFAULT_SUBJECT}',
+                          to: 'benjamin.bappel@gmail.com')
+            }
+        }
+        
     }
 }
