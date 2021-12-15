@@ -3,6 +3,8 @@ pipeline {
     triggers {
         githubPush()
     }
+    stages {
+    }
     post {
         always {
             emailext body: 'Test Message',
