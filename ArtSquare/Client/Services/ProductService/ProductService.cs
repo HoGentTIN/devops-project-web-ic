@@ -11,20 +11,19 @@ namespace ArtSquare.Client.Services.ProductService
     public class ProductService : IProductService
     {
         private readonly HttpClient _http;
+        private readonly PublicClient _publicHttp;
 
-        
+
         public List<Product> Products { get; set; } = new List<Product>();
 
         public ProductService(HttpClient http)
         {
             _http = http;
+            _publicHttp = new PublicClient(http);
         }
 
 
-        public async Task LoadProducts()
-        {
-            Products = await _http.GetFromJsonAsync <List<Product>> ("api/Product/SetUp");
-        }
+        
 
         public async Task GetProducts()
         {
@@ -51,6 +50,11 @@ namespace ArtSquare.Client.Services.ProductService
                 UploadDate = DateTime.Now
             };
             await _http.PostAsJsonAsync<Product>("api/Product", postBody);
+        }
+
+        public Task LoadProducts()
+        {
+            throw new NotImplementedException();
         }
     }
 }

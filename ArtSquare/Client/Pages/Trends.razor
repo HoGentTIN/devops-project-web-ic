@@ -4,8 +4,9 @@
 
 @inject HttpClient Http
 @inject IProductService ProductService
-@inject IUserService UserService
 @inject NavigationManager NavManager
+@inject IUserService UserService
+@inject PublicClient PublicClient
 
 @page "/trends"
 @* <div class="background">
@@ -33,7 +34,7 @@
                 </div>
                 <div class="search-element2">
                     <label class="search-label">Tag</label>
-                    <input class="search-input" type="text" placeholder="Enter Tag" autocomplete="on" name="location">
+                    <input class="search-input"  type="text" placeholder="Enter Tag" autocomplete="on" name="location">
                 </div>
 
                 <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary" />
@@ -72,7 +73,7 @@
     <MudItem xs="12">
 
         <MudGrid Spacing="@spacing" Justify="Justify.Center">
-            @foreach (var product in ProductService.Products)
+            @foreach (var product in PublicClient.Products)
             {
                 <MudItem>
 
@@ -101,6 +102,12 @@
                 </MudItem>
             }
 
+            @foreach (var tags in PublicClient.Tags)
+            {
+                <a>@tags.Name ;</a>
+                <br />
+            }
+
 
         </MudGrid>
     </MudItem>
@@ -118,13 +125,31 @@
 </div>
 
 @code {
+    public int spacing { get; set; } = 5;
+    private string? inputValue;
     protected override async Task OnInitializedAsync()
     {
-        await ProductService.LoadProducts();
-        //user = await Http.GetStringAsync("user/id");
+        await PublicClient.LoadProducts();
+        await PublicClient.LoadTags();
+        Dictionary<string, string> user = await UserService.GetUser();
+
+        //check if user exists
+        bool exist = await UserService.CheckIfUserExist();
+
+
+        //Console.WriteLine(user.Keys);
+        Console.WriteLine(exist);
+        //CreateUser(user);
 
     }
-    public int spacing { get; set; } = 5;
+
+
+    void CreateUser(Dictionary<string, string> user)
+    {
+
+        
+    }
+
     void AddSpacing()
     {
         if (spacing >= 10)

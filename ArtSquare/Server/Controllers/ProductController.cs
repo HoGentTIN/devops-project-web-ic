@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace ArtSquare.Server.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
@@ -20,11 +21,13 @@ namespace ArtSquare.Server.Controllers
         {
             _productService = productService;
         }
+
         [HttpGet("SetUp")]
         public async Task<ActionResult<List<Product>>> SetUp()
         {
             return Ok(await _productService.SetUp());
         }
+        
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
@@ -37,6 +40,7 @@ namespace ArtSquare.Server.Controllers
             return Ok(await _productService.GetProduct(id));
         }
 
+        [Authorize]
         [HttpPost]
         public async Task AddProduct(Product p)
         {

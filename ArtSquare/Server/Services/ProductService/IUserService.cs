@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ArtSquare.Server.Services.ProductService
 {
-    interface IUserService
+    public interface IUserService
     {
-        Task<IdentityUser> GetProduct();
+        Task<bool> CheckIfUserExist(string id);
     }
 }

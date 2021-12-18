@@ -20,12 +20,13 @@ namespace ArtSquare.Server.Data
         public DbSet<Review> Reviews { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<UserArt> UserArts { get; set; }
-        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Tags> Tags { get; set; }
         public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>().ToTable("Product");
+            modelBuilder.Entity<Tags>().ToTable("Tags");
         }
     }
 }

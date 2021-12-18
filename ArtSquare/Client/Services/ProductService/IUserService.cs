@@ -8,6 +8,8 @@ namespace ArtSquare.Client.Services.ProductService
 {
     interface IUserService
     {
-        Task<string> GetUser();
+        Task<Dictionary<string, string>> GetUser();
+
+        Task<bool> CheckIfUserExist();
     }
 }

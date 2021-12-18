@@ -23,20 +23,28 @@ namespace ArtSquare.Client
             builder.RootComponents.Add<App>("#app");
 
 
-
-            builder.Services.AddHttpClient("ArtAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
-                    .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
-
+            builder.Services.AddHttpClient("AuthenticatedServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
+                   .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
             builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>()
-                   .CreateClient("ArtApi"));
+                   .CreateClient("AuthenticatedServerAPI"));
+
+            builder.Services.AddHttpClient<PublicClient>(client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
 
 
-            builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            //builder.Services.AddHttpClient("ArtAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
+            //.AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
 
-           
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            //builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>()
+            //.CreateClient("ArtApi"));
+
+
+            //builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+
+            //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             builder.Services.AddScoped<IProductService, ProductService>();
+            
 
             builder.Services.AddScoped<IUserService, UserService>();
 

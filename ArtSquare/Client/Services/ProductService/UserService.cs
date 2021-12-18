@@ -18,9 +18,15 @@ namespace ArtSquare.Client.Services.ProductService
         {
             _http = http;
         }
-        public async Task<string> GetUser()
+
+        public async Task<bool> CheckIfUserExist()
         {
-            return await _http.GetFromJsonAsync<string>($"user/id");
+            return await _http.GetFromJsonAsync<bool>($"user/exist");
+        }
+
+        public async Task<Dictionary<string, string>> GetUser()
+        {
+            return await _http.GetFromJsonAsync<Dictionary<string, string>>($"user/id");
         }
     }
 }

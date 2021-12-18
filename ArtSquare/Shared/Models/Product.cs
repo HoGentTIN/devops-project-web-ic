@@ -25,7 +25,7 @@ namespace ArtSquare.Shared.Models
         //public Bet Bet { set; get; }
         public Artist Artist { set; get; }
         public int ArtistId { set; get; }
-        public List<Tag> Tags { set; get; }
+        public List<Tags> Tags { set; get; }
         public List<Order> Orders { set; get; }
         public List<ShoppingCart> ShoppingCarts { set; get; }
 

@@ -26,6 +26,9 @@ namespace ArtSquare.Server.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ArtistId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Bank")
                         .HasColumnType("nvarchar(max)");
 
@@ -241,7 +244,7 @@ namespace ArtSquare.Server.Migrations
                     b.ToTable("ShoppingCarts");
                 });
 
-            modelBuilder.Entity("ArtSquare.Shared.Models.Tag", b =>
+            modelBuilder.Entity("ArtSquare.Shared.Models.Tags", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -284,6 +287,9 @@ namespace ArtSquare.Server.Migrations
                     b.Property<string>("Street")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Zipcode")
                         .HasColumnType("int");
 
@@ -322,7 +328,7 @@ namespace ArtSquare.Server.Migrations
                     b.ToTable("ProductShoppingCart");
                 });
 
-            modelBuilder.Entity("ProductTag", b =>
+            modelBuilder.Entity("ProductTags", b =>
                 {
                     b.Property<int>("ProductsId")
                         .HasColumnType("int");
@@ -334,7 +340,7 @@ namespace ArtSquare.Server.Migrations
 
                     b.HasIndex("TagsId");
 
-                    b.ToTable("ProductTag");
+                    b.ToTable("ProductTags");
                 });
 
             modelBuilder.Entity("ArtSquare.Shared.Models.Auction", b =>
@@ -455,7 +461,7 @@ namespace ArtSquare.Server.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ProductTag", b =>
+            modelBuilder.Entity("ProductTags", b =>
                 {
                     b.HasOne("ArtSquare.Shared.Models.Product", null)
                         .WithMany()
@@ -463,7 +469,7 @@ namespace ArtSquare.Server.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ArtSquare.Shared.Models.Tag", null)
+                    b.HasOne("ArtSquare.Shared.Models.Tags", null)
                         .WithMany()
                         .HasForeignKey("TagsId")
                         .OnDelete(DeleteBehavior.Cascade)
