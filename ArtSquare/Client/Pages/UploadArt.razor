@@ -2,6 +2,8 @@
 @attribute [Authorize]
 @inject ISnackbar Snackbar
 @inject IProductService ProductService
+@inject IUserService UserService
+
 @inject NavigationManager Navigation
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @inject HttpClient Http
@@ -135,7 +137,10 @@
 
     protected async Task Add(string name, string description, double price, int width, int height, bool isAuction)
     {
-        await ProductService.AddProduct(name, description, price, width, height, IsAuction);
+        Dictionary<string, string> user = await UserService.GetUser();
+        Artist a = await UserService.GetArtist(user["user_id"]);
+        Console.WriteLine(a.Firstname);
+        await ProductService.AddProduct(name, description, price, width, height, IsAuction, a);
 
     }
 }

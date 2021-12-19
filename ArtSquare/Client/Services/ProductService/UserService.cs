@@ -48,6 +48,11 @@ namespace ArtSquare.Client.Services.ProductService
             return await _http.GetFromJsonAsync<bool>($"user/exist");
         }
 
+        public async Task<Artist> GetArtist(string userid)
+        {
+            return await _http.GetFromJsonAsync<Artist>($"artist/{userid}");
+        }
+
         public async Task<Dictionary<string, string>> GetUser()
         {
             return await _http.GetFromJsonAsync<Dictionary<string, string>>($"user/id");

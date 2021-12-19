@@ -13,6 +13,6 @@ namespace ArtSquare.Client.Services.ProductService
         Task LoadProducts();
         Task<Product> GetProduct(int id);
 
-        Task AddProduct(string name, string description, double price, int width, int height, bool isAuction);
+        Task AddProduct(string name, string description, double price, int width, int height, bool isAuction, Artist artist);
     }
 }

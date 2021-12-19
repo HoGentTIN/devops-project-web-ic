@@ -26,5 +26,13 @@ namespace ArtSquare.Server.Controllers
         {
             await _userService.AddArtist(a);
         }
+
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Artist>> GetArtist(string id)
+        {
+            return Ok(await _userService.GetArtist(id));
+        }
+
     }
 }

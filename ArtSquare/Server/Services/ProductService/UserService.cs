@@ -63,5 +63,10 @@ namespace ArtSquare.Server.Services.ProductService
             var JSONObj = deserial.Deserialize<Dictionary<string, string>>(response);
             return JSONObj;
         }
+
+        public async Task<Artist> GetArtist(string id)
+        {
+            return await _context.Artists.FirstOrDefaultAsync(a => a.ArtistId.Equals(id));
+        }
     }
 }

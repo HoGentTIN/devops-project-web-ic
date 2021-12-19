@@ -15,5 +15,7 @@ namespace ArtSquare.Server.Services.ProductService
 
         Task AddUser(UserArt u);
         Task AddArtist(Artist a);
+        Task<Artist> GetArtist(string id);
+
     }
 }

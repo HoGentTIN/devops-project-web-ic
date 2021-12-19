@@ -35,7 +35,7 @@ namespace ArtSquare.Client.Services.ProductService
             return await _http.GetFromJsonAsync<Product>($"api/Product/{id}");
         }
 
-        public async Task AddProduct(string name, string description, double price, int width, int height, bool isAuction)
+        public async Task AddProduct(string name, string description, double price, int width, int height, bool isAuction, Artist artist)
         {
             var postBody = new Product
             {
@@ -45,7 +45,7 @@ namespace ArtSquare.Client.Services.ProductService
                 IsAuction = isAuction,
                 Width = width,
                 Height = height,
-                ArtistId=1,
+                ArtistId=artist.Id,
                 Desciption = description,
                 UploadDate = DateTime.Now
             };
