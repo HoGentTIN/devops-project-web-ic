@@ -1,5 +1,7 @@
 ﻿@page "/"
 @inject IProductService ProductService
+@inject IUserService UserService
+
 
 <div class="parallax-container">
     <div class="background">
@@ -225,6 +227,34 @@
     private bool delimiters = true;
     private bool autocycle = true;
     private Transition transition = Transition.Slide;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Dictionary<string, string> user = await UserService.GetUser();
+
+            //check if user exists
+            bool exist = await UserService.CheckIfUserExist();
+
+            Console.WriteLine(user["given_name"]);
+            Console.WriteLine(exist);
+
+            if(exist==false && user["nickname"].Equals("true"))
+            {
+                await UserService.AddArtist(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+            }
+            else if(exist==false)
+            {
+                await UserService.AddUser(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+            }
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+    }
 
     public int spacing { get; set; } = 4;
     void AddSpacing()

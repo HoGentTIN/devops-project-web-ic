@@ -19,6 +19,30 @@ namespace ArtSquare.Client.Services.ProductService
             _http = http;
         }
 
+        public async Task AddUser(string userid, string firstname, string lastname, string email)
+        {
+            var postBody = new UserArt
+            {
+                Firstname = firstname,
+                Lastname = lastname,
+                Email = email,
+                UserId = userid
+            };
+            await _http.PostAsJsonAsync<UserArt>("User", postBody);
+        }
+
+        public async Task AddArtist(string userid, string firstname, string lastname, string email)
+        {
+            var postBody = new Artist
+            {
+                Firstname = firstname,
+                Lastname = lastname,
+                Email = email,
+                ArtistId = userid
+            };
+            await _http.PostAsJsonAsync<Artist>("Artist", postBody);
+        }
+
         public async Task<bool> CheckIfUserExist()
         {
             return await _http.GetFromJsonAsync<bool>($"user/exist");
@@ -28,5 +52,7 @@ namespace ArtSquare.Client.Services.ProductService
         {
             return await _http.GetFromJsonAsync<Dictionary<string, string>>($"user/id");
         }
+
+
     }
 }

@@ -126,12 +126,40 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 223 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
+#line 225 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
       
     private bool arrows = true;
     private bool delimiters = true;
     private bool autocycle = true;
     private Transition transition = Transition.Slide;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Dictionary<string, string> user = await UserService.GetUser();
+
+            //check if user exists
+            bool exist = await UserService.CheckIfUserExist();
+
+            Console.WriteLine(user["given_name"]);
+            Console.WriteLine(exist);
+
+            if(exist==false && user["nickname"].Equals("true"))
+            {
+                await UserService.AddArtist(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+            }
+            else if(exist==false)
+            {
+                await UserService.AddUser(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+            }
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+    }
 
     public int spacing { get; set; } = 4;
     void AddSpacing()
@@ -150,6 +178,7 @@ using Microsoft.AspNetCore.Authorization;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IUserService UserService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
     }
 }

@@ -33,8 +33,13 @@
                     <input class="search-input" type="text" placeholder="Enter Price" autocomplete="on" name="location">
                 </div>
                 <div class="search-element2">
-                    <label class="search-label">Tag</label>
-                    <input class="search-input"  type="text" placeholder="Enter Tag" autocomplete="on" name="location">
+                    <MudSelect T="string" Label="Look for Tags">
+                        @foreach (var tags in PublicClient.Tags)
+                        {
+                        <MudSelectItem Value="@(@tags.Name)" />
+                    
+                        }   
+                    </MudSelect>
                 </div>
 
                 <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary" />
@@ -102,11 +107,6 @@
                 </MudItem>
             }
 
-            @foreach (var tags in PublicClient.Tags)
-            {
-                <a>@tags.Name ;</a>
-                <br />
-            }
 
 
         </MudGrid>
@@ -126,21 +126,10 @@
 
 @code {
     public int spacing { get; set; } = 5;
-    private string? inputValue;
     protected override async Task OnInitializedAsync()
     {
         await PublicClient.LoadProducts();
         await PublicClient.LoadTags();
-        Dictionary<string, string> user = await UserService.GetUser();
-
-        //check if user exists
-        bool exist = await UserService.CheckIfUserExist();
-
-
-        //Console.WriteLine(user.Keys);
-        Console.WriteLine(exist);
-        //CreateUser(user);
-
     }
 
 

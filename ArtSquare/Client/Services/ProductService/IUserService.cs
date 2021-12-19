@@ -11,5 +11,8 @@ namespace ArtSquare.Client.Services.ProductService
         Task<Dictionary<string, string>> GetUser();
 
         Task<bool> CheckIfUserExist();
+
+        Task AddUser(string userid, string firstname, string lastname, string email);
+        Task AddArtist(string userid, string firstname, string lastname, string email);
     }
 }

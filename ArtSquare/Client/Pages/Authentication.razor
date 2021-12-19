@@ -4,6 +4,7 @@
 
 @inject NavigationManager Navigation
 @inject IConfiguration Configuration
+@inject HttpClient Http
 
 <RemoteAuthenticatorView Action="@Action">
     <LogOut>
@@ -23,6 +24,7 @@
     {
         var authority = Configuration["Auth0:Authority"];
         var clientId = Configuration["Auth0:ClientId"];
+
         Navigation.NavigateTo($"{authority}/v2/logout?client_id={clientId}");
     }
 }

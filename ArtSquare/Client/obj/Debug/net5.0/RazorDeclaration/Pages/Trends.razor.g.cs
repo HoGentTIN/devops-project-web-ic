@@ -143,21 +143,10 @@ using Microsoft.AspNetCore.Identity;
 #line 127 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
        
     public int spacing { get; set; } = 5;
-    private string? inputValue;
     protected override async Task OnInitializedAsync()
     {
         await PublicClient.LoadProducts();
         await PublicClient.LoadTags();
-        Dictionary<string, string> user = await UserService.GetUser();
-
-        //check if user exists
-        bool exist = await UserService.CheckIfUserExist();
-
-
-        //Console.WriteLine(user.Keys);
-        Console.WriteLine(exist);
-        //CreateUser(user);
-
     }
 
 
