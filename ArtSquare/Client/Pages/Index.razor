@@ -1,7 +1,13 @@
 ﻿@page "/"
-@inject IProductService ProductService
-@inject IUserService UserService
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Identity;
 
+@inject HttpClient Http
+@inject IProductService ProductService
+@inject NavigationManager NavManager
+@inject IUserService UserService
+@inject PublicClient PublicClient
 
 <div class="parallax-container">
     <div class="background">
@@ -28,8 +34,9 @@
                         <input class="search-input" type="text" placeholder="Enter Price" autocomplete="on" name="location">
                     </div>
                     <div class="search-element2">
-                        <label class="search-label">Tag</label>
-                        <input class="search-input" type="text" placeholder="Enter Tag" autocomplete="on" name="location">
+                        @foreach (var tags in PublicClient.Tags)
+                        {
+            <MudSelectItem Value="@(@tags.Name)" />}
                     </div>
                     <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary" />
                 </div>
@@ -227,46 +234,47 @@
     private bool delimiters = true;
     private bool autocycle = true;
     private Transition transition = Transition.Slide;
-
+  
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            Dictionary<string, string> user = await UserService.GetUser();
+            Dictionary<string, string>
+    user = await UserService.GetUser();
 
-            //check if user exists
-            bool exist = await UserService.CheckIfUserExist();
+    //check if user exists
+    bool exist = await UserService.CheckIfUserExist();
 
-            Console.WriteLine(user["given_name"]);
-            Console.WriteLine(exist);
+    Console.WriteLine(user["given_name"]);
+    Console.WriteLine(exist);
 
-            if(exist==false && user["nickname"].Equals("true"))
-            {
-                await UserService.AddArtist(user["user_id"], user["given_name"], user["family_name"], user["email"]);
-            }
-            else if(exist==false)
-            {
-                await UserService.AddUser(user["user_id"], user["given_name"], user["family_name"], user["email"]);
-            }
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
+    if(exist==false && user["nickname"].Equals("true"))
+    {
+    await UserService.AddArtist(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+    }
+    else if(exist==false)
+    {
+    await UserService.AddUser(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+    }
+    }
+    catch(Exception e)
+    {
+    Console.WriteLine(e.Message);
+    }
 
     }
 
     public int spacing { get; set; } = 4;
     void AddSpacing()
     {
-        if (spacing >= 10)
-        {
-            spacing = 0;
-        }
-        else
-        {
-            spacing += 1;
-        }
-        StateHasChanged();
+    if (spacing >= 10)
+    {
+    spacing = 0;
     }
-}
+    else
+    {
+    spacing += 1;
+    }
+    StateHasChanged();
+    }
+    }

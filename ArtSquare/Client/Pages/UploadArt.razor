@@ -11,11 +11,11 @@
 
 <MudText Class=" mb-10" Align="Align.Center" Typo="Typo.h3">Upload your art</MudText>
 
-<MudPaper Class="mx-auto mb-20 mud-theme-secondary" Height="600px" Width="80%" Elevation="4">
+<MudPaper Class="mx-auto mb-20 mud-theme-secondary" Height="650px" Width="80%" Elevation="4">
     <MudContainer>
-        <MudPaper Height="600px" Width="100%" Square="true" Class="pt-25" Elevation="4">
+        <MudPaper Height="650px" Width="100%" Square="true" Class="pt-25" Elevation="4">
 
-            <MudGrid Class="ml-5 ">
+            <MudGrid Class=" ">
                 <MudItem xs="12" sm="6" md="4">
                     <MudTextField T="string" Label="Title" HelperText="Specify name of Art" HelperTextOnFocus="false" Variant="Variant.Text" @bind-Text="@Name" @oninput="@((e) => { Name=(string)e.Value;})" />
                 </MudItem>
@@ -31,6 +31,7 @@
                 <MudItem xs="12" sm="6" md="4">
                     <MudTextField T="string" Label="Height" HelperText="Add a Height" HelperTextOnFocus="false" Variant="Variant.Text" @bind-Text="@Height" @oninput="@((e) => { Height=(string)e.Value;})" />
                 </MudItem>
+
 
 
 

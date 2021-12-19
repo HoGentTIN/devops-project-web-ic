@@ -1,4 +1,5 @@
-﻿@page "/artistView"
+﻿@page "/artistView2"
+@inject ISnackbar Snackbar
 
 @* <div class="background">
         <img class="background__image" src="/Images/art2.jpg" height="300px" width="100%" />
@@ -14,6 +15,17 @@
     <div class="block">
         <MudItem xs="12" sm="6">
             <img class="profile" src="/Images/peter.jpg" />
+            <InputFile id="fileInput112" OnChange="UploadFiles" hidden multiple accept=".jpg, .jpeg, .png" />
+            <MudButton HtmlTag="label"
+                       Variant="Variant.Text"
+                       Color="Color.Primary"
+                       StartIcon="@Icons.Filled.Edit"
+                       for="fileInput112">
+                Edit Picture
+            </MudButton>
+
+
+
         </MudItem>
     </div>
     <div class="header">
@@ -21,19 +33,28 @@
             <MudItem xs="12" sm="6">
                 <MudText Class="mb-7" Typo="Typo.h2">Peter Lustig</MudText>
             </MudItem>
+
             <MudItem xs="12" sm="10">
                 <MudText Typo="Typo.overline">About the Artist</MudText>
-
-                <MudText Class="ml-20" Typo="Typo.body1">
+                <MudText Class="ml-20" Typo="Typo.body1" Text="@sampleText">
                     For over a decade Aivazovsky has been one of the biggest stars in abstract art.
                     his way of combining different elements is unique and he received many prices for his works ...                    his way of combining different elements is unique and he received many prices for his works ...
                     his way of combining different elements is unique and he received many prices for his works ...
 
                 </MudText>
             </MudItem>
+            <MudItem xs="12" sm="12" md="12" Class="mt-5">
+                <MudTextField @ref="multilineReference" T="string" Label="Edit Description" Lines="3" Variant="Variant.Text" Text="@sampleText" />
+            </MudItem>
+            <MudItem xs="12" Class="d-flex justify-end">
+                <MudButton @onclick="() => multilineReference.SelectAsync()">
+                    Edit
+                </MudButton>
+            </MudItem>
+
 
             <MudItem Class="mt-10">
-                <MudText Typo="Typo.h5">Rating: <MudRating SelectedValue="2" Size="Size.Large" Class="ml-10" /></MudText>
+                <MudText Typo="Typo.h5">Rating: <MudRating SelectedValue="2" ReadOnly="true" Size="Size.Large" Class="ml-10" /></MudText>
 
             </MudItem>
 
@@ -74,6 +95,22 @@
 
 
 @code {
+    private MudTextField<string>
+    multilineReference;
+
+    string sampleText = "For over a decade Aivazovsky has been one of the biggest stars in abstract art. his way of combining different elements is unique and he received many prices for his works ...                    his way of combining different elements is unique and he received many prices for his works ...  his way of combining different elements is unique and he received many prices for his works ...";
 
 
-}
+    private void UploadFiles(InputFileChangeEventArgs e)
+    {
+    var entries = e.GetMultipleFiles();
+    //Do your validations here
+    Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+    Snackbar.Add($"Files with {entries.FirstOrDefault().Size} bytes size are not allowed", Severity.Error);
+    Snackbar.Add($"Files starting with letter {entries.FirstOrDefault().Name.Substring(0, 1)} are not recommended", Severity.Warning);
+    Snackbar.Add($"This file has the extension {entries.FirstOrDefault().Name.Split(".").Last()}", Severity.Info);
+
+    //TODO upload the files to the server
+    }
+
+    }

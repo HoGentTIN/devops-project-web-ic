@@ -13,106 +13,120 @@ namespace ArtSquare.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 1 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 2 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 3 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 4 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 5 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 6 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 7 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 8 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 9 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using ArtSquare.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 10 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using ArtSquare.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 11 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using MudBlazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 12 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using ArtSquare.Shared.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 13 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
 using ArtSquare.Client.Services.ProductService;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 16 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+#line 17 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 17 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\_Imports.razor"
-using Microsoft.AspNetCore.Authorization;
+#line 3 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
@@ -126,60 +140,65 @@ using Microsoft.AspNetCore.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 225 "C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
+#line 232 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Index.razor"
       
     private bool arrows = true;
     private bool delimiters = true;
     private bool autocycle = true;
     private Transition transition = Transition.Slide;
-
+  
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            Dictionary<string, string> user = await UserService.GetUser();
+            Dictionary<string, string>
+    user = await UserService.GetUser();
 
-            //check if user exists
-            bool exist = await UserService.CheckIfUserExist();
+    //check if user exists
+    bool exist = await UserService.CheckIfUserExist();
 
-            Console.WriteLine(user["given_name"]);
-            Console.WriteLine(exist);
+    Console.WriteLine(user["given_name"]);
+    Console.WriteLine(exist);
 
-            if(exist==false && user["nickname"].Equals("true"))
-            {
-                await UserService.AddArtist(user["user_id"], user["given_name"], user["family_name"], user["email"]);
-            }
-            else if(exist==false)
-            {
-                await UserService.AddUser(user["user_id"], user["given_name"], user["family_name"], user["email"]);
-            }
-        }
-        catch(Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
+    if(exist==false && user["nickname"].Equals("true"))
+    {
+    await UserService.AddArtist(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+    }
+    else if(exist==false)
+    {
+    await UserService.AddUser(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+    }
+    }
+    catch(Exception e)
+    {
+    Console.WriteLine(e.Message);
+    }
 
     }
 
     public int spacing { get; set; } = 4;
     void AddSpacing()
     {
-        if (spacing >= 10)
-        {
-            spacing = 0;
-        }
-        else
-        {
-            spacing += 1;
-        }
-        StateHasChanged();
+    if (spacing >= 10)
+    {
+    spacing = 0;
     }
+    else
+    {
+    spacing += 1;
+    }
+    StateHasChanged();
+    }
+    
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private PublicClient PublicClient { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IUserService UserService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IProductService ProductService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591
