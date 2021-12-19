@@ -218,12 +218,12 @@
       "netstandard.dll": "sha256-dOHF0zANIyA4WS496iWrAkTuEFWSWrXJjZj2pQQHrMA=",
       "System.Private.CoreLib.dll": "sha256-C96+zv+mWW0XzMG520oRgAG1lHVY8xzWGc6oc6rFjws=",
       "ArtSquare.Shared.dll": "sha256-yP4Hgi6q\/oMxpiUT2O3eIwZOKEjzwHOe+\/9+t8jTYaw=",
-      "ArtSquare.Client.dll": "sha256-OTeUXyuWP8N6XkSzPR1Q5GY2psLv+GXrdbiA0+rFLLM="
+      "ArtSquare.Client.dll": "sha256-wTOtmtx0vqH26nHViZTd0cy3Rd23Ttl04rnjcx4PRkw="
     },
     "lazyAssembly": null,
     "pdb": {
       "ArtSquare.Shared.pdb": "sha256-af7Pag0migGvEus6cNxSBtl\/x\/ymPoAwiAYzkbAfcCg=",
-      "ArtSquare.Client.pdb": "sha256-TTDJKcbWx6sgzdDkUyX+mZxnsLeZG0CFmDAbVFxTqIg="
+      "ArtSquare.Client.pdb": "sha256-RlfFstHYSsZuMy+\/V2Iabgu411qCRyFKwYx1W4WPDV8="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ir9YCVnnk7popgsYUkvitfGA4WpkP1ydPh\/ENHnxGys=",

@@ -1,0 +1,116 @@
+﻿@page "/auctionProduct"
+@*@inject IProductService ProductService*@
+
+
+<div class="carousel">
+    <div class="frame">
+
+        <MudCarousel class="mx-auto" Elevation="2" Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object">
+            <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Lighten1};")">
+                <div class="d-flex" style="height:100%">
+                    <img class="img1" src="/Images/art5.jpg">
+                </div>
+            </MudCarouselItem>
+            <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Teal.Lighten3};")">
+                <div class="d-flex" style="height:100%">
+                    <img class="img1" src="/Images/art.jpg">
+                </div>
+            </MudCarouselItem>
+            <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Accent1};")">
+                <div class="d-flex" style="height:100%">
+                    <img src="/Images/art3.jpg">
+                </div>
+            </MudCarouselItem>
+        </MudCarousel>
+    </div>
+    <MudText Typo="Typo.button">Ivan Aizovsky</MudText><br />
+    <MudText Typo="Typo.overline">@*@product.Width x @product.Height*@ 30 x 20 cm.</MudText>
+</div>
+
+
+
+
+<div class="Desc">
+    <MudGrid Class="ml-25">
+        <MudItem xs="12">
+            <MudText Typo="Typo.h2">"@*@product.Name*@The Stone"</MudText>
+        </MudItem>
+        <br />
+        <MudItem>
+            <br />
+            <MudText>
+                Kranke Desc
+                @*@product.Desciption*@
+            </MudText>
+        </MudItem>
+
+    </MudGrid>
+
+    <div class="tags">
+        <div class="spacing">
+            <MudText Typo="Typo.button">Tags:</MudText><br />
+            <MudItem Class="mt-5">
+                <MudChip>"Winter"</MudChip>
+                <MudChip>"Oil"</MudChip>
+                <MudChip>"Fine Arts"</MudChip>
+
+                <MudChip>"Classic"</MudChip>
+            </MudItem>
+        </div>
+    </div>
+
+
+    <div class="tags">
+        <MudText Align="Align.Left"><b>Auction Ends:</b> @*@product.Price*@ 20/12/2020</MudText>
+
+        <MudText Align="Align.Left"><b>Buy immediately for:</b> @*@product.Price*@ 1500€</MudText>
+        <MudItem xs="8" md="4">
+            <MudText Class="mt-5" Align="Align.Left"><b>Current Bids:</b></MudText>
+            <MudPaper Width="100%">
+                <MudList Dense="true">
+                    <MudListItem Text="800€" />
+                    <MudDivider />
+                    <MudListItem Text="810€" />
+                    <MudDivider />
+                    <MudListItem Text="820€" />
+
+                </MudList>
+            </MudPaper>
+        </MudItem>
+        <MudButton Class="mt-5" Variant="Variant.Filled">BID</MudButton>
+        <MudButton Class="mt-5 ml-5" Variant="Variant.Filled">Buy Now</MudButton>
+
+
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
+
+@code {
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    private bool visible;
+    private int rating;
+    private void OpenDialog() => visible = true;
+    void Submit() => visible = false;
+
+    private DialogOptions dialogOptions = new() { FullWidth = true };
+
+    private Product product = new Product();
+
+@*[Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProductService.GetProduct(Id);
+    }*@
+}

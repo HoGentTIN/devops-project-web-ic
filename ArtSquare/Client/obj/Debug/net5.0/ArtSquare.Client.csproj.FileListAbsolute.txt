@@ -1116,8 +1116,6 @@ C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Ra
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\ProductList.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Authentication.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\ManageUser.razor.g.cs
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\New2.razor.g.cs
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\New3.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Shared\NewShared.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\ArtistView.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
@@ -1163,8 +1161,6 @@ C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\ww
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\Authentication.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\ManageUser.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\ArtistView.razor.g.cs
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\New2.razor.g.cs
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\New3.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Shared\NewShared.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\tTQVnSXx.gz
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\NhIwogaI.gz
@@ -1364,8 +1360,6 @@ C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\bu
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\RHxN2ix2.gz
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\build-gz\zd56sQo0.gz
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\ArtistView.razor.rz.scp.css
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\New2.razor.rz.scp.css
-C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\New3.razor.rz.scp.css
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Shared\NewShared.razor.rz.scp.css
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\wwwroot\_framework\blazor.boot.json
 C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\bin\Debug\net5.0\ArtSquare.Client.StaticWebAssets.xml
@@ -2091,3 +2085,9 @@ C:\Users\szabo\Desktop\Löschen später\devops-project-web-ic\ArtSquare\Client\o
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\ArtistViewEdit.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\ArtistViewEdit.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\ArtistViewEdit.razor.rz.scp.css
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\SubscriptionView.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\SubscriptionView.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\SubscriptionView.razor.rz.scp.css
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\DetailViewAuction.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\DetailViewAuction.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\DetailViewAuction.razor.rz.scp.css
