@@ -46,6 +46,7 @@ namespace ArtSquare.Client.Services.ProductService
                 Width = width,
                 Height = height,
                 ArtistId=artist.Id,
+                Artist = artist,
                 Desciption = description,
                 UploadDate = DateTime.Now
             };
