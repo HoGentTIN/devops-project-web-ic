@@ -4,7 +4,7 @@ pipeline {
         githubPush()
     }
     stages {
-                stage('configure'){
+        stage('configure'){
            steps{
                sh 'git stash'
                sh 'git pull'
