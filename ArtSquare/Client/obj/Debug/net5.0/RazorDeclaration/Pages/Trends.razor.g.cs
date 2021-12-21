@@ -140,9 +140,10 @@ using Microsoft.AspNetCore.Identity;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 127 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
+#line 128 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\Trends.razor"
        
     public int spacing { get; set; } = 5;
+    bool open;
     protected override async Task OnInitializedAsync()
     {
         await PublicClient.LoadProducts();
@@ -150,29 +151,32 @@ using Microsoft.AspNetCore.Identity;
     }
 
 
-    void CreateUser(Dictionary<string, string> user)
+
+    void CreateUser(Dictionary<string, string>
+    user)
     {
 
-        
+
     }
 
     void AddSpacing()
     {
-        if (spacing >= 10)
-        {
-            spacing = 0;
-        }
-        else
-        {
-            spacing += 1;
-        }
-        StateHasChanged();
+    if (spacing >= 10)
+    {
+    spacing = 0;
+    }
+    else
+    {
+    spacing += 1;
+    }
+    StateHasChanged();
     }
 
     void RedirectDetailView(int id)
     {
-        NavManager.NavigateTo("/product/" + id);
+    NavManager.NavigateTo("/product/" + id);
     }
+    
 
 #line default
 #line hidden

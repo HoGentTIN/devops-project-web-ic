@@ -1,0 +1,73 @@
+﻿@page "/shoppingCart"
+@*@inject IProductService ProductService*@
+
+
+
+<div class="container">
+
+
+    <MudText Typo="Typo.h3" Class="mb-10">Shoppingcart</MudText>
+    <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+
+
+
+    <MudItem xs="12" sm="6">
+        <div class="frame">
+            <img class="profile" src="/Images/art2.jpg" />
+
+        </div>
+    </MudItem>
+
+
+    <div class="header">
+        <div class="text">
+            <MudItem xs="12" sm="6">
+                <MudText Typo="Typo.h4">"The Stone"</MudText>
+
+            </MudItem>
+            <MudItem xs="12" sm="10">
+                <MudText Typo="Typo.overline">Art Description</MudText>
+
+                <MudText Class="ml-20" Typo="Typo.body1">
+                    @*@product.Desciption*@
+                    For over a decade Aivazovsky has been one of the biggest stars in abstract art.
+                    his way of combining different elements is unique and he received many prices for his works ...                    his way of combining different elements is unique and he received many prices for his works ...
+                    his way of combining different elements is unique and he received many prices for his works ...
+
+                </MudText>
+
+                <MudText Typo="Typo.overline">Bankdata:</MudText>
+
+                <MudText Align="Align.Left"><b>Name:</b> Peter Lustig</MudText>
+                <MudText Align="Align.Left"><b>IBAN:</b> BE23 1093 1234 1234.</MudText>
+                <MudText Align="Align.Left"><b>BIC:</b> GIBAATWX.</MudText>
+                <MudText Align="Align.Left"><b>Price:</b> @*@product.Price*@ 1100 €</MudText>
+
+
+            </MudItem>
+
+
+
+        </div>
+        <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+
+    </div>
+
+
+</div>
+
+
+
+@code {
+
+    @*private Product product = new Product();
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProductService.GetProduct(Id);
+    }*@
+
+    }

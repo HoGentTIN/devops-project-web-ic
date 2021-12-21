@@ -58,7 +58,96 @@
 
             </MudItem>
 
+
+
+
         </div>
+        <MudText Typo="Typo.h5" Class="mb-5 mt-5"> Delete Art</MudText>
+
+        <MudGrid Class="mt-5">
+            <MudItem xs="12">
+                <MudGrid Spacing="@spacing" Justify="Justify.Center">
+                    <MudItem>
+                        <MudCard Elevation="4" Square="true">
+                            <MudCardHeader>
+                                <CardHeaderAvatar>
+                                    <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                                </CardHeaderAvatar>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.body1">Artist Name</MudText>
+                                    <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardMedia Image="/Images/art2.jpg" Height="200" Width="300" />
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">Old Paint</MudText>
+                                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                                <MudButton Variant="Variant.Text" Color="Color.Warning">Delete</MudButton>
+                                <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">1100€</MudPaper>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    <MudItem>
+                        <MudCard Elevation="4" Square="true">
+                            <MudCardHeader>
+                                <CardHeaderAvatar>
+                                    <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                                </CardHeaderAvatar>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.body1">Artist Name</MudText>
+                                    <MudText Typo="Typo.body2">00:10:15:13</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardMedia Image="/Images/art.jpg" Height="200" Width="300" />
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">Old Paint</MudText>
+                                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                                <MudButton Variant="Variant.Text" Color="Color.Warning">Delete</MudButton>
+                                <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">8000€</MudPaper>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+
+
+
+
+
+                </MudGrid>
+            </MudItem>
+
+        </MudGrid>
+        <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+
+        <MudText Typo="Typo.overline">Bankdata:</MudText>
+
+        <MudText Align="Align.Left"><b>Name:</b> Peter Lustig</MudText>
+        <MudText Align="Align.Left"><b>IBAN:</b> BE23 1093 1234 1234.</MudText>
+        <MudText Align="Align.Left"><b>BIC:</b> GIBAATWX.</MudText>
+      
+
+        <MudItem xs="12" md="6">
+            <MudTextField T="string" Counter="25" HelperText="Enter New Name" Immediate="true" Validation="@(new Func<string, IEnumerable<string>>(MaxCharacters))" Label="Name" Variant="Variant.Text" />
+        </MudItem>
+        <MudItem xs="12" md="6">
+            <MudTextField T="string" Counter="34" HelperText="Enter New IBAN" Immediate="true" Validation="@(new Func<string, IEnumerable<string>>(MaxCharactersIban))" Label="IBAN" Variant="Variant.Text" />
+        </MudItem>
+        <MudItem xs="12" md="6">
+            <MudTextField T="string" Counter="8" HelperText="Enter New BIC" Immediate="true" Validation="@(new Func<string, IEnumerable<string>>(MaxCharactersBic))" Label="BIC" Variant="Variant.Text" />
+        </MudItem>
+        <MudButton>
+            Edit
+        </MudButton>
+
+
+
         <MudDivider DividerType="DividerType.Middle" Class="my-10" />
         <MudItem Class="mt-10">
             <MudText Typo="Typo.h4" Class="mb-5"> Recent Works:</MudText>
@@ -90,6 +179,8 @@
     </div>
 
 
+
+
 </div>
 
 
@@ -97,20 +188,53 @@
 @code {
     private MudTextField<string>
     multilineReference;
+    public int spacing { get; set; } = 5;
 
-    string sampleText = "For over a decade Aivazovsky has been one of the biggest stars in abstract art. his way of combining different elements is unique and he received many prices for his works ...                    his way of combining different elements is unique and he received many prices for his works ...  his way of combining different elements is unique and he received many prices for his works ...";
-
-
-    private void UploadFiles(InputFileChangeEventArgs e)
+    void AddSpacing()
     {
-    var entries = e.GetMultipleFiles();
-    //Do your validations here
-    Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
-    Snackbar.Add($"Files with {entries.FirstOrDefault().Size} bytes size are not allowed", Severity.Error);
-    Snackbar.Add($"Files starting with letter {entries.FirstOrDefault().Name.Substring(0, 1)} are not recommended", Severity.Warning);
-    Snackbar.Add($"This file has the extension {entries.FirstOrDefault().Name.Split(".").Last()}", Severity.Info);
-
-    //TODO upload the files to the server
+    if (spacing >= 10)
+    {
+    spacing = 0;
+    }
+    else
+    {
+    spacing += 1;
+    }
+    StateHasChanged();
     }
 
+    private IEnumerable<string> MaxCharacters(string ch)
+    {
+    if (!string.IsNullOrEmpty(ch) && 25 < ch?.Length)
+    yield return "Max 25 characters";
     }
+
+    private IEnumerable<string> MaxCharactersIban(string ch)
+    {
+    if (!string.IsNullOrEmpty(ch) && 34 < ch?.Length)
+    yield return "Max 34 characters";
+    }
+
+    private IEnumerable<string> MaxCharactersBic(string ch)
+        {
+        if (!string.IsNullOrEmpty(ch) && 8 < ch?.Length)
+        yield return "Max 8 characters";
+        }
+
+
+        string sampleText = "For over a decade Aivazovsky has been one of the biggest stars in abstract art. his way of combining different elements is unique and he received many prices for his works ...                    his way of combining different elements is unique and he received many prices for his works ...  his way of combining different elements is unique and he received many prices for his works ...";
+
+
+        private void UploadFiles(InputFileChangeEventArgs e)
+        {
+        var entries = e.GetMultipleFiles();
+        //Do your validations here
+        Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+        Snackbar.Add($"Files with {entries.FirstOrDefault().Size} bytes size are not allowed", Severity.Error);
+        Snackbar.Add($"Files starting with letter {entries.FirstOrDefault().Name.Substring(0, 1)} are not recommended", Severity.Warning);
+        Snackbar.Add($"This file has the extension {entries.FirstOrDefault().Name.Split(".").Last()}", Severity.Info);
+
+        //TODO upload the files to the server
+        }
+
+        }

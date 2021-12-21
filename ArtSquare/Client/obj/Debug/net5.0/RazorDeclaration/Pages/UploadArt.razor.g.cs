@@ -140,7 +140,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 101 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
+#line 108 "C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\Pages\UploadArt.razor"
        
     private string Name { get; set; } = "";
     private string Description { get; set; } = "";

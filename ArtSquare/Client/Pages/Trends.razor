@@ -8,6 +8,7 @@
 @inject IUserService UserService
 @inject PublicClient PublicClient
 
+
 @page "/trends"
 @* <div class="background">
         <img class="background__image" src="/Images/art2.jpg" height="300px" width="100%" />
@@ -36,9 +37,7 @@
                     <MudSelect T="string" Label="Look for Tags">
                         @foreach (var tags in PublicClient.Tags)
                         {
-                        <MudSelectItem Value="@(@tags.Name)" />
-                    
-                        }   
+            <MudSelectItem Value="@(@tags.Name)" />}
                     </MudSelect>
                 </div>
 
@@ -49,6 +48,9 @@
         </form>
     </div>
 </div>
+
+
+
 
 
 <MudDivider DividerType="DividerType.Middle" Class="my-10" />
@@ -80,32 +82,31 @@
         <MudGrid Spacing="@spacing" Justify="Justify.Center">
             @foreach (var product in PublicClient.Products)
             {
-                <MudItem>
+<MudItem>
 
-                    <MudCard Elevation="4" Width="375px" Height="450px" Square="true" Class="mr-5">
+    <MudCard Elevation="4" Width="375px" Height="450px" Square="true" Class="mr-5">
 
-                        <MudCardHeader>
-                            <CardHeaderAvatar>
-                                <MudAvatar Color="Color.Secondary">A</MudAvatar>
-                            </CardHeaderAvatar>
-                            <CardHeaderContent>
-                                <MudText Typo="Typo.body1">test</MudText>
-                                <!-- <MudText Typo="Typo.body2">20/4/1969</MudText> -->
-                            </CardHeaderContent>
-                        </MudCardHeader>
-                        <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
-                        <MudCardContent>
-                            <MudText Typo="Typo.h5">@product.Name</MudText>
-                            <MudText Typo="Typo.body2">@product.Desciption</MudText>
-                        </MudCardContent>
-                        <MudCardActions>
-                            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="() => RedirectDetailView(product.Id)">Learn More</MudButton>
-                            <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
-                            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
-                        </MudCardActions>
-                    </MudCard>
-                </MudItem>
-            }
+        <MudCardHeader>
+            <CardHeaderAvatar>
+                <MudAvatar Color="Color.Secondary">A</MudAvatar>
+            </CardHeaderAvatar>
+            <CardHeaderContent>
+                <MudText Typo="Typo.body1">test</MudText>
+                <!-- <MudText Typo="Typo.body2">20/4/1969</MudText> -->
+            </CardHeaderContent>
+        </MudCardHeader>
+        <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
+        <MudCardContent>
+            <MudText Typo="Typo.h5">@product.Name</MudText>
+            <MudText Typo="Typo.body2">@product.Desciption</MudText>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="() => RedirectDetailView(product.Id)">Learn More</MudButton>
+            <MudText Class="pa-2 mr-2 mb-1 ml-auto">Buy for:</MudText>
+            <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
+        </MudCardActions>
+    </MudCard>
+</MudItem>  }
 
 
 
@@ -126,6 +127,7 @@
 
 @code {
     public int spacing { get; set; } = 5;
+    bool open;
     protected override async Task OnInitializedAsync()
     {
         await PublicClient.LoadProducts();
@@ -133,27 +135,29 @@
     }
 
 
-    void CreateUser(Dictionary<string, string> user)
+
+    void CreateUser(Dictionary<string, string>
+    user)
     {
 
-        
+
     }
 
     void AddSpacing()
     {
-        if (spacing >= 10)
-        {
-            spacing = 0;
-        }
-        else
-        {
-            spacing += 1;
-        }
-        StateHasChanged();
+    if (spacing >= 10)
+    {
+    spacing = 0;
+    }
+    else
+    {
+    spacing += 1;
+    }
+    StateHasChanged();
     }
 
     void RedirectDetailView(int id)
     {
-        NavManager.NavigateTo("/product/" + id);
+    NavManager.NavigateTo("/product/" + id);
     }
-}
+    }

@@ -2091,3 +2091,6 @@ C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\sc
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\DetailViewAuction.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\DetailViewAuction.razor.g.cs
 C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\DetailViewAuction.razor.rz.scp.css
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\RazorDeclaration\Pages\ShoppingCart.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\Razor\Pages\ShoppingCart.razor.g.cs
+C:\Users\senad\DevOps\devops-project-web-ic\ArtSquare\Client\obj\Debug\net5.0\scopedcss\Pages\ShoppingCart.razor.rz.scp.css

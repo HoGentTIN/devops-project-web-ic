@@ -33,9 +33,9 @@
                     <input class="search-input" type="text" placeholder="Enter Price" autocomplete="on" name="location">
                 </div>
                 <div class="search-element2">
-                    @foreach (var tags in PublicClient.Tags)
+                    @*@foreach (var tags in PublicClient.Tags)
                     {
-        <MudSelectItem Value="@(@tags.Name)" />}
+        <MudSelectItem Value="@(@tags.Name)" />}*@
                 </div>
 
                 <MudIcon Class="mr-5" Icon="@Icons.Material.Filled.Search" Title="Search" Size="Size.Large" Color="Color.Secondary" />
@@ -214,7 +214,7 @@
             </MudItem>
 
             <MudItem>
-                <MudPagination BoundaryCount="1" MiddleCount="3" Count="9" @bind -Selected="@_selected" Class="mt-5" Color="Color.Secondary" />
+                @*<MudPagination BoundaryCount="1" MiddleCount="3" Count="9" @bind -Selected="@_selected" Class="mt-5" Color="Color.Secondary" />*@
             </MudItem>
         </MudGrid>
     </MudItem>

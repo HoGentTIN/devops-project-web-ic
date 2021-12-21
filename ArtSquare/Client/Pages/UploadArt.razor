@@ -31,6 +31,13 @@
                 <MudItem xs="12" sm="6" md="4">
                     <MudTextField T="string" Label="Height" HelperText="Add a Height" HelperTextOnFocus="false" Variant="Variant.Text" @bind-Text="@Height" @oninput="@((e) => { Height=(string)e.Value;})" />
                 </MudItem>
+                <MudItem xs="12" sm="6" md="4">
+                    <MudSelect T="string" Label="Look for Tags">
+                        @*@foreach (var tags in PublicClient.Tags)
+                        {
+                <MudSelectItem Value="@(@tags.Name)" />}*@
+                    </MudSelect>
+                </MudItem>
 
 
 
