@@ -1,0 +1,134 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Identity;
+
+@inject HttpClient Http
+@inject IProductService ProductService
+@inject NavigationManager NavManager
+@inject IUserService UserService
+@inject PublicClient PublicClient
+
+
+<div class="parallax-container">
+    <div class="background">
+    </div>
+    
+</div>
+
+
+<div class="h1">
+    <MudText  Align="Align.Center" Typo="Typo.h1">"Where Art is at Home.."</MudText>
+</div>
+
+<div class="carousel">
+    <MudCarousel Elevation="2" Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object">
+        <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Lighten1};")">
+            <div class="d-flex" style="height:100%">
+                <img class="img1" src="/Images/art5.jpg">
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Teal.Lighten3};")">
+            <div class="d-flex" style="height:100%">
+                <img class="img1" src="/Images/art.jpg">
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Accent1};")">
+            <div class="d-flex" style="height:100%">
+                <img src="/Images/art3.jpg">
+            </div>
+        </MudCarouselItem>
+    </MudCarousel>
+</div>
+
+
+<MudDivider DividerType="DividerType.Middle" Class="my-6" />
+
+<MudGrid Class=" mb-10">
+    <MudItem xs="4">
+        <div class="container">
+            <img src="/Images/box.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit the Auction</div></a>
+            </div>
+        </div>
+    </MudItem>
+    <MudItem xs="4">
+        <div class="container">
+            <img src="/Images/box2.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/trends"><div class="textbox">Visit the Market</div></a>
+            </div>
+        </div>
+    </MudItem>
+    <MudItem xs="4">
+        <div class="container">
+            <img src="/Images/box3.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                <a href="/open"><div class="textbox">Visit Young Art</div></a>
+            </div>
+        </div>
+    </MudItem>
+</MudGrid>
+
+
+
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
+@code{
+    public string TextValue { get; set; }
+
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await PublicClient.LoadProducts();
+        await PublicClient.LoadTags();
+        try
+        {
+            Dictionary<string, string>
+    user = await UserService.GetUser();
+
+    //check if user exists
+    bool exist = await UserService.CheckIfUserExist();
+
+    Console.WriteLine(user["given_name"]);
+    Console.WriteLine(exist);
+
+    if(exist==false && user["nickname"].Equals("true"))
+    {
+    await UserService.AddArtist(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+    await UserService.AssignRole();
+    NavManager.NavigateTo("/", true);
+    }
+    else if(exist==false)
+    {
+    await UserService.AddUser(user["user_id"], user["given_name"], user["family_name"], user["email"]);
+    }
+    
+    }
+    catch(Exception e)
+    {
+    Console.WriteLine(e.Message);
+    }
+
+    }
+
+    public int spacing { get; set; } = 4;
+    void AddSpacing()
+    {
+    if (spacing >= 10)
+    {
+    spacing = 0;
+    }
+    else
+    {
+    spacing += 1;
+    }
+    StateHasChanged();
+    }
+    }

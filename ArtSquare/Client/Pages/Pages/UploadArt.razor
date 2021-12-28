@@ -1,0 +1,249 @@
+﻿@page "/uploadArt"
+@attribute [Authorize]
+@inject ISnackbar Snackbar
+@inject IProductService ProductService
+@inject IUserService UserService
+@inject PublicClient PublicClient
+
+@inject NavigationManager Navigation
+@using ArtSquare.Shared.Response
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject HttpClient Http
+
+
+<MudText Class=" mb-10" Align="Align.Center" Typo="Typo.h3">Upload your art</MudText>
+
+<MudPaper Class="mx-auto mb-20 mud-theme-secondary" Height="80%" Width="70%" Elevation="4">
+    <MudContainer>
+        <MudPaper Height="80%" Width="100%" Square="true" Class="pt-25" Elevation="4">
+
+            <MudGrid Class=" ">
+                <MudItem xs="10" sm="5" md="3">
+                    <MudTextField T="string" Label="Title" Required="true" RequiredError="Title is required!" HelperText="Specify name of Art" HelperTextOnFocus="false" Variant="Variant.Text" @bind-Text="@Name" @oninput="@((e) => { Name=(string)e.Value;})" />
+                </MudItem>
+                <MudItem xs="10" sm="5" md="3">
+                    <MudTextField T="string" Label="Description" HelperText="Add a Description" Required="true" RequiredError="Description is required!" HelperTextOnFocus="false" Variant="Variant.Text" @bind-Text="@Description" @oninput="@((e) => { Description=(string)e.Value;})" />
+                </MudItem>
+                <MudItem xs="10" sm="5" md="3">
+                    <MudNumericField Label="Instant Purchase Price" HelperText="Set a Price" Required="true" RequiredError="Price is required!" HelperTextOnFocus="false" Variant="Variant.Text" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Euro" HideSpinButtons="true" @bind-Value="@Price" @oninput="@((e) => { Price = Convert.ToDouble(e.Value); })" />
+                </MudItem>
+                <MudItem xs="10" sm="5" md="3">
+                    <MudNumericField Label="Width" HelperText="Add a Width in cm" HelperTextOnFocus="false" Variant="Variant.Text" Required="true" RequiredError="Width is required!" Adornment="Adornment.End" AdornmentText="cm" HideSpinButtons="true" @bind-Value="@Width" @oninput="@((e) => { Width=Convert.ToInt32(e.Value);})" />
+                </MudItem>
+                <MudItem xs="10" sm="5" md="3">
+                    <MudNumericField Label="Height" HelperText="Add a Height in cm" HelperTextOnFocus="false" Variant="Variant.Text" Required="true" RequiredError="Height is required!" Adornment="Adornment.End" AdornmentText="cm" HideSpinButtons="true" @bind-Value="@Height" @oninput="@((e) => { Height=Convert.ToInt32(e.Value);})" />
+                </MudItem>
+                <MudGrid>
+                    <MudItem xs="10" sm="5" md="3">
+                        <MudSelect Class="ml-3" T="string" MultiSelection="true" Label="Tags" HelperText="Pick fitting Tags" @bind-Value="@tagVar" @bind-SelectedValues="options">
+                            @foreach (var tags in PublicClient.Tags)
+                            {
+                                <MudSelectItem Value="@tags.Name" />
+                            }
+                        </MudSelect>
+                    </MudItem>
+
+                </MudGrid>
+
+
+
+
+
+
+
+
+            </MudGrid>
+            <MudGrid Class="ml-5 mt-5">
+                <MudItem xs="12" sm="6" md="4">
+
+                    <InputFile Class="mud-theme-secondary" OnChange="@LoadImage" hidden multiple accept=".jpg, .jpeg, .png" id="fileInput" />
+
+                    <MudFab HtmlTag="label"
+                            Color="Color.Secondary"
+                            Icon="@Icons.Filled.Image"
+                            Label="Load picture"
+                            for="fileInput" />
+                    <MudText Typo="@Typo.h6" Color=Color.Error>@ErrorFile</MudText>
+                </MudItem>
+
+
+
+                @if (file != null)
+                {
+                    <MudText Typo="@Typo.h6">1 File:</MudText>
+                    <MudList>
+
+                        <MudListItem Icon="@Icons.Filled.AttachFile" @key="@file">
+                            @file.Name <code>@file.Size bytes</code>
+                        </MudListItem>
+
+                    </MudList>
+                }
+            </MudGrid>
+
+            <MudCheckBox @bind-Checked="@IsAuction" Label="Is Auction?" Color="Color.Primary"></MudCheckBox>
+            @if (IsAuction == true)
+            {
+                <MudGrid Class="ml-5 mt-5">
+                    <MudItem xs="12" sm="6" md="4">
+                        <MudDatePicker Label="Deadline" MinDate="DateTime.Today" Editable="false" @bind-Date="date" Placeholder="Select Date" />
+                    </MudItem>
+                    <MudItem xs="12" sm="6" md="4">
+                        <MudTimePicker PickerVariant="PickerVariant.Dialog" Label="24 hours" @bind-Time="time" />
+                    </MudItem>
+                    <MudItem xs="12" sm="6" md="4">
+                        <MudNumericField Label="Minimum Price" HelperText="Add a minimum price" HelperTextOnFocus="false" Variant="Variant.Text" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Euro" HideSpinButtons="true" @bind-Value="@MinPrice" @oninput="@((e) => { Height=Convert.ToInt32(e.Value);})" />
+                    </MudItem>
+
+                </MudGrid>
+            }
+            <div class="up">
+                <MudGrid Class="mt-60">
+                    <MudItem Class="mx-auto mt-70 ">
+                        <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.Upload" Style="background-color: lightblue; color: white; width: 200px; height: 60px;" @onclick="() => AddArt()">
+                            Upload Art
+                        </MudButton>
+                        
+                    </MudItem>
+                </MudGrid>
+                <MudText Typo="@Typo.h6" Color=Color.Error>@Error</MudText>
+            </div>
+        </MudPaper>
+    </MudContainer>
+</MudPaper>
+
+
+
+@code {
+    string tagVar="Nothing selected";
+    private HashSet<string>
+    options { get; set; } = new HashSet<string>
+    ();
+
+
+    private string Name { get; set; } = "";
+    private string Description { get; set; } = "";
+    private double Price { get; set; }
+    private int Width { get; set; }
+    private int Height { get; set; }
+    private double MinPrice { get; set; }
+
+    private string ErrorFile { get; set; } = "";
+    private string Error { get; set; } = "";
+    private string Tags { get; set; } = "";
+    TimeSpan? time = new TimeSpan(00, 45, 00);
+
+
+
+    public string TextValue { get; set; }
+    public bool IsAuction { get; set; } = false;
+    DateTime? date = DateTime.Today;
+    IBrowserFile file;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await PublicClient.LoadTags();
+    }
+
+    Func<Tags, string>
+        converter = p => p?.Name;
+
+    void AddTags()
+    {
+        Tags += Tags;
+    }
+
+    private void LoadImage(InputFileChangeEventArgs e)
+    {
+        file = e.File;
+
+        //TODO upload the files to the server
+    }
+
+    async void AddArt()
+    {
+        if(file==null)
+        {
+            ErrorFile = "Please Select a File";
+            return;
+        }
+        if (IsAuction == true)
+        {
+            var split = tagVar.Split(", ");
+            List<Tags>
+                tags = new List<Tags>
+                    ();
+            foreach(var tag in PublicClient.Tags)
+            {
+                for(int j=0; j<split.Length; j++)
+                {
+                    if(split[j].Equals(tag.Name))
+                    {
+                        tags.Add(tag);
+                        Console.WriteLine(tag.Name);
+                    }
+                }
+            }
+            DateTime deadline=date??DateTime.Now;
+            TimeSpan t=time ?? TimeSpan.MinValue;
+            deadline=deadline.Date + t;
+            var response=await Add(Name, Description, Price, Width, Height, IsAuction, tags);
+            await ProductService.UploadImageAsync(response.UploadUri, file);
+            Dictionary<string, string> user = await UserService.GetUser();
+            Artist a = await UserService.GetArtist(user["user_id"]);
+            await ProductService.AddAuction(deadline, MinPrice, Price, response.ProductId);
+            Navigation.NavigateTo("open");
+
+        }
+        else
+        {
+            var split = tagVar.Split(", ");
+            List<Tags> tags = new List<Tags>();
+            foreach(var tag in PublicClient.Tags)
+            {
+                for(int j=0; j<split.Length; j++)
+                {
+                    if(split[j].Equals(tag.Name))
+                    {
+                        tags.Add(tag);
+                        Console.WriteLine(tag.Name);
+                    }
+                }
+            }
+            ProductResponse.Create response;
+            try
+            {
+                response = await Add(Name, Description, Price, Width, Height, IsAuction, tags);
+                await ProductService.UploadImageAsync(response.UploadUri, file);
+            }
+            catch(Exception e)
+            {
+                return;
+            }
+            Navigation.NavigateTo("trends");
+
+        }
+    }
+
+    protected async Task<ProductResponse.Create> Add(string name, string description, double price, int width, int height, bool isAuction,List<Tags> tags)
+    {
+        Dictionary<string, string> user = await UserService.GetUser();
+        Artist a = await UserService.GetArtist(user["user_id"]);
+        if(a.Iban == null || a.Iban.Equals("") || a.Bic == null || a.Bic.Equals(""))
+        {
+            Error = "Please fill out your Bank informations in your profile first!";
+            StateHasChanged();
+            return null;
+        }
+        if(name == null || name.Equals("") || description == null || description.Equals("")|| price == 0 || width == 0 || height == 0)
+        {
+            Error = "Please fill out every field before you Upload!";
+            StateHasChanged();
+            return null;
+        }
+        var i = await ProductService.AddProduct(name, description, price, width, height, IsAuction, a, tags);
+        return i;
+
+    }
+}

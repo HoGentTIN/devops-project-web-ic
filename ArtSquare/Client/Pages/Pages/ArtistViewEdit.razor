@@ -1,0 +1,277 @@
+﻿@page "/artistView2/{id:int}"
+@inject ISnackbar Snackbar
+@inject IUserService UserService
+@inject PublicClient PublicClient
+@inject IProductService ProductService
+@inject NavigationManager Navigation
+
+@* <div class="background">
+        <img class="background__image" src="/Images/art2.jpg" height="300px" width="100%" />
+    </div> *@
+
+
+<div class="container">
+
+
+    <MudText Typo="Typo.h1" Class="mb-5">Artist</MudText>
+
+
+    <div class="block">
+        <MudItem xs="12" sm="6">
+            <img class="profile" src=@Img />
+            <InputFile id="fileInput112" OnChange="@LoadImage" hidden multiple accept=".jpg, .jpeg, .png" />
+            <MudButton HtmlTag="label"
+                       Variant="Variant.Text"
+                       Color="Color.Primary"
+                       StartIcon="@Icons.Filled.Edit"
+                       for="fileInput112">
+                Choose new Picture
+            </MudButton>
+            <MudButton HtmlTag="label"
+                       Variant="Variant.Text"
+                       Color="Color.Primary"
+                       @onclick="() => UpdateImg()">Upload</MudButton>
+
+
+
+        </MudItem>
+    </div>
+    <div class="header">
+        <div class="text">
+            <MudItem xs="12" sm="6">
+                <MudText Class="mb-7" Typo="Typo.h2">@artist.Firstname @artist.Lastname</MudText>
+            </MudItem>
+
+            <MudItem xs="12" sm="10">
+                <MudText Typo="Typo.overline">About the Artist</MudText>
+                <MudText Class="ml-20" Typo="Typo.body1" Text="@sampleText">
+                    @Desc
+
+                </MudText>
+            </MudItem>
+            <MudItem xs="12" sm="12" md="12" Class="mt-5">
+                <MudTextField @bind-Text=@Desc T="string" Label="Edit Description" Lines="3" Variant="Variant.Text" />
+            </MudItem>
+            <MudItem xs="12" Class="d-flex justify-end">
+                <MudButton @onclick="() => UpdateDesc()">
+                    Edit
+                </MudButton>
+            </MudItem>
+
+
+            
+
+
+
+
+        </div>
+        <MudText Typo="Typo.h5" Class="mb-5 mt-5"> Delete Art</MudText>
+
+        <MudGrid Class="mt-5">
+            
+            <MudItem xs="12">
+                <MudGrid Spacing="@spacing" Justify="Justify.Center">
+                    @foreach(var p in ProductsByArtist){
+                    <MudItem>
+                        <MudCard Elevation="4" Width="375px" Height="450px" Square="true" Class="mr-5">
+                            <MudCardHeader>
+                                <CardHeaderAvatar>
+                                    <MudAvatar Color="Color.Secondary">A</MudAvatar>
+                                </CardHeaderAvatar>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.body1">@artist.Firstname @artist.Lastname</MudText>
+
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardMedia Image=@p.ImgPath Height="200" Width="300" />
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">@p.Name</MudText>
+                                <MudText Typo="Typo.body2">@p.Desciption</MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton @onclick="() => DeleteProduct(p)" Variant="Variant.Text" Color="Color.Warning">Delete</MudButton>
+                                <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@p.Price€</MudPaper>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                    }
+                </MudGrid>
+            </MudItem>
+            
+        </MudGrid>
+        <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+
+        <MudText Typo="Typo.overline">Bankdata:</MudText>
+
+        <MudText Align="Align.Left"><b>IBAN:</b> @Iban</MudText>
+        <MudText Align="Align.Left"><b>BIC:</b> @Bic</MudText>
+      
+
+        <MudItem xs="12" md="6">
+            <MudTextField T="string" @bind-Text="IbanTxt" Counter="34" HelperText="Enter New IBAN" Immediate="true" Validation="@(new Func<string, IEnumerable<string>>(MaxCharactersIban))" Label="IBAN" Variant="Variant.Text" />
+        </MudItem>
+        <MudItem xs="12" md="6">
+            <MudTextField T="string" @bind-Text="BicTxt" Counter="8" HelperText="Enter New BIC" Immediate="true" Validation="@(new Func<string, IEnumerable<string>>(MaxCharactersBic))" Label="BIC" Variant="Variant.Text" />
+        </MudItem>
+        <MudButton @onclick="() => UpdateBank()">
+            Edit
+        </MudButton>
+
+
+
+        
+    </div>
+
+
+
+
+</div>
+
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    string Img { set; get; } = "";
+    string Desc { get; set; } = "";
+    string Iban { get; set; } = "";
+    string Bic { get; set; } = "";
+
+    string IbanTxt { get; set; } = "";
+    string BicTxt { get; set; } = "";
+    IBrowserFile file;
+
+
+    private MudTextField<string>
+    multilineReference;
+    public int spacing { get; set; } = 5;
+
+    public Artist artist = new Artist();
+
+    public List<Product> ProductsByArtist = new List<Product>();
+
+    private void LoadImage(InputFileChangeEventArgs e)
+    {
+        file = e.File;
+
+        //TODO upload the files to the server
+    }
+    public async void DeleteProduct(Product p)
+    {
+        await ProductService.DelProduct(p);
+        Navigation.NavigateTo($"/artistView2/{artist.Id}", true);
+    }
+    public async void UpdateBank()
+    {
+        if(IbanTxt.Equals("") || BicTxt.Equals(""))
+        {
+            return;
+        }
+        artist.Iban = IbanTxt;
+        artist.Bic = BicTxt;
+        await UserService.UpdateBank(artist);
+        Navigation.NavigateTo($"/artistView2/{artist.Id}", true);
+    }
+    public async void UpdateDesc()
+    {
+        artist.Description = Desc;
+        await UserService.UpdateDesc(artist);
+    }
+
+    public async void UpdateImg()
+    {
+        if(file == null)
+        {
+            return;
+        }
+        Uri uri = await UserService.GetUri(artist.Id);
+        await ProductService.UploadImageAsync(uri, file);
+        
+        Navigation.NavigateTo($"/artistView2/{artist.Id}", true);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await PublicClient.GetArtist(Id);
+        artist = PublicClient.DetailArtist;
+        Img = artist.ImgPath;
+        Desc = artist.Description;
+        Iban = artist.Iban;
+        Bic = artist.Bic;
+        if (Img==null)
+        {
+            Img = "https://hogentcsharpstorage.blob.core.windows.net/images/profile.png";
+        }
+        if(Desc == null)
+        {
+            Desc = "No Description has been added yet.";
+        }
+        if (Iban == null)
+        {
+            Iban = "No IBAN added yet";
+        }
+        if (Bic == null)
+        {
+            Bic = "No BIC added yet";
+        }
+        await PublicClient.LoadProducts();
+        List<Product> products = new List<Product>();
+        foreach(var p in PublicClient.Products)
+        {
+            if(p.Artist.Id==Id && p.BoughtBy==null)
+            {
+                ProductsByArtist.Add(p);
+            }
+        }
+
+    }
+
+    void AddSpacing()
+    {
+    if (spacing >= 10)
+    {
+    spacing = 0;
+    }
+    else
+    {
+    spacing += 1;
+    }
+    StateHasChanged();
+    }
+
+    private IEnumerable<string> MaxCharacters(string ch)
+    {
+    if (!string.IsNullOrEmpty(ch) && 25 < ch?.Length)
+    yield return "Max 25 characters";
+    }
+
+    private IEnumerable<string> MaxCharactersIban(string ch)
+    {
+    if (!string.IsNullOrEmpty(ch) && 34 < ch?.Length)
+    yield return "Max 34 characters";
+    }
+
+    private IEnumerable<string> MaxCharactersBic(string ch)
+        {
+        if (!string.IsNullOrEmpty(ch) && 8 < ch?.Length)
+        yield return "Max 8 characters";
+        }
+
+
+        string sampleText = "For over a decade Aivazovsky has been one of the biggest stars in abstract art. his way of combining different elements is unique and he received many prices for his works ...                    his way of combining different elements is unique and he received many prices for his works ...  his way of combining different elements is unique and he received many prices for his works ...";
+
+
+        private void UploadFiles(InputFileChangeEventArgs e)
+        {
+        var entries = e.GetMultipleFiles();
+        //Do your validations here
+        Snackbar.Configuration.PositionClass = Defaults.Classes.Position.TopCenter;
+        Snackbar.Add($"Files with {entries.FirstOrDefault().Size} bytes size are not allowed", Severity.Error);
+        Snackbar.Add($"Files starting with letter {entries.FirstOrDefault().Name.Substring(0, 1)} are not recommended", Severity.Warning);
+        Snackbar.Add($"This file has the extension {entries.FirstOrDefault().Name.Split(".").Last()}", Severity.Info);
+
+        //TODO upload the files to the server
+        }
+
+        }

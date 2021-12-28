@@ -1,0 +1,184 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Identity;
+
+@page "/product/{id:int}"
+@inject PublicClient PublicClient
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@inject IUserService UserService
+@inject IProductService ProductService
+
+ 
+<div class="carousel">
+    <div class="frame">
+
+        <MudCarousel class="mx-auto" Elevation="2" Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object">
+            <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Lighten1};")">
+                <div class="d-flex" style="height:100%">
+                    <img class="img1" src="@PublicClient.DetailProduct.ImgPath">
+                </div>
+            </MudCarouselItem>
+            
+        </MudCarousel>
+    </div>
+    <MudButton Color=Color.Primary @onclick="() => RedirectDetailView(artistId)" Typo="Typo.button" >@firstname @lastname</MudButton><br />
+    <MudText Typo="Typo.overline">@PublicClient.DetailProduct.Width x @PublicClient.DetailProduct.Height cm.</MudText>
+</div>
+
+
+
+
+<div class="Desc">
+    <MudGrid Class="ml-25">
+        <MudItem xs="12">
+            <MudText Typo="Typo.h2">"@PublicClient.DetailProduct.Name"</MudText>
+        </MudItem>
+        <br />
+        <MudItem>
+            <br/>
+            <MudText>
+                @PublicClient.DetailProduct.Desciption
+            </MudText>
+        </MudItem>
+
+    </MudGrid>
+
+    <div class="tags">
+        <div class="spacing">
+            <MudText Typo="Typo.button">Tags:</MudText><br />
+            <MudItem Class="mt-5">
+                @foreach(var tag in tags)
+                {
+
+                 <MudChip>@tag</MudChip>
+
+                }
+
+            </MudItem>
+        </div>
+    </div>
+    
+
+    <div class="tags">
+
+        <MudText Align="Align.Left"><b>Price:</b> @PublicClient.DetailProduct.Price  €</MudText>
+        <MudText Typo="@Typo.h6" Color=Color.Error>@Error</MudText>
+        <MudButton @onclick="() => Buy()" Class="mt-5" Variant="Variant.Filled">Buy Art</MudButton>
+        
+
+
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
+
+@code {
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    private bool visible;
+    private int rating;
+    private void OpenDialog() => visible = true;
+    void Submit() => visible = false;
+
+    private DialogOptions dialogOptions = new() { FullWidth = true };
+    private string Error { get; set; } = "";
+
+    int artistId;
+    string firstname;
+    string lastname;
+    List<string> tags = new List<string>();
+
+    [Parameter]
+    public int Id { get; set; }
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await PublicClient.GetProduct(Id);
+        await PublicClient.GetArtist(PublicClient.DetailProduct.ArtistId);
+        firstname = PublicClient.DetailProduct.Artist.Firstname;
+        lastname = PublicClient.DetailProduct.Artist.Lastname;
+        artistId = PublicClient.DetailProduct.Id;
+        try
+        {
+            foreach (var tag in PublicClient.DetailProduct.Tags)
+            {
+                if (tag != null)
+                {
+                    tags.Add(tag.Name);
+                }
+            }
+        }
+        catch(Exception e)
+        {
+
+        }
+
+    }
+
+    public async void Buy()
+    {
+        Dictionary<string, string> user = new Dictionary<string, string>();
+        try
+        {
+            user = await UserService.GetUser();
+            await UserService.GetUserById(user["user_id"]);
+        }
+        catch(Exception e)
+        {
+            Error = "Please Sign In with User Account before you proceed!";
+            StateHasChanged();
+            Console.WriteLine(e.Message);
+            return;
+        }
+
+        UserArt userArt = await UserService.GetUserById(user["user_id"]);
+
+        ArtSquare.Shared.Models.ShoppingCart sc = new ArtSquare.Shared.Models.ShoppingCart();
+        sc.UserArt = userArt;
+        sc.Product=PublicClient.DetailProduct;
+        UserArt u = new UserArt();
+        try
+        {
+            user = await UserService.GetUser();
+            u = await UserService.GetUserById(user["user_id"]);
+        }
+        catch(Exception e)
+        {
+            return;
+        }
+        await ProductService.GetShopItems(user["user_id"]);
+        List<Product> shop = ProductService.ShopProducts;
+        if(shop!=null)
+        {
+            foreach(var s in shop)
+            {
+                if(s.Id == sc.Product.Id)
+                {
+                    Error = "You already added this item to your Shopping Cart!";
+                    StateHasChanged();
+                    return;
+                }
+            }
+        }
+        await ProductService.AddShop(sc);
+        NavManager.NavigateTo("/shoppingCart");
+
+
+    }
+
+    void RedirectDetailView(int id)
+    {
+        NavManager.NavigateTo("/artistView/"+id);
+    }
+}

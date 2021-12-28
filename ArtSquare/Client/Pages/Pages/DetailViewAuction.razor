@@ -1,0 +1,138 @@
+﻿@page "/auction/{id:int}"
+@inject PublicClient PublicClient
+@inject NavigationManager NavManager
+
+
+
+<div class="carousel">
+    <div class="frame">
+
+        <MudCarousel class="mx-auto" Elevation="2" Style="height:600px;" ShowArrows="@arrows" ShowDelimiters="@delimiters" AutoCycle="@autocycle" TData="object">
+            <MudCarouselItem Transition="transition" Style="@($"background:{Colors.Cyan.Lighten1};")">
+                <div class="d-flex" style="height:100%">
+                    <img class="img1" src="@PublicClient.DetailProduct.ImgPath">
+                </div>
+            </MudCarouselItem>
+            
+        </MudCarousel>
+    </div>
+
+    <MudButton Color=Color.Primary @onclick="() => RedirectDetailView(artistId)" Typo="Typo.button" >@firstname @lastname</MudButton><br />
+    <MudText Typo="Typo.overline">@PublicClient.DetailProduct.Width x @PublicClient.DetailProduct.Height cm.</MudText>
+
+
+    <div class="Desc">
+    <MudGrid Class="">
+        <MudItem xs="12">
+            <MudText Typo="Typo.h2">"@PublicClient.DetailProduct.Name"</MudText>
+        </MudItem>
+        <br />
+        <MudItem>
+            <br />
+            <MudText>
+                @PublicClient.DetailProduct.Desciption
+            </MudText>
+        </MudItem>
+
+    </MudGrid>
+
+    <div class="tags">
+        <div class="spacing">
+            <MudText Typo="Typo.button">Tags:</MudText><br />
+            <MudItem Class="mt-5">
+                @foreach(var tag in tags)
+                {
+
+                 <MudChip>@tag</MudChip>
+
+                }
+            </MudItem>
+        </div>
+    </div>
+
+
+    <div class="tags">
+        <MudText Align="Align.Left"><b>Auction Ends: </b>@PublicClient.DetailAuction.Deadline.ToString("dd/MM/yyyy") @PublicClient.DetailAuction.Deadline.Hour:@PublicClient.DetailAuction.Deadline.Minute</MudText>
+
+        <MudText Align="Align.Left"><b>Buy immediately for: </b>@PublicClient.DetailProduct.Price€</MudText>
+        <MudItem xs="8" md="4">
+            <MudText Class="mt-5" Align="Align.Left"><b>Current Bids:</b></MudText>
+            <MudPaper Width="100%">
+                <MudList Dense="true">
+                    <MudListItem Text="800€" />
+                    <MudDivider />
+                    <MudListItem Text="810€" />
+                    <MudDivider />
+                    <MudListItem Text="820€" />
+
+                </MudList>
+            </MudPaper>
+        </MudItem>
+        <MudButton Class="mt-5" Variant="Variant.Filled">BID</MudButton>
+        <MudButton Class="mt-5 ml-5" Variant="Variant.Filled">Buy Now</MudButton>
+
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="footer">
+    <p>&copy ArtSquare - 2021</p>
+</div>
+
+@code {
+    private bool arrows = true;
+    private bool delimiters = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Slide;
+
+    private bool visible;
+    private int rating;
+    private void OpenDialog() => visible = true;
+    void Submit() => visible = false;
+
+    int artistId;
+    string firstname;
+    string lastname;
+    List<string> tags = new List<string>();
+
+
+    [Parameter]
+    public int Id { get; set; }
+
+    private DialogOptions dialogOptions = new() { FullWidth = true };
+
+    private Auction auction = new Auction();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        await PublicClient.GetProduct(Id);
+        await PublicClient.GetAuction(Id);
+        await PublicClient.GetArtist(PublicClient.DetailProduct.ArtistId);
+        firstname = PublicClient.DetailProduct.Artist.Firstname;
+        lastname = PublicClient.DetailProduct.Artist.Lastname;
+        artistId = PublicClient.DetailProduct.Id;
+        ;
+        foreach(var tag in PublicClient.DetailProduct.Tags)
+        {
+            if(tag!=null)
+            {
+                tags.Add(tag.Name);
+            }
+        }
+    }
+    void RedirectDetailView(int id)
+    {
+        NavManager.NavigateTo("/artistView/"+id);
+    }
+}

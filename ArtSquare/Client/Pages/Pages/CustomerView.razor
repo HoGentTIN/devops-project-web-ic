@@ -1,0 +1,148 @@
+﻿@page "/customerView/{id}"
+
+@inject IUserService UserService
+@inject IProductService ProductService
+@inject PublicClient PublicClient
+@* <div class="background">
+        <img class="background__image" src="/Images/art2.jpg" height="300px" width="100%" />
+    </div> *@
+
+
+<div class="container">
+
+
+    <MudText Typo="Typo.h1" Class="mb-5">Profile</MudText>
+
+
+    <div class="block">
+        <MudItem xs="12" sm="6">
+            <img class="profile" src="https://hogentcsharpstorage.blob.core.windows.net/images/profile.png" />
+        </MudItem>
+    </div>
+    <div class="header">
+        <div class="text">
+            <MudItem xs="12" sm="6">
+                <MudText Class="mb-7" Typo="Typo.h2">@user.Firstname @user.Lastname</MudText>
+            </MudItem>
+            <MudItem xs="12" sm="10">
+                <MudText Typo="Typo.overline">How it works</MudText>
+
+                <MudText Class="ml-20" Typo="Typo.body1">
+                    On your profile u can see the last artworks you bought or the artworks which you got by having the highest bid in the auction.<br>
+                    Please transfer the money to the seen Bankdata, so the artist can send you the Artwork as soon as possible.
+
+                </MudText>
+            </MudItem>
+
+
+
+        </div>
+
+        
+
+        <MudItem Class="mt-10">
+            <MudText Typo="Typo.h4" Class="mb-5"> Recently Bought Works:</MudText>
+
+        </MudItem>
+        <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+        @foreach(var p in Products)
+        {
+        <MudItem xs="12" sm="6" Class="mb-0">
+            <div class="frame">
+                <img class="profile" src=@p.ImgPath />
+
+            </div>
+        </MudItem>
+
+        
+        <div class="header">
+            <div class="text">
+                <MudItem xs="12" sm="6">
+                    <MudText Typo="Typo.h5">
+                        @p.Name
+                    </MudText>
+
+                </MudItem>
+                <MudItem xs="12" sm="10">
+
+
+                    <MudText Typo="Typo.overline">Shipping Information:</MudText>
+                    <MudText Color="Color.Error" Align="Align.Left">Please Provide your Shipping address as a reference to the bank transfer, so the Artist can deliver you the bought item!</MudText>
+                    <MudText Align="Align.Left"><b>Name:</b> @p.Artist.Firstname @p.Artist.Lastname</MudText>
+                    <MudText Align="Align.Left"><b>IBAN:</b> @p.Artist.Iban</MudText>
+                    <MudText Align="Align.Left"><b>BIC:</b> @p.Artist.Bic</MudText>
+                    <MudText class="mt-5 mb-5" Align="Align.Left"><b>Price:</b> @p.Price€</MudText>
+                    <MudItem><MudButton @onclick="() => DeleteProduct(p)" Variant="Variant.Text" Color="Color.Primary"><MudLink Href="#" Underline="Underline.None">Finish</MudLink></MudButton></MudItem>
+                </MudItem>
+            </div>
+        </div>
+        <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+        }
+    </div>
+    
+</div>
+
+
+
+
+@code {
+    public UserArt user = new UserArt();
+
+    [Parameter]
+    public string Id { get; set; }
+    public int spacing { get; set; } = 5;
+    List<Product> Products { get; set; } = new List<Product>();
+    void AddSpacing()
+    {
+        if (spacing >= 10)
+        {
+            spacing = 0;
+        }
+        else
+        {
+            spacing += 1;
+        }
+        StateHasChanged();
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        user= await UserService.GetUserById(Id);
+        await PublicClient.LoadProducts();
+        List<Product> products = new List<Product>();
+        foreach(var p in PublicClient.Products)
+        {
+            if(p.BoughtBy!= null && p.BoughtBy.Equals(Id))
+            {
+                Products.Add(p);
+            }
+        }
+
+    }
+    public async void DeleteProduct(Product p)
+    {
+        await ProductService.DelProduct(p);
+        StateHasChanged();
+    }
+
+
+         private IEnumerable<string>
+            MaxCharacters(string ch)
+            {
+            if (!string.IsNullOrEmpty(ch) && 25 < ch?.Length)
+            yield return "Max 25 characters";
+            }
+
+        private IEnumerable<string>
+            MaxCharactersAdress(string ch)
+            {
+            if (!string.IsNullOrEmpty(ch) && 50 < ch?.Length)
+            yield return "Max 50 characters";
+            }
+
+        private IEnumerable<string>
+            MaxCharactersCity(string ch)
+            {
+            if (!string.IsNullOrEmpty(ch) && 30 < ch?.Length)
+            yield return "Max 30 characters";
+            }
+         }

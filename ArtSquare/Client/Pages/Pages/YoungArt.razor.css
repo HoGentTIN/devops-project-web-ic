@@ -1,0 +1,172 @@
+﻿
+.container {
+    align-items: left;
+}
+/* img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+} */
+body {
+    background-image: url("/wwwroot/Images/young.jpg");
+    background-repeat: repeat-y;
+    /* font-family: 'Andada Pro', serif; */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00ACC1;
+    color: white;
+    text-align: center;
+}
+
+
+
+.nav-item3 {
+    margin-left: 20px;
+}
+
+.user {
+    border-left: 2px solid black;
+}
+
+.form {
+    margin-top: 20px;
+    position: relative;
+}
+
+.product-search {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 60px;
+    margin: 0 auto;
+    box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 70%;
+}
+
+.entry {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.td {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.search-element {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    border-right: 2px solid rgba(10,10,10,.1);
+    padding: 1em;
+    margin-left: 15px;
+    height: 80px;
+    width: 10%;
+}
+
+.search-element2 {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    padding: 1em;
+    margin-left: 15px;
+}
+
+.search-label {
+    font-weight: 700;
+}
+
+.search-input {
+    border: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin-top: 5px;
+}
+
+
+
+.search-button:hover {
+    background-color: HSLA(345, 100%, 60%, 1.00);
+}
+
+.search-image {
+    margin-right: 15px;
+}
+
+table {
+    width: 90%;
+    margin: 5%;
+    align-items: center;
+}
+
+.product {
+    width: 220px;
+    height: 350px;
+    background-size: cover;
+    border: 6px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.para {
+    margin-right: 10%;
+    text-align: left;
+}
+
+
+.product2 {
+    margin-bottom: 20%;
+}
+
+.text {
+    margin-left: 20%;
+}
+
+.headline {
+    margin-bottom: 2px;
+}
+
+.carousel {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 80%;
+}
+
+.h1 {
+    margin-left: 9%;
+    margin-top: 2%;
+    font-family: 'Andada Pro', serif;
+}
+
+.d-flex {
+    margin: auto;
+    width: 100%;
+}
+
+.peter {
+    color: green;
+}
+
+
+
+.foreground {
+    background-attachment: fixed;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}

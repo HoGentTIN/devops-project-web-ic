@@ -1,0 +1,46 @@
+﻿
+/* img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+} */
+body {
+    background: white;
+    /* font-family: 'Andada Pro', serif; */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00ACC1;
+    color: white;
+    text-align: center;
+}
+
+
+.profile {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 5%;
+}
+
+.container {
+    margin-left: 10%;
+}
+
+.header {
+}
+
+.text {
+    margin-left: 30%;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}

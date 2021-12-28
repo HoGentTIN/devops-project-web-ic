@@ -1,0 +1,56 @@
+﻿@page "/manageUser"
+@inject HttpClient Http
+@inject IUserService UserService
+@attribute [Authorize(Roles = "Admin")]
+
+@if (users is null)
+{
+    <p>Loading...</p>
+
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th scope="col">Email</th>
+                <th scope="col">User Id</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Is Artist?</th>
+                <th scope="col">Blocked</th>
+                <th scope="col">Edit</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <th scope="row">@user.Email</th>
+                    <td>@user.Street</td>
+                    <td>@user.Firstname</td>
+                    <td>@user.Lastname</td>
+                    <td>@user.City</td>
+                    <td>@user.Blocked</td>
+                    <td><MudButton @onclick="() => ChangeBlocked(user.Street)">Change</MudButton></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<UserArt>? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await Http.GetFromJsonAsync<UserArt[]>("user");
+    }
+
+    async void ChangeBlocked(string id)
+    {
+        await UserService.BlockUser(id);
+    }
+}

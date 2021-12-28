@@ -1,0 +1,154 @@
+﻿@page "/artistView/{id:int}"
+
+@inject PublicClient PublicClient
+@inject NavigationManager Navigation
+
+@* <div class="background">
+        <img class="background__image" src="/Images/art2.jpg" height="300px" width="100%" />
+    </div> *@
+
+
+<div class="container">
+
+
+    <MudText Typo="Typo.h1" Class="mb-5">Artist</MudText>
+
+
+    <div class="block">
+        <MudItem xs="12" sm="6">
+            @if(ImgPath==null)
+            {
+                <img class="profile" src="https://hogentcsharpstorage.blob.core.windows.net/images/profile.png" />
+            }
+            else{
+                <img class="profile" src=@ImgPath />
+            }
+        </MudItem>
+    </div>
+    <div class="header">
+        <div class="text">
+            <MudItem xs="12" sm="6">
+                <MudText Class="mb-7" Typo="Typo.h2">@Firstname @Lastname</MudText>
+            </MudItem>
+            <MudItem xs="12" sm="10">
+                <MudText Typo="Typo.overline">Email: @Email</MudText>
+                <br />
+                <MudText Typo="Typo.overline">About the Artist</MudText>
+
+                @if(Description ==null)
+                {
+                    <MudText Class="ml-20" Typo="Typo.body1">
+                            The Artist has no description yet..
+                            <br/>
+                            <br/>
+                    </MudText>      
+                }
+                else
+                {
+                    <MudText Class="ml-20" Typo="Typo.body1">
+                        @PublicClient.DetailProduct.Artist.Description
+                    </MudText>
+                }
+                
+            </MudItem>
+
+            
+
+        </div>
+        <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+        <MudItem Class="mt-10">
+            <MudText Typo="Typo.h4" Class="mb-5"> Recent Works:</MudText>
+
+        </MudItem>
+            </div>
+            </div>
+
+        <MudGrid Class="mt-5">
+
+                    
+                        
+                        <MudItem xs="12">
+                            <MudGrid Spacing="@spacing" Justify="Justify.Center">
+                                   @foreach(var product in PublicClient.Products)
+                                   {
+                                        if (product.ArtistId == ArtistId && product.IsAvailable==true)
+                                        {
+                                            <MudItem>
+                                                <MudCard Elevation="4" Width="375px" Height="450px" Square="true" Class="mr-5">
+                                                    <MudCardHeader>
+                                                        <CardHeaderAvatar>
+                                                            <MudAvatar Color="Color.Secondary">D</MudAvatar>
+                                                        </CardHeaderAvatar>
+                                                        <CardHeaderContent>
+                                                            <MudText Typo="Typo.body1">Upload Date: @product.UploadDate.ToString("dd/MM/yyyy")</MudText>
+                                                        </CardHeaderContent>
+                                                    </MudCardHeader>
+                                                    <MudCardMedia Image=@product.ImgPath Height="200" Width="300" />
+                                                    <MudCardContent>
+                                                        <MudText Typo="Typo.h5">@product.Name</MudText>
+                                                        <MudText Typo="Typo.body2">@product.Desciption</MudText>
+                                                    </MudCardContent>
+                                                    <MudCardActions>
+                                                        <MudButton @onclick="() => DetailPage(product.Id)" Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                                                        <MudPaper Class="pa-2 mr-2 mb-1 ml-auto mud-theme-secondary" Square="true">@product.Price€</MudPaper>
+                                                    </MudCardActions>
+                                                </MudCard>
+                                            </MudItem>
+                                        }
+                                    }
+                            </MudGrid>
+                        </MudItem>
+                    
+                </MudGrid>
+
+
+        
+
+
+    
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private string Firstname { get; set; }
+    private string Lastname { get; set; }
+    private string Email { get; set; }
+    private string Description { get; set; }
+    private string ImgPath { get; set; }
+    private int ArtistId { get; set; }
+
+
+    public int spacing { get; set; } = 5;
+
+    void AddSpacing()
+    {
+        if (spacing >= 10)
+        {
+            spacing = 0;
+        }
+        else
+        {
+            spacing += 1;
+        }
+        StateHasChanged();
+    }
+    public async void DetailPage(int i)
+    {
+        Navigation.NavigateTo($"/product/{i}");
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        await PublicClient.LoadProducts();
+        await PublicClient.GetProduct(Id);
+        await PublicClient.GetArtist(PublicClient.DetailProduct.ArtistId);
+        Firstname = PublicClient.DetailProduct.Artist.Firstname;
+        Lastname = PublicClient.DetailProduct.Artist.Lastname;
+        Description = PublicClient.DetailProduct.Artist.Description;
+        ImgPath = PublicClient.DetailProduct.Artist.ImgPath;
+        ArtistId = PublicClient.DetailProduct.Artist.Id;
+        Email = PublicClient.DetailProduct.Artist.Email;
+    }
+
+}

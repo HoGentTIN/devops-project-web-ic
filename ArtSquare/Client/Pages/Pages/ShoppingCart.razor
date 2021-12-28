@@ -1,0 +1,130 @@
+﻿@page "/shoppingCart"
+@inject IProductService ProductService
+@inject PublicClient PublicClient
+@inject IUserService UserService
+@inject NavigationManager NavManager
+
+
+
+
+<div class="container">
+
+
+    <MudText Typo="Typo.h3" Class="mb-10" Align="Align.Center" >Shopping Cart</MudText>
+    <MudText Align="Align.Left">How it works: By checking out you are buying the Artpiece, after proceeding to the checkout, you will find the Bank address of the Artist in your Profile in the Section "Purchased Products". The Product will be send as soon as the Artist receives the money.  </MudText>
+    
+    @if(NoLogIn==true)
+    {
+        <MudText Color="Color.Primary" Typo="Typo.h6">
+                    <b>Please Log In With a User Account before accesing your Shopping Cart</b>            
+                </MudText>
+    }
+    @foreach(var p in ProductService.ShopProducts)
+    {
+    <MudDivider DividerType="DividerType.Middle" Class="my-10" />
+        <MudItem xs="12" sm="6" Class="mb-0">
+            <div class="frame">
+                <img class="profile" src=@p.ImgPath />
+            </div>
+        </MudItem>
+        <div class="header">
+            <div class="text">
+                <MudItem xs="12" sm="6">
+                    <MudText Typo="Typo.h5">
+                        @p.Name             
+                    </MudText>
+
+                </MudItem>
+                <MudItem xs="12" sm="10">
+                    <MudText class="mt-5 mb-5" Align="Align.Left"><b>Price:</b> @p.Price€</MudText>
+
+                    <MudItem>
+                        @if(checkout == false && CheckoutFinal == false)
+                        {
+                            <MudButton @onclick="() => Delete(p)" Variant="Variant.Text" Color="Color.Warning">Delete</MudButton>
+                            <MudButton @onclick="() => Checkout(p)"  Variant="Variant.Text" Color="Color.Primary">Checkout</MudButton>
+                        }
+                        else if(checkout == true && CheckoutFinal ==false && currentlySelected == p)
+                        {
+                            <MudText class="mt-5 mb-5" Align="Align.Left"><b>Are you sure?</b></MudText>
+                            <MudButton @onclick="Cancel" Variant="Variant.Text" Color="Color.Warning">No</MudButton>
+                            <MudButton  @onclick="() => BuyItem(p)" Variant="Variant.Text" Color="Color.Success">Yes</MudButton>
+                        }
+                        else{
+                            
+                        }
+                    </MudItem>
+                </MudItem>
+            </div>
+        </div>
+    }
+
+
+</div>
+
+
+
+@code {
+    public bool checkout { get; set; } = false;
+    public bool CheckoutFinal { get; set; } = false;
+    public Product currentlySelected { get; set; } = new Product();
+    public bool NoLogIn { get; set; } = false;
+
+    Dictionary<string, string> user = new Dictionary<string, string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        UserArt userArt = new UserArt();
+
+        try
+        {
+            user = await UserService.GetUser();
+            userArt = await UserService.GetUserById(user["user_id"]);
+        }
+        catch(Exception e)
+        {
+            NoLogIn = true;
+            StateHasChanged();
+            return;
+        }
+        Console.WriteLine("This is my user id" + user["user_id"]);
+        await ProductService.GetShopItems(user["user_id"]);
+    }
+
+    public async void BuyItem(Product p)
+    {
+        await ProductService.BuyItem(p);
+        await ProductService.DelShop(p);
+        string uid = user["user_id"];
+        NavManager.NavigateTo($"customerView/{uid}");
+    }
+
+    public async void Delete(Product p)
+    {
+        await ProductService.DelShop(p);
+        NavManager.NavigateTo("ShoppingCart", true);
+    }
+
+    public void Checkout(Product p)
+    {
+        checkout = true;
+        currentlySelected = p;
+    }
+
+    public void Cancel()
+    {
+        checkout = false;
+    }
+    
+    @*private Product product = new Product();
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProductService.GetProduct(Id);
+    }*@
+
+    }
