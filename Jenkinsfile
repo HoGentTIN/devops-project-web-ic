@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Fake Run'){
              steps{
-               sh 'dotnet run --property:Configuration=Release --project=ArtSquare/Server'
+               sh 'nohup dotnet run --property:Configuration=Release --project=ArtSquare/Server > /dev/null 2>&1 &'
              }
         }
     }
